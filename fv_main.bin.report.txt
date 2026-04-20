@@ -1,0 +1,1536 @@
+        Type         |        Subtype        |   Base   |   Size   |  CRC32   |   Name 
+ Image               | UEFI                  | 00000000 | 0044F000 | 60019A2B |  UEFI image
+ Volume              | FFSv2                 | 00000000 | 0044F000 | 60019A2B | - 1FD0BACE-6F0A-4085-901E-F6210385CB6F
+ File                | Volume image          | 00000078 | 00399FF1 | 9985B688 | -- 20BC8AC9-94D1-4208-AB28-5D673FD73486
+ Section             | GUID defined          | 00000090 | 00399FD9 | 390DCB5D | --- A31280AD-481E-41B6-95E8-127F4C984779
+ Section             | Raw                   |   N/A    | 0000007C | 3A3CD69B | ---- Raw section
+ Section             | Volume image          |   N/A    | 00D4D004 | 8DA29EB8 | ---- Volume image section
+ Volume              | FFSv2                 |   N/A    | 00D4D000 | 57BAF770 | ----- 8C8CE578-8A3D-4F1C-9935-896185C32DD3
+ File                | Freeform              |   N/A    | 0000006C | AE58AC43 | ------ FC510EE7-FFDC-11D4-BD41-0080C73C8881 | DXE apriori file
+ Section             | Raw                   |   N/A    | 00000054 | DBB96A42 | ------- Raw section
+ File                | DXE driver            |   N/A    | 0000608A | 269DD614 | ------ B2C9CD52-86B3-4031-B830-8BD84495ABC8 | HddSpinDownDxe
+ Section             | DXE dependency        |   N/A    | 0000003A | 06838A7D | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00006004 | A0620920 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000022 | BE510B50 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE core              |   N/A    | 000172BE | D1024533 | ------ D6A2CB7F-6A18-4E2F-B43B-9920A733700A | DxeCore
+ Section             | PE32 image            |   N/A    | 00017284 | 3533A8CD | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000014 | E7DD0759 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000608A | 8600DCB2 | ------ D93CE3D8-A7EB-4730-8C8E-CC466A9ECC3C | ReportStatusCodeRouterRuntimeDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00006004 | BE9E34A8 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000046 | F96805C2 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000009FA | 1FE9451D | ------ C8339973-A563-4561-B858-D8476F9DEFC4 | Metronome
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000009A4 | DC8EC279 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000018 | 6C1FF508 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000605E | 5C61C15B | ------ B601F8C4-43B7-4784-95B1-F4226CB40CEE | RuntimeDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00006004 | 77A1B770 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001A | 6676D6C5 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000008B2 | 832994F4 | ------ F099D67F-71AE-4C36-B2A3-DCEB0EB2B7D8 | WatchdogTimer
+ Section             | DXE dependency        |   N/A    | 00000028 | 5A7CF72A | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00000844 | 53BBF593 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | 3A85A850 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00001CA6 | 643FA6B0 | ------ 00160F8D-2B35-4DF2-BBE0-B272A8D631F0 | FirmwarePerformanceDxe
+ Section             | DXE dependency        |   N/A    | 00000028 | EDDB2D2B | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001C24 | F86185C1 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000032 | 16EFB6E0 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000A622 | 30E0D961 | ------ 9B680FCE-AD6B-4F3A-B60B-F59899003443 | DevicePathDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 0000A5C4 | C7F0D4B0 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | 7EE438D8 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00003CF6 | C9D2FEC3 | ------ 13AC6DD0-73D0-11D4-B06B-00AA00BD6DE7 | EbcDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00003CA4 | C7612BA8 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000012 | 467449E0 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000807E | B610BD42 | ------ 2FA2A6DA-11D5-4DC3-999A-749648B03C56 | PiSmmIpl
+ Section             | DXE dependency        |   N/A    | 0000003A | F7BE7FA7 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00008004 | 28818C0D | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000016 | AB7D286C | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM core              |   N/A    | 0000FA42 | CB3A2A3A | ------ E94F54CD-81EB-47ED-AEC3-856F5DC157A9 | PiSmmCore
+ Section             | PE32 image            |   N/A    | 0000FA04 | 5676ED5C | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000018 | 58898CA9 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 00003406 | BD664119 | ------ 79CD78D8-6EDC-4978-BD02-3299C387AB17 | StatusCodeHandlerSmm
+ Section             | MM dependency         |   N/A    | 0000004C | CC4E6F39 | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00003364 | 0643A37D | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002E | C0E7BBCB | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 000024EA | DF1CDBD2 | ------ 044310AB-77FD-402A-AF1A-87D4120E7329 | FirmwarePerformanceSmm
+ Section             | MM dependency         |   N/A    | 0000004C | CC4E6F39 | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00002444 | 887B9D9F | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000032 | F63E3515 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 00002182 | 6CE52384 | ------ 33FB3535-F15E-4C17-B303-5EB94595ECB6 | SmmLockBox
+ Section             | MM dependency         |   N/A    | 0000003A | 40C7F5A8 | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00002104 | 5E75A768 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001A | 113BD4A1 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000023EE | EECA7722 | ------ 51CCF399-4FDF-4E55-A45B-E123F84D456A | ConPlatformDxe
+ Section             | PE32 image            |   N/A    | 000023A4 | D6BF6FC8 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000022 | DB693214 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000215A | A00DAE60 | ------ 79E4A61C-ED73-4312-94FE-E3E7563362A9 | PrintDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00002104 | 5A49FE7E | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000016 | C81B0384 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00002142 | 2C506E31 | ------ 6B38F7B4-AD98-40E9-9093-ACA2B5A253C4 | DiskIoDxe
+ Section             | PE32 image            |   N/A    | 00002104 | 3907CEEC | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000018 | 528EA2A1 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00000C9A | 89F376EA | ------ A19B1FE7-C1BC-49F8-875F-54A5D542443F | CpuIo2Dxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00000C44 | 23F0C999 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000018 | A117E6B6 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 0000128A | 99E244BB | ------ A47EE2D8-F60E-42FD-8E58-7BD65EE4C29B | CpuIo2Smm
+ Section             | MM dependency         |   N/A    | 00000028 | 78C05CEB | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00001224 | 9B8C4ED5 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000018 | 41C66543 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00001836 | 8E1FB8DC | ------ B981A835-6EE8-4F4C-AE0B-210AA0BFBF01 | RngDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000017E4 | 2CF284A1 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000012 | 49EA32B7 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00000B7E | FB992B6C | ------ 79CA4208-BBA1-4A9A-8456-E1E66A81484E | Legacy8259
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00000B24 | BB13A0C9 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001A | 4969801B | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00005ABE | AFBEF4D3 | ------ 62D171CB-78CD-4480-8678-C6A2A797A8DE | CpuArchDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00005A64 | B7547974 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001A | 9E53C0F7 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000A94A | 0F74B825 | ------ 40BEAB40-CECE-4909-B133-20A413AE19E9 | CpuMpDxe
+ Section             | DXE dependency        |   N/A    | 00000094 | 3C22B004 | ------- DXE dependency section
+ Section             | Raw                   |   N/A    | 00000034 | CA17A0C4 | ------- Raw section
+ Section             | PE32 image            |   N/A    | 0000A844 | 401C7959 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000016 | A19DA3AE | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 0000669A | 63B25651 | ------ A3FF0EF5-0C28-42F5-B544-8C7DE1E80014 | PiSmmCpuDxeSmm
+ Section             | MM dependency         |   N/A    | 0000004C | 0DA9CD4A | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00006604 | DA65C552 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000022 | 741CE285 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 0000131A | 59888735 | ------ E21F35A8-42FF-4050-82D6-93F7CDFA7073 | PiSmmCommunicationSmm
+ Section             | MM dependency         |   N/A    | 0000005E | 7F52BD77 | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00001264 | 9016FF7D | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000030 | C64DF5FC | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00001602 | 025C136D | ------ 801ADCA0-815E-46A4-84F7-657F53621A57 | SectionExtractionDxe
+ Section             | DXE dependency        |   N/A    | 00000028 | 5AC1150A | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001584 | 5CADEE6D | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002E | 8B88A55D | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000605A | 5D21FCE8 | ------ BAE7599F-3C6B-43B7-BDF0-9CE07AA91AA6 | CpuIoDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00006004 | D2A58DB4 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000016 | 743E42B4 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00002A42 | C5ED710C | ------ 240612B5-A063-11D4-9A3A-0090273FC14D | IsaBusDxe
+ Section             | PE32 image            |   N/A    | 00002A04 | 4BEF2BBF | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000018 | F6FDBB1D | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00000F5E | CCD058A7 | ------ 53BCC14F-C24F-434C-B294-8ED2D4CC1860 | DataHubDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00000F04 | 2FC409D7 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001A | 0BA0E5B2 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000073A | C49001E2 | ------ CA515306-00CE-4032-874E-11B755FF6866 | DataHubStdErrDxe
+ Section             | DXE dependency        |   N/A    | 00000028 | 7B9E9267 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000006C4 | 0D538A3A | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000026 | 7D82FC23 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00001B66 | 38508ADD | ------ BF89F10D-B205-474F-96E3-7A7BB1B4A407 | VgaClassDxe
+ Section             | PE32 image            |   N/A    | 00001B24 | D1BB40D5 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001C | C5D960FE | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00006F36 | B035B818 | ------ 961578FE-B6B7-44C3-AF35-6BC705CD2B1F | Fat
+ Section             | PE32 image            |   N/A    | 00006F04 | 28801BF0 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000000C | 508FAC8E | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000004E6 | 05030222 | ------ 7C380900-1B96-4615-978E-89E02E2C89D0 | DebugDriverDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00000484 | 6A45F0F6 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000022 | 5EDDFA4F | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 4C4F5494 | ------- Version section
+ File                | Combined SMM/DXE      |   N/A    | 000154B6 | 74506A5B | ------ 80CF7257-87AB-47F9-A3FE-D50B76D89541 | PcdSmmDxe
+ Section             | Raw                   |   N/A    | 0000C454 | 649C9967 | ------- Raw section
+ Section             | MM dependency         |   N/A    | 00000016 | EC1B2AC4 | ------- MM dependency section
+ Section             | DXE dependency        |   N/A    | 00000006 | 217A7023 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00009004 | 84949A33 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000018 | 72B38B81 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | C8055A6E | ------- Version section
+ File                | SMM module            |   N/A    | 0000117E | 56A54D2F | ------ A6885402-D022-4B0E-A509-4711B90F2A39 | ReportStatusCodeRouterSmm
+ Section             | MM dependency         |   N/A    | 0000003A | 40C7F5A8 | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 000010E4 | 4CBA8FA6 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000038 | B0A88A17 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00008076 | CA41C884 | ------ 378D7B65-8DA9-4773-B6E4-A47826A833E1 | PcRtc
+ Section             | DXE dependency        |   N/A    | 0000003A | 1839A0BC | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00008004 | 5F93A4D3 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000010 | 0B3C66FC | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Combined SMM/DXE      |   N/A    | 0002A08E | 46B2D327 | ------ 4AC99A7C-1DCF-4A51-8F06-5EEDFE8A8864 | CryptoServiceRuntimeDxe
+ Section             | MM dependency         |   N/A    | 00000016 | 5FAC0446 | ------- MM dependency section
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 0002A004 | 842BC6A8 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000034 | CC321163 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000437E | B31F514E | ------ AD416CE3-A483-45B1-94C2-4B4E4D575562 | TcgMor
+ Section             | DXE dependency        |   N/A    | 0000005E | D5BE933F | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000042E4 | 9471F834 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000012 | E3D53EC1 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00002A7A | 226786DF | ------ 8376BDCA-5E03-4735-951A-4A74141E5886 | TrEEConfigDxe
+ Section             | DXE dependency        |   N/A    | 00000070 | 291326DC | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000029C4 | FE19FF75 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | 7C66FD69 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Freeform              |   N/A    | 000006EC | EBC7F3CA | ------ 4B8D2F76-D9E7-46DC-B5ED-EFEF9476AF4A
+ Section             | Raw                   |   N/A    | 000006D4 | 54DF0D48 | ------- Raw section
+ File                | DXE driver            |   N/A    | 00005616 | 70B54D1C | ------ A5683620-7998-4BB2-A377-1C1E31E1E215 | TcgDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000055C4 | 7CA600C7 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000012 | 2F8778EF | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000851A | 98C88019 | ------ 96107C8E-9490-4767-9D0D-5590F1F6E1FC | PhysicalPresenceDxe
+ Section             | DXE dependency        |   N/A    | 000000B8 | ED0B015D | ------- DXE dependency section
+ Section             | Raw                   |   N/A    | 0000004C | 0CC12803 | ------- Raw section
+ Section             | PE32 image            |   N/A    | 000083C4 | BE7C464A | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002C | C9CE7117 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 00002E4A | 7756C489 | ------ 42293093-76B9-4482-8C02-3BEFDEA9B35D | TcgSmm
+ Section             | MM dependency         |   N/A    | 00000082 | 91E33287 | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 000029E4 | A77E59C8 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000012 | CF56FB1A | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ Section             | Raw                   |   N/A    | 000003A6 | 2EC8581D | ------- Raw section
+ File                | Combined SMM/DXE      |   N/A    | 00001D1E | BC891A32 | ------ 2892389C-FBE9-43D7-B9FC-6C5D90D18456 | TisDxe
+ Section             | MM dependency         |   N/A    | 00000028 | 78C05CEB | ------- MM dependency section
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001CA4 | AC679080 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000012 | EBF5B11C | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00008C76 | 5FCC4498 | ------ FDFF263D-5F68-4591-87BA-B768F445A9AF | Tcg2Dxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00008C24 | 8D501680 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000014 | D8471319 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00009F12 | 6E1B64A6 | ------ EDB396E3-2DDC-4396-BCA5-1202D3005AEA | Tcg2PhysicalPresenceDxe
+ Section             | DXE dependency        |   N/A    | 000000A6 | ADE3BC9B | ------- DXE dependency section
+ Section             | Raw                   |   N/A    | 0000004C | B4A653E4 | ------- Raw section
+ Section             | PE32 image            |   N/A    | 00009DC4 | 1D55F6CD | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000034 | 133E3A0D | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 00003AD5 | 09B32A85 | ------ 44A20657-10B8-4049-A148-ACD8812AF257 | Tcg2Smm
+ Section             | MM dependency         |   N/A    | 00000070 | 6B0CD874 | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 000032A4 | 552B5998 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000014 | 389690EC | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ Section             | Raw                   |   N/A    | 00000785 | 54982B77 | ------- Raw section
+ File                | DXE driver            |   N/A    | 00002C06 | EBB1BCC4 | ------ 2707E46D-DBD7-41C2-9C04-C9FDB8BAD86C | JpegDecoderDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00002BA4 | 548C7446 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000022 | 568791C1 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00000D62 | 01CAAE20 | ------ ADCCA887-5330-414A-81A1-5B578146A397 | TgaDecoderDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00000D04 | CFF19F80 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | 92E87478 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00000902 | 00703320 | ------ A8F634A5-28F1-4456-A9D5-7E24B99BDB65 | PcxDecoderDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000008A4 | 3CB13B39 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | 92E83076 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00002062 | 1D25F2AD | ------ 1353DE63-B74A-4BEF-80FD-2C5CFA83040B | GifDecoderDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00002004 | 3E36D365 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | D08665F5 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00000D82 | 22F318AB | ------ A9F634A5-29F1-4456-A9D5-6E24B88BDB65 | BmpDecoderDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00000D24 | 648F042E | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | 3226D72F | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Pad                   |   N/A    | 00000058 | 247A233E | ------ Padding file
+ File                | DXE driver            |   N/A    | 00004E46 | CAF3116B | ------ C1D5258B-F61A-4C02-9293-A005BEB3EAA1 | PngDecoderDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | Raw                   |   N/A    | 00000004 | CA4DE08B | ------- Raw section
+ Section             | PE32 image            |   N/A    | 00004DE4 | 55E7D751 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | 96365977 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000401B2 | 5B7E26D2 | ------ FC5C7020-1A48-4198-9BE2-EAD5ABC8CF2F | BdsDxe
+ Section             | DXE dependency        |   N/A    | 000000A6 | 02CE40D5 | ------- DXE dependency section
+ Section             | Raw                   |   N/A    | 0000004C | BE376834 | ------- Raw section
+ Section             | PE32 image            |   N/A    | 00040084 | C123A0A3 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000012 | EB2AC728 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00004356 | 4EE195AD | ------ 2D6BB83D-84A2-404A-B4CA-3E7AC0EFB3D2 | BootOptionPolicyDxe
+ Section             | DXE dependency        |   N/A    | 0000005E | 27F54A27 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000042A4 | 242615A5 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002C | A7F00ABB | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Combined SMM/DXE      |   N/A    | 000090DA | DCE8608D | ------ 4C862FC6-0E54-4E36-8C8F-FF6F3167951F | FaultTolerantWriteLiteDxe
+ Section             | MM dependency         |   N/A    | 0000003A | 3A4E2705 | ------- MM dependency section
+ Section             | DXE dependency        |   N/A    | 0000003A | AA41FE65 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00009004 | 800105A1 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000038 | DE6558BD | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Combined SMM/DXE      |   N/A    | 000191B6 | D02EDA69 | ------ CBD2E4D5-7068-4FF5-B462-9822B4AD8D60 | VariableRuntimeDxe
+ Section             | MM dependency         |   N/A    | 000000B8 | E84A504B | ------- MM dependency section
+ Section             | DXE dependency        |   N/A    | 000000A6 | 00B4D917 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00019004 | 3A49DBCF | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002A | 280E2B1F | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00002E16 | 9C3B4EBD | ------ 760F874E-B8CB-405E-AA32-A46AE2F3D680 | VariableDefaultUpdate
+ Section             | DXE dependency        |   N/A    | 0000003A | 362BFB08 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00002D84 | 824DE1C6 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000030 | 81E5B528 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000ED46 | 438F2B9F | ------ F80697E9-7FD6-4665-8646-88E33EF71DFC | SecurityStubDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 0000ECE4 | C779CAE2 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000024 | 80A6C5D3 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000060A2 | 642AF12B | ------ AD608272-D07F-4964-801E-7BD3B7888652 | MonotonicCounterRuntimeDxe
+ Section             | DXE dependency        |   N/A    | 0000003A | 1839A0BC | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00006004 | 0450AE49 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000003A | 0034BE4B | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00005D86 | 0CB545DB | ------ 506533A6-E626-4500-B14F-17939C0E5B60 | AcpiSupportDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00005D24 | 9D6FDC97 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000022 | 8C9C31D3 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00007196 | 90D6E155 | ------ CB933912-DF8F-4305-B1F9-7B44FA11395C | AcpiPlatform
+ Section             | DXE dependency        |   N/A    | 000000CA | 06312484 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00007084 | 8413C697 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001E | 696FE4FF | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00009116 | 7102940A | ------ FA20568B-548B-4B2B-81EF-1BA08D4A3CEC | BootScriptExecutorDxe
+ Section             | DXE dependency        |   N/A    | 0000003A | 661AA882 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00009084 | 464A2FAD | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000030 | 54AA2DA3 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00005BFA | EF81A343 | ------ B8E62775-BB0A-43F0-A843-5BE8B14F8CCD | BootGraphicsResourceTableDxe
+ Section             | DXE dependency        |   N/A    | 000000EE | 6A312E59 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00005AA4 | 0A4103F5 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000003E | 7839897C | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00000C3E | 66422E5F | ------ ED92EAE0-C31C-4824-8802-35595EFA8287 | WpbtDxe
+ Section             | PE32 image            |   N/A    | 00000C04 | 68433EDB | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000014 | E05BBEAB | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00002C4E | FC849246 | ------ 6903A447-CB4F-45F6-89A2-7E7E2F9EE14C | InstallMsdm
+ Section             | DXE dependency        |   N/A    | 000000A6 | F6BB2160 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00002B64 | D02CA8E8 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001C | C7A12740 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000034B6 | 421D59DB | ------ BDCE85BB-FBAA-4F4E-9264-501A2C249581 | S3SaveStateDxe
+ Section             | DXE dependency        |   N/A    | 00000028 | C2686222 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00003444 | 7481A31A | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000022 | F1F5C1E3 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000410E | CE9E45B7 | ------ 3DC82376-637B-40A6-A8FC-A565417F2C38 | Ps2KeyboardDxe
+ Section             | PE32 image            |   N/A    | 000040C4 | 973E465F | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000022 | 0212248E | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00002B66 | B1EC1291 | ------ 202A2B0E-9A31-4812-B291-8747DF152439 | Ps2MouseDxe
+ Section             | PE32 image            |   N/A    | 00002B24 | 4674730D | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001C | 9F6E49B5 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Combined SMM/DXE      |   N/A    | 0000DFEA | E4DBDCA2 | ------ 69FD8E47-A161-4550-B01A-5594CEB2B2B2 | IdeBusDxe
+ Section             | MM dependency         |   N/A    | 00000082 | 71627F4C | ------- MM dependency section
+ Section             | DXE dependency        |   N/A    | 00000082 | 60E9FCE0 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 0000DEA4 | C7BDCC90 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000018 | ED41A1E6 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 4C4F5494 | ------- Version section
+ File                | DXE driver            |   N/A    | 00011672 | B11ED2C6 | ------ 93B80004-9FB3-11D4-9A3A-0090273FC14D | PciBusDxe
+ Section             | DXE dependency        |   N/A    | 000000EE | 6A312E59 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00011544 | 52759906 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000018 | B3373E9B | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00003C8A | 23B59220 | ------ 93B80003-9FB3-11D4-9A3A-0090273FC14D | IsaSerialDxe
+ Section             | PE32 image            |   N/A    | 00003C44 | 467D463D | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001E | 7194EF8F | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Combined SMM/DXE      |   N/A    | 00010856 | BC9A8957 | ------ 3ACC966D-8E33-45C6-B4FE-62724BCD15A9 | AhciBusDxe
+ Section             | MM dependency         |   N/A    | 00000016 | 5FAC0446 | ------- MM dependency section
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000107E4 | 7F4113CC | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001A | 1E5006F8 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 4C4F5494 | ------- Version section
+ File                | Combined SMM/DXE      |   N/A    | 00006DBA | D9388BAA | ------ 5BE3BDF4-53CF-46A3-A6A9-73C34A6E5EE3 | NvmExpressDxe
+ Section             | MM dependency         |   N/A    | 00000016 | 5FAC0446 | ------- MM dependency section
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00006D44 | 4C39061E | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | 8A281ED5 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 4C4F5494 | ------- Version section
+ File                | Combined SMM/DXE      |   N/A    | 000074CE | 0414EB7A | ------ BDFE430E-8F2A-4DB0-9991-6F856594777E | EhciDxe
+ Section             | MM dependency         |   N/A    | 00000028 | 5C873ECC | ------- MM dependency section
+ Section             | DXE dependency        |   N/A    | 00000028 | B413FA6D | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00007444 | D97A09CF | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000014 | 9DC2C13B | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 4C4F5494 | ------- Version section
+ File                | Combined SMM/DXE      |   N/A    | 0000840E | 1F0ED047 | ------ 356C2B12-3124-4451-BF66-B502D88A0074 | XhciDxe
+ Section             | MM dependency         |   N/A    | 00000028 | 5C873ECC | ------- MM dependency section
+ Section             | DXE dependency        |   N/A    | 00000028 | B413FA6D | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00008384 | C90D3ACE | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000014 | 72AFBDFC | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 4C4F5494 | ------- Version section
+ File                | Combined SMM/DXE      |   N/A    | 00008252 | 167D37E5 | ------ 31FD7EAF-80A7-435E-8E0A-3F185F8667DD | UsbCoreDxe
+ Section             | MM dependency         |   N/A    | 0000005E | 31A58516 | ------- MM dependency section
+ Section             | DXE dependency        |   N/A    | 0000004C | F9C0ED45 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00008164 | C359C44E | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001A | 11DA88F7 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 4C4F5494 | ------- Version section
+ File                | Combined SMM/DXE      |   N/A    | 000064B2 | E038AE36 | ------ 240612B7-A063-11D4-9A3A-0090273FC14D | UsbBusDxe
+ Section             | MM dependency         |   N/A    | 00000028 | 700BFD24 | ------- MM dependency section
+ Section             | DXE dependency        |   N/A    | 00000028 | B413FA6D | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00006424 | E23DB336 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000018 | ECC59921 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Combined SMM/DXE      |   N/A    | 000015B2 | B50FE146 | ------ B40612B9-A063-11D4-9A3A-0090273FC14D | UsbBotDxe
+ Section             | MM dependency         |   N/A    | 00000028 | 7C43A42A | ------- MM dependency section
+ Section             | DXE dependency        |   N/A    | 00000028 | B413FA6D | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001524 | 67E8A9B7 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000018 | E83687C5 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Combined SMM/DXE      |   N/A    | 00001512 | 84A272B0 | ------ A3527D16-E6CC-42F5-BADB-BF3DE177742B | UsbCbiDxe
+ Section             | MM dependency         |   N/A    | 00000028 | 7C43A42A | ------- MM dependency section
+ Section             | DXE dependency        |   N/A    | 00000028 | B413FA6D | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001484 | 0F03A3C1 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000018 | 39C66D05 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000035D2 | 6E077511 | ------ 9FB4B4A7-42C0-4BCD-8540-9BCC6711F83E | UsbMassStorageDxe
+ Section             | PE32 image            |   N/A    | 00003584 | 0428AFC8 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000028 | 45EFDCC4 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Combined SMM/DXE      |   N/A    | 000069A2 | 82057CA0 | ------ 2D2E62CF-9ECF-43B7-8219-94E7FC713DFE | UsbKbDxe
+ Section             | MM dependency         |   N/A    | 0000005E | 8DAA90B0 | ------- MM dependency section
+ Section             | DXE dependency        |   N/A    | 0000005E | 15C9CB20 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000068A4 | 0741EC76 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000016 | 67939558 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Combined SMM/DXE      |   N/A    | 00003F96 | F6C524AB | ------ 2D2E62AA-9ECF-43B7-8219-94E7FC713DFE | UsbMouseDxe
+ Section             | MM dependency         |   N/A    | 00000028 | 5C873ECC | ------- MM dependency section
+ Section             | DXE dependency        |   N/A    | 00000028 | B413FA6D | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00003F04 | A35E95A5 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001C | A273B9FE | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 00003F96 | 8685726D | ------ EF33C296-F64C-4146-AD04-347899702C84 | UsbLegacySmm
+ Section             | MM dependency         |   N/A    | 0000004C | 4E7D859D | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00003F04 | 2638A309 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001E | 6310D3A9 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 4C4F5494 | ------- Version section
+ File                | DXE driver            |   N/A    | 0000180A | 0AF9ADCD | ------ 2BDED685-F733-455F-A840-43A22B791FB3 | AcpiS3SaveDxe
+ Section             | DXE dependency        |   N/A    | 0000005E | FB45B91A | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001764 | E1E1106C | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | A600745E | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Combined SMM/DXE      |   N/A    | 0000C0D2 | EBDD5493 | ------ BDFE5FAA-2A35-44BB-B17A-8084D4E2B9E9 | FvbServicesRuntimeDxe
+ Section             | MM dependency         |   N/A    | 0000005E | 821D1DDB | ------- MM dependency section
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 0000C004 | 90A54A57 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000030 | 9A6E6500 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Combined SMM/DXE      |   N/A    | 000054B2 | D5BF8410 | ------ 74D936FA-D8BD-4633-B64D-6424BDD23D24 | FwBlockServiceSmm
+ Section             | MM dependency         |   N/A    | 00000028 | 78C05CEB | ------- MM dependency section
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00005424 | 92B0357D | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000028 | E67CD096 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000B08A | 61F9CFB9 | ------ B0C2372B-9393-4CBC-9CAF-53913C9DCE29 | FlashDeviceFvbRuntimeDxe
+ Section             | DXE dependency        |   N/A    | 00000028 | 30BCD443 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 0000B004 | 8C3AFD8E | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000036 | 5D58CF1D | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00002F2E | 0E8E2F5F | ------ 1967DD9B-B72C-4328-8C80-D4ACFC83FDF8 | PciHotPlugDxe
+ Section             | DXE dependency        |   N/A    | 00000082 | F22EA1C7 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00002E64 | 0955D7EA | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | 90E8F291 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 00001AD2 | AE77A82C | ------ 4FB2CE1F-1A3A-42E3-BD0C-7B84F954189A | AcpiCallbacksSmm
+ Section             | MM dependency         |   N/A    | 0000005E | 7F97B043 | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00001A24 | D3A27AC2 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000026 | 026667FA | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00001402 | AC2F9742 | ------ 27BEDA18-AE2B-43C2-AF6B-74952441DE28 | MonitorKeyDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000013A4 | 3FC5A377 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | 5CE1775C | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000080DE | 00C41E37 | ------ A368D636-4C77-4B50-AAE8-F99E2DA40440 | PnpRuntimeDxe
+ Section             | DXE dependency        |   N/A    | 00000094 | E63DBE28 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00008004 | 832D8877 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | D856EC25 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Combined SMM/DXE      |   N/A    | 00006942 | 629F2DE2 | ------ CC1BAA36-11EB-45CC-9ADC-7565E273AC70 | PnpSmm
+ Section             | MM dependency         |   N/A    | 0000004C | 1E3E6A4E | ------- MM dependency section
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000068A4 | C37C062B | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000012 | 8D27EF7E | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 0000381E | E271DFA2 | ------ 6069277B-246B-45D5-BD6D-81820E10C11F | CommonSmiCallBackSmm
+ Section             | MM dependency         |   N/A    | 00000082 | E6140041 | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00003744 | BFC93193 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002E | 851A36DF | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00005E16 | B6029C2C | ------ F9D88642-0737-49BC-81B5-6889CD57D9EA | SmbiosDxe
+ Section             | DXE dependency        |   N/A    | 00000094 | E63DBE28 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00005D44 | 0E0E0781 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000018 | 3B1B0CCD | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00001622 | 57AF7E02 | ------ D27FED59-ABB4-4FED-BEAD-2A878C7E4A7E | SmbiosMeasurementDxe
+ Section             | DXE dependency        |   N/A    | 00000028 | 0C46E763 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000015A4 | 98D2278B | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002E | 308AA182 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0001707E | 2201EA60 | ------ 348C4D62-BFBD-4882-9ECE-C80BB1C4783B | HiiDatabase
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00017024 | E6B1679F | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001C | 7780C467 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Combined SMM/DXE      |   N/A    | 0001122E | 5F9CAA4B | ------ E8571188-00C1-4ED4-B14E-E38451351EC4 | HddPassword
+ Section             | MM dependency         |   N/A    | 00000094 | B376ED3B | ------- MM dependency section
+ Section             | Raw                   |   N/A    | 0000004C | C534335F | ------- Raw section
+ Section             | DXE dependency        |   N/A    | 000000A6 | 3045ABA6 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00011064 | 86EF0A0D | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001C | 3413ADE9 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00002B52 | 0EBE0BD4 | ------ 42FCB444-B881-49D8-A6E9-5A1695FC9F3E | SysPassword
+ Section             | DXE dependency        |   N/A    | 0000004C | 9029B30B | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00002AC4 | A223AC15 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001C | 9BD4D175 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Combined SMM/DXE      |   N/A    | 00003AB2 | C1747FCE | ------ 70D57D67-7F05-494D-A014-B75D7345B700 | StorageSecurityCommandDxe
+ Section             | MM dependency         |   N/A    | 00000016 | 5FAC0446 | ------- MM dependency section
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00003A24 | BB451BC7 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000038 | 6417DD81 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 4C4F5494 | ------- Version section
+ File                | DXE driver            |   N/A    | 000026A2 | 7A7B9242 | ------ 9C452F5C-6200-4AA6-8068-F44B4F36D41E | H2OKeyDescDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00002644 | 08543611 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | A636B719 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Pad                   |   N/A    | 00000060 | D9EA0359 | ------ Padding file
+ File                | DXE driver            |   N/A    | 0000F592 | 40AFF0C4 | ------ 531AED6E-3DEE-45EB-8DF1-B70ADB1F885D | TrueTypeDecoderDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | Raw                   |   N/A    | 00000004 | CA4DE08B | ------- Raw section
+ Section             | PE32 image            |   N/A    | 0000F524 | 3DF6D0EC | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002A | 9DDB5EF7 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00002CB6 | 9E340164 | ------ B273CC44-E62A-41DC-9CAD-BDB4235459D8 | UnicodeCollationDxe
+ Section             | DXE dependency        |   N/A    | 0000005E | 9BC98009 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00002C04 | B5C8288F | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002C | 12E7A27F | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00002046 | FCCC580A | ------ 38A0EC22-FBE7-4911-8BC1-176E0D6C1DBD | IsaAcpi
+ Section             | DXE dependency        |   N/A    | 00000028 | 53FF9F75 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001FE4 | 63EED0BB | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000014 | F6ED9E53 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00009C3E | 426AB650 | ------ 408EDCEC-CF6D-477C-A5A8-B4844E3DE281 | ConSplitterDxe
+ Section             | DXE dependency        |   N/A    | 000000EE | 6A312E59 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00009B04 | 3CF65F5E | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000022 | 42133349 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00007646 | DCE0E43A | ------ CCCB0C28-4B24-11D5-9A5A-0090273FC14D | GraphicsConsoleDxe
+ Section             | DXE dependency        |   N/A    | 000000EE | 6A312E59 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00007504 | 810BE8A1 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002A | 0C7B3ADB | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00002636 | 4569E06B | ------ B5F33FB5-66D5-4901-BAF1-F0C774FC6588 | VgaDriverPolicyDxe
+ Section             | PE32 image            |   N/A    | 000025E4 | 9C38B6A4 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002A | 3629BCFD | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00002E3E | 5485A7A5 | ------ 2818256A-6BDB-4871-993C-95315854012E | EdidOverrideDxe
+ Section             | DXE dependency        |   N/A    | 000000EE | 6A312E59 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00002D04 | 59BA05A7 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000024 | 00AD5B8C | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000034CA | D0C875CB | ------ 1FA1F39E-FEFF-4AAE-BD7B-38A070A3B609 | PartitionDxe
+ Section             | PE32 image            |   N/A    | 00003484 | E45D4D91 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001E | 06398EBA | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00002F12 | 62D87ED6 | ------ EEC9BC9A-2907-4D59-8B86-D1EC67DE62E1 | GenericMemoryTestDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00002EA4 | 1125580A | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002E | 5014AD94 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000543E | FD977618 | ------ B7358BEB-6A52-4D50-98F9-7EDD70B4B320 | CommonPciPlatformDxe
+ Section             | DXE dependency        |   N/A    | 00000082 | B47108A2 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00005364 | 9B8ADF71 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002E | E1533656 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000F0A6 | 07A85E7D | ------ F122A15C-C10B-4D54-8F48-60F4F06DD1AD | LegacyBiosDxe
+ Section             | DXE dependency        |   N/A    | 000000DC | 7148BC21 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 0000EF84 | 87419520 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | F606FF1E | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00003186 | BFF7689F | ------ 5479662B-6AE4-49E8-A6BD-6DE4B625811F | KeyboardDxe
+ Section             | PE32 image            |   N/A    | 00003144 | 28F525C1 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001C | 16DA00CF | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000409A | C934443B | ------ 4495E47E-42A9-4007-8C17-B6664F909D04 | BlockIoDxe
+ Section             | DXE dependency        |   N/A    | 00000112 | E4B3D2AC | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00003F44 | 13499B47 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001A | CE0C1EBC | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Combined SMM/DXE      |   N/A    | 000015C6 | 682DBF73 | ------ 7D4E94A9-269A-47A1-80F0-2B0EB42F7B4B | Int15ServiceSmm
+ Section             | MM dependency         |   N/A    | 0000003A | 97AAC47C | ------- MM dependency section
+ Section             | DXE dependency        |   N/A    | 0000003A | A450766C | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001504 | 00FE5B36 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000024 | 4F2E591D | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00008E6A | 7F1C7257 | ------ 0B04B2ED-861C-42CD-A22F-C3AAFACCB896 | BiosVideoDxe
+ Section             | DXE dependency        |   N/A    | 00000100 | 218AC820 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00008D24 | BEB8E4D5 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001E | 09AD5082 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000078E2 | 90C684AC | ------ F84CFFF4-511E-41C8-B829-519F5152F444 | LegacyBiosPlatformDxe
+ Section             | DXE dependency        |   N/A    | 000000A6 | 1DB913E5 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000077E4 | C528697B | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000030 | 6CB1FDF9 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 00003F8A | 57473172 | ------ 396E583B-D2DD-45F6-86E8-119885777CDE | AtaLegacySmm
+ Section             | MM dependency         |   N/A    | 0000005E | 597DF5FE | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00003EE4 | 557D3027 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001E | EBB68438 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 4C4F5494 | ------- Version section
+ File                | SMM module            |   N/A    | 00002156 | 1BE429DA | ------ 4AAAE990-5F1C-4BA3-B0CE-66754D383521 | NvmExpressLegacySmm
+ Section             | MM dependency         |   N/A    | 0000005E | B70E20F4 | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 000020A4 | 7BE296DB | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002C | EB955FDA | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 4C4F5494 | ------- Version section
+ File                | DXE driver            |   N/A    | 00001296 | C49D9B3D | ------ C7D4F4E3-DAEA-40B0-8846-F4CAF3135CE8 | BiosProtectDxe
+ Section             | DXE dependency        |   N/A    | 00000028 | 53FF9F75 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001224 | 7F8DF419 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000022 | 0447405B | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 00004B5A | 00A25BBF | ------ C7EA9F94-1547-44F0-863F-563EAE79E1C0 | TianoCompressSmm
+ Section             | MM dependency         |   N/A    | 00000028 | 78C05CEB | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00004AE4 | 5AE659EB | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000026 | 9FDBBC4C | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000011BA | D777DEDE | ------ 0541150C-E33B-4DAF-A263-02E4BB4BF1CF | SecurityErrorHandlingDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001144 | AE3E20BF | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000036 | F656B7AD | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00005556 | 4C0482AB | ------ 6B1AB225-2E47-4A61-8FF5-B8EA42EE3EA8 | SecureFlashDxe
+ Section             | DXE dependency        |   N/A    | 00000028 | 80F1E4F9 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000054E4 | 458A9AA5 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000022 | 33293E87 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Freeform              |   N/A    | 00000341 | 3FD633BC | ------ 9F4F421C-CE02-42C1-92FB-CF26C52B9526
+ Section             | Raw                   |   N/A    | 00000329 | FEF21F08 | ------- Raw section
+ File                | DXE driver            |   N/A    | 0000607E | D5E8BB4B | ------ E8DDEB8B-82D7-4B6E-A2B4-D5EAEC2B8976 | IrsiRegistrationRuntimeDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00006004 | 0DE5FA2A | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000003A | 81A8A3A4 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00009076 | 16CCA52C | ------ BA118F88-5B65-4584-9C5A-C2D087F6ED1E | IrsiRuntimeDxe
+ Section             | DXE dependency        |   N/A    | 00000028 | 49542225 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00009004 | E7286EA6 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000022 | E6E25BDC | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000808E | AB8BE9DC | ------ B795675E-7583-4F98-AC6A-F9DDBBCC32E8 | SystemFirmwareManagementRuntimeDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00008004 | C3092AC0 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000004A | 5CA78F5A | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0007A07A | DA0D2CC4 | ------ 42857F0A-13F2-4B21-8A23-53D3F714B840 | CapsuleRuntimeDxe
+ Section             | DXE dependency        |   N/A    | 00000028 | E91AF10E | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 0007A004 | 632C1F4D | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000028 | E6C4F29F | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00009C6A | 8990CA94 | ------ C62CEB80-FB40-4A46-A5E5-C1D997C36DFC | CapsuleLoaderTriggerDxe
+ Section             | DXE dependency        |   N/A    | 0000004C | C8328AFA | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00009BC4 | E940532C | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000034 | 736722D3 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000B9BA | 64AC0A13 | ------ 043DF38F-32E1-4893-911F-37A7FE91F723 | CapsuleProcessorDxe
+ Section             | DXE dependency        |   N/A    | 00000082 | F5CE5916 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 0000B8E4 | 3F999E98 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002C | EA78EB3E | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00001712 | 1F2B8888 | ------ 78D19E50-2B62-407F-9F49-C652A4124002 | VariableRegionInfoDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000016A4 | 7F5E470B | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000030 | D44A2E48 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00004252 | F57E37F8 | ------ 13863F79-D94B-4205-BB0F-E4E06AAA5A4E | DelayUefiRaidOprom
+ Section             | DXE dependency        |   N/A    | 0000003A | 55703808 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000041C4 | EFE95013 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002A | 5552FAA2 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00006072 | 768909BD | ------ 4B28E4C7-FF36-4E10-93CF-A82159E777C5 | ResetSystemRuntimeDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00006004 | 6B71CABB | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000030 | 610E4DCC | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Application           |   N/A    | 00003FCE | F759CC26 | ------ 3935B0A1-A182-4887-BC56-675528E78877 | SetupUtilityApp
+ Section             | PE32 image            |   N/A    | 00003F84 | 61C92020 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000024 | 85C769FF | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0001BBC2 | F964F68D | ------ 847BC3FE-B974-446D-9449-5AD5412E993B | BootManagerDxe
+ Section             | DXE dependency        |   N/A    | 00000070 | F9F8FAFC | ------- DXE dependency section
+ Section             | Raw                   |   N/A    | 00000064 | 183AC6DA | ------- Raw section
+ Section             | PE32 image            |   N/A    | 0001BAA4 | CC2F380A | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000022 | 54D0406F | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00024C96 | 5D5B1AD4 | ------ 167CC1F7-F4AB-46CC-8773-6278056C14EB | BootMaintDxe
+ Section             | DXE dependency        |   N/A    | 00000070 | F9F8FAFC | ------- DXE dependency section
+ Section             | Raw                   |   N/A    | 0000007C | D1D995DB | ------- Raw section
+ Section             | PE32 image            |   N/A    | 00024B64 | C94DFF4C | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001E | E195BA32 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00010F3E | A9105E2B | ------ E4ED28FD-13C1-40C4-B55A-C5260771A2CF | DeviceManagerDxe
+ Section             | DXE dependency        |   N/A    | 00000070 | F9F8FAFC | ------- DXE dependency section
+ Section             | Raw                   |   N/A    | 0000007C | 60BABD5E | ------- Raw section
+ Section             | PE32 image            |   N/A    | 00010E04 | FEC0A48A | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000026 | 58A23C9F | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00016266 | 279026B7 | ------ 5F53F1DE-E647-425D-8B59-2DDEE19E8C76 | SecureBootMgrDxe
+ Section             | DXE dependency        |   N/A    | 00000070 | F9F8FAFC | ------- DXE dependency section
+ Section             | Raw                   |   N/A    | 00000064 | EB952DB8 | ------- Raw section
+ Section             | PE32 image            |   N/A    | 00016144 | 1BB77C48 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000026 | 27DACBA5 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Freeform              |   N/A    | 000001CC | D8115CFE | ------ BF58B971-4818-43F5-866F-535D8FA0FB62
+ Section             | Raw                   |   N/A    | 000001B4 | 3FBC64C0 | ------- Raw section
+ File                | Freeform              |   N/A    | 00017DCC | CB124A60 | ------ 1547B4F3-3E8A-4FEF-81C8-328ED647AB1A
+ Section             | Raw                   |   N/A    | 00017DB4 | D4AD07EF | ------- Raw section
+ File                | Freeform              |   N/A    | 00041F04 | F1D47299 | ------ 931F77D1-10FE-48BF-AB72-773D389E3FAA
+ Section             | Raw                   |   N/A    | 00041EEC | 96623BE4 | ------- Raw section
+ File                | Freeform              |   N/A    | 00006C6D | BFB7A8C4 | ------ 771F77D1-13AF-48BF-2584-773D389E33CA
+ Section             | Raw                   |   N/A    | 00006C55 | 34F8963A | ------- Raw section
+ File                | Freeform              |   N/A    | 0000A4DE | C4D7A484 | ------ 96DCE314-3628-4256-A02E-3B10C61D85FD
+ Section             | Raw                   |   N/A    | 0000A4C6 | 8151B2F2 | ------- Raw section
+ File                | Freeform              |   N/A    | 000081F0 | 2420FE15 | ------ 931F00D1-10FE-48BF-AB72-773D389E3FDA
+ Section             | Raw                   |   N/A    | 000081D8 | CBDBDFB3 | ------- Raw section
+ File                | Freeform              |   N/A    | 00007A42 | B42787FF | ------ 2132D258-DCB6-42E9-A243-064A9568D512
+ Section             | Raw                   |   N/A    | 00007A2A | E84DAB60 | ------- Raw section
+ File                | DXE driver            |   N/A    | 00001872 | C10DF424 | ------ D2B6C80A-FAFE-4512-835D-50D136540AAA | MultiConfigUpdateDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001804 | DB445DBF | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002E | 5E761B42 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 00010D22 | C1CB44CA | ------ 87C2106E-8790-459D-BD44-2EF32A68C3F9 | IhisiServicesSmm
+ Section             | MM dependency         |   N/A    | 00000070 | AE93D324 | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00010C64 | 65506043 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000026 | C923280E | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00003406 | 637D50A9 | ------ 3D2F8940-A850-4543-B294-9B0BD0E750C7 | HstiDxe
+ Section             | DXE dependency        |   N/A    | 00000028 | C2686222 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000033A4 | 30E1886C | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000014 | C5828090 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000015C2 | 91BC71A6 | ------ AA48FBB2-9F87-4DFD-B416-575938F0C8F4 | PropertiesTableAttributesDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001544 | 24F7BC6C | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000003E | E7C6752B | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Combined SMM/DXE      |   N/A    | 00001B4E | D2AACF95 | ------ A8913EC1-C00C-4C3A-A245-077C0CA35738 | AspmOverrideDxe
+ Section             | MM dependency         |   N/A    | 00000028 | 4C64743B | ------- MM dependency section
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001AC4 | 78767471 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000024 | 11989B92 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Freeform              |   N/A    | 0001E9F7 | 034D1C57 | ------ 0E8B5F41-6845-484D-8D53-EFA3174D0A0C
+ Section             | Raw                   |   N/A    | 0001E9DF | 9F75FE7B | ------- Raw section
+ File                | DXE driver            |   N/A    | 00000D26 | D3F08536 | ------ A2760074-ED4C-4719-8382-C942CBF16D85 | DisplayTypeDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00000CC4 | 56C8F008 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000022 | 435C2B4F | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0007D07A | E94465E6 | ------ 6AD37609-A9F9-4587-9023-7820E10F5B7A | HiiLayoutPkgDxe
+ Section             | Raw                   |   N/A    | 0000004C | 9BCED686 | ------- Raw section
+ Section             | PE32 image            |   N/A    | 0007CFE4 | D88C1193 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000024 | 9AB723AE | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0003196E | 8417EC66 | ------ 9E5DAEB4-4B91-4466-9EBE-81C7E4401E6D | H2OFormBrowserDxe
+ Section             | DXE dependency        |   N/A    | 00000070 | B6D03BAD | ------- DXE dependency section
+ Section             | Raw                   |   N/A    | 0000004C | 6DD9C51D | ------- Raw section
+ Section             | PE32 image            |   N/A    | 00031864 | BF6912C2 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000028 | F230BA7E | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0001962E | 606A0DB7 | ------ F1C50D3A-58E4-4104-9176-00CDF8BC4BB2 | H2ODisplayEngineLocalTextDxe
+ Section             | DXE dependency        |   N/A    | 00000082 | D63E4936 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00019544 | 925840EE | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000003E | 7C9A0FE3 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00001EBA | FD587C20 | ------ C613EC78-63ED-4B93-ACD4-54B3D4CCC268 | NetworkLockerDxe
+ Section             | DXE dependency        |   N/A    | 00000028 | 41355AFF | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001E44 | 44AA2E12 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000026 | A0428F06 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00004B5A | 8F59B6ED | ------ 9C7CCB02-9154-4864-9E4B-DC0487E37660 | DhcpDummyDxe
+ Section             | DXE dependency        |   N/A    | 000000EE | 6A312E59 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00004A24 | 672CD22C | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001E | 1585B202 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000337E | 2AF46F31 | ------ F0F1588E-9028-4EB8-8031-F233B48EA0B7 | PxeDummyDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 0F7026A7 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00003324 | 897634A9 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001C | 4CE88ED4 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000055DE | B27E8817 | ------ E1CEE6E3-6C42-4A4F-916E-38385290A556 | SnpDxe
+ Section             | PE32 image            |   N/A    | 000055A4 | D63E6B5B | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000012 | 11974950 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Pad                   |   N/A    | 00000068 | A8B3B7F4 | ------ Padding file
+ File                | DXE driver            |   N/A    | 00000B5A | 855041EB | ------ A210F973-229D-4F4D-AA37-9895E6C9EABA | DpcDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | Raw                   |   N/A    | 00000004 | CA4DE08B | ------- Raw section
+ Section             | PE32 image            |   N/A    | 00000B04 | BB77C13C | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000012 | 3B58DBF5 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000071FE | DF3540DA | ------ 025BBFC7-E6A9-4B8B-82AD-6815A1AEAF4A | MnpDxe
+ Section             | PE32 image            |   N/A    | 000071C4 | 26C0A02B | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000012 | BCBE20BC | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000102BE | B8C9CDE6 | ------ 9FB1A1F3-3B71-4324-B39A-745CBB015FFF | Ip4Dxe
+ Section             | PE32 image            |   N/A    | 00010284 | E69EF436 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000012 | D76A369F | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000072BE | F94DE653 | ------ 6D6963AB-906D-4A65-A7CA-BD40E5D6AF2B | Udp4Dxe
+ Section             | PE32 image            |   N/A    | 00007284 | 039C2F0A | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000014 | 667C5C7C | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00007CE2 | A78B0336 | ------ 94734718-0BBC-47FB-96A5-EE7A5AE6A2AD | Dhcp4Dxe
+ Section             | PE32 image            |   N/A    | 00007CA4 | F78A31D3 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000016 | 5620EFF1 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00007762 | 726F2371 | ------ 0BB51CDD-A750-442F-A15E-7DEADFBA30FF | Mtftp4Dxe
+ Section             | PE32 image            |   N/A    | 00007724 | 481FB761 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000018 | 1316C69E | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000361E | 51C13FC1 | ------ 529D3F93-E8E9-4E73-B1E1-BDF6A9D50113 | ArpDxe
+ Section             | PE32 image            |   N/A    | 000035E4 | 396B3DAD | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000012 | 9F5911EC | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000174BE | F312F12E | ------ 5BEDB5CC-D830-4EB2-8742-2D4CC9B54F2C | Ip6Dxe
+ Section             | PE32 image            |   N/A    | 00017484 | FA7FB03F | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000012 | D39FE6A2 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000715E | 3C6FA2B3 | ------ 40008162-93D0-48F2-80DA-7E32F4C98F8B | Udp6Dxe
+ Section             | PE32 image            |   N/A    | 00007124 | 4EE4CC1E | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000014 | 62898C41 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00008522 | ED86A52D | ------ 94E24C26-80FA-427D-80FB-E374E9E9BF85 | Dhcp6Dxe
+ Section             | PE32 image            |   N/A    | 000084E4 | DA29FB56 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000016 | 52D53FCC | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00007F22 | 235DC956 | ------ 2EC499F9-0337-4DA1-91CA-6BC4E8C03DA2 | Mtftp6Dxe
+ Section             | PE32 image            |   N/A    | 00007EE4 | B1231DAC | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000018 | 17E316A3 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0001308A | 9152A269 | ------ AE724F8D-62C6-4638-A065-0138F47B6D23 | UefiPxeBcDxe
+ Section             | PE32 image            |   N/A    | 00013044 | 2BE35C63 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001E | 7426BBE3 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Freeform              |   N/A    | 00001A5D | 3FBF617A | ------ 5B1E5B38-8EBD-4784-9B52-38B2AA9BFF2F
+ Section             | Raw                   |   N/A    | 00001A45 | 62538EC7 | ------- Raw section
+ File                | DXE driver            |   N/A    | 00005B62 | 13CFA02C | ------ 162793AA-0FE7-4010-9818-45F55C5CCC3E | AmdCpmInitDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00005B04 | E465BEE7 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | 0FA0935D | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 000050A6 | CE01A151 | ------ 30AF1245-A58E-4EF7-8C75-B725939B3B9F | AmdCpmInitSmm
+ Section             | MM dependency         |   N/A    | 0000003A | B2884F39 | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00005024 | C08C2886 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | EF7110A8 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Freeform              |   N/A    | 00001098 | FC061297 | ------ 3C673CCC-25E0-454B-A4B9-108FB8CAAC1A
+ Section             | Raw                   |   N/A    | 00001080 | 8426E905 | ------- Raw section
+ File                | Freeform              |   N/A    | 00001140 | 2674F381 | ------ 96A507FB-20F6-44F3-9B91-75ABD0E0493B
+ Section             | Raw                   |   N/A    | 00001128 | 4FDE40CF | ------- Raw section
+ File                | Freeform              |   N/A    | 00001148 | 7B7F494A | ------ 5D263214-3BB4-43CC-B203-87D4B1F9E6F2
+ Section             | Raw                   |   N/A    | 00001130 | 2BCDD5A6 | ------- Raw section
+ File                | Freeform              |   N/A    | 0000113C | 9C10C532 | ------ 652EF761-119A-4FD2-B21E-EFD83493BA5A
+ Section             | Raw                   |   N/A    | 00001124 | 48B1BF82 | ------- Raw section
+ File                | Freeform              |   N/A    | 00001140 | 55430327 | ------ 1CC2006D-FABC-4936-A552-DC1EC2A444D0
+ Section             | Raw                   |   N/A    | 00001128 | 83057384 | ------- Raw section
+ File                | Freeform              |   N/A    | 00000A91 | DD3E13B9 | ------ 9D695853-A840-4670-9DAE-951116E81151
+ Section             | Raw                   |   N/A    | 00000A79 | 3EE71BE6 | ------- Raw section
+ File                | Freeform              |   N/A    | 00000ADD | A4D060E0 | ------ E751E272-9D7A-4E8F-8BB4-522152E8EB49
+ Section             | Raw                   |   N/A    | 00000AC5 | B6FCC6BA | ------- Raw section
+ File                | Freeform              |   N/A    | 00000548 | 46E45DA9 | ------ C7E9B6A4-7149-4135-BDFC-B8327BBC9325
+ Section             | Raw                   |   N/A    | 00000530 | 27E236DC | ------- Raw section
+ File                | Freeform              |   N/A    | 0000006C | 3BCAE8E8 | ------ 78DB63B7-E9F4-4244-90C6-F5845912EB3B
+ Section             | Raw                   |   N/A    | 00000054 | 8E602BB9 | ------- Raw section
+ File                | Freeform              |   N/A    | 000000F3 | 80A601A7 | ------ 245031A5-33E6-4962-9B66-95CF63263666
+ Section             | Raw                   |   N/A    | 000000DB | 7E73365E | ------- Raw section
+ File                | Freeform              |   N/A    | 000000A8 | 00904395 | ------ E0EC8F82-FD17-4F8D-8DFF-A4CFFBE74C4D
+ Section             | Raw                   |   N/A    | 00000090 | D6F7CE13 | ------- Raw section
+ File                | Freeform              |   N/A    | 000000A2 | 3DFD25BE | ------ 6476864D-F8A0-460E-947B-5F7B88A52116
+ Section             | Raw                   |   N/A    | 0000008A | 1901AAA5 | ------- Raw section
+ File                | DXE driver            |   N/A    | 00003ADA | F6CCB339 | ------ 57E9EEE9-EB7D-4453-BBF7-6C138BF06458 | AmdCpmDisplayFeatureDxe
+ Section             | DXE dependency        |   N/A    | 0000003A | E1AB74CA | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00003A44 | D675A717 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000034 | BFE83112 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 00002A2E | 9D084423 | ------ 30AF4110-A58E-4EF7-8C75-B725939B3B9F | AmdCpmDisplayFeatureSmm
+ Section             | MM dependency         |   N/A    | 00000070 | 462CE3E5 | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00002964 | EE857602 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000034 | 5F39B2E7 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Freeform              |   N/A    | 000000EC | 00AE13CF | ------ 5F26CA84-837D-4C3E-9D76-B6A788B75057
+ Section             | Raw                   |   N/A    | 000000D4 | 679BE05A | ------- Raw section
+ File                | Freeform              |   N/A    | 00000242 | A8E051D1 | ------ 798E5415-D6FE-4663-817C-CEFD59B7D7A5
+ Section             | Raw                   |   N/A    | 0000022A | 1031CBD4 | ------- Raw section
+ File                | Freeform              |   N/A    | 000005DD | 25316FE2 | ------ F00B910D-67A7-48F3-8296-920C233262D5
+ Section             | Raw                   |   N/A    | 000005C5 | E71948CD | ------- Raw section
+ File                | Freeform              |   N/A    | 0000038E | A36400C9 | ------ 246653E0-99EF-4C1A-9A68-B3184DB62FD9
+ Section             | Raw                   |   N/A    | 00000376 | D9EBF238 | ------- Raw section
+ File                | DXE driver            |   N/A    | 0000102E | D3935A59 | ------ C5FA0EE8-2D81-4202-A021-3DA700B3DEAE | AmdCpmPcieInitDxe
+ Section             | DXE dependency        |   N/A    | 0000003A | E1AB74CA | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00000FA4 | 1EACA11D | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000028 | A0AA56E8 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00000DCE | EBA801E9 | ------ 71032D4B-4B91-4EC1-AD53-81827FB43108 | AmdCpmGpioInitDxe
+ Section             | DXE dependency        |   N/A    | 0000003A | E1AB74CA | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00000D44 | 7969773C | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000028 | 6CD33C2C | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 0000105E | E5CCB104 | ------ CD1C556B-62BF-4EEC-8E73-7731F8E847B2 | AmdCpmGpioInitSmm
+ Section             | MM dependency         |   N/A    | 0000004C | DE5425D2 | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00000FC4 | BF4E5746 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000028 | 8C02BFD9 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Freeform              |   N/A    | 000000E3 | 4A9576BB | ------ A7D18461-72A5-4BC7-9EFC-31E4D35B8214
+ Section             | Raw                   |   N/A    | 000000CB | 282A7162 | ------- Raw section
+ File                | DXE driver            |   N/A    | 00000716 | 2C38C1FD | ------ 38D51B46-D275-475C-A951-80A7E1CF38B1 | AmdCpmSensorFusionDxe
+ Section             | DXE dependency        |   N/A    | 0000003A | E1AB74CA | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00000684 | C6F8F3D1 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000030 | 28BC3BDC | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00001AD6 | 6BC6D42D | ------ 5C9D17C2-4DD8-45D9-8E06-BDD3F8B45E4B | AmdI2cMasterDxe
+ Section             | DXE dependency        |   N/A    | 00000028 | 1F10E1EC | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001A64 | 088DC383 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000024 | 754DFD44 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00002C0E | 100DC0A7 | ------ 28374747-76FF-41B3-9740-381EFAEF13BC | PspPlatform
+ Section             | DXE dependency        |   N/A    | 00000028 | C2686222 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00002BA4 | C2AE900A | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001C | B41A2C5C | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000090A2 | 82292A8B | ------ BBB77CB9-762D-436C-AC40-8EE4901C3446 | AmdPbsSetupDxe
+ Section             | DXE dependency        |   N/A    | 00000070 | CD0A096E | ------- DXE dependency section
+ Section             | Raw                   |   N/A    | 00000064 | E3B83ED7 | ------- Raw section
+ Section             | PE32 image            |   N/A    | 00008F84 | 43FCE02C | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000022 | 1BF82B34 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000011EE | 184E4CE9 | ------ B6B643B8-2B41-4A61-A224-D4F476EF580C | AmdCpmOemInitDxe
+ Section             | DXE dependency        |   N/A    | 0000003A | E1AB74CA | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001164 | B910788D | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000026 | FF360574 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 00000F36 | E54CCC83 | ------ B9B0F38D-1F27-4F46-9F44-42D694729882 | AmdCpmOemSmm
+ Section             | MM dependency         |   N/A    | 0000004C | FB02B1A0 | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00000EA4 | 80293AF6 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001E | 098E0B84 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000062B2 | 9768C5A7 | ------ 9B0FF2C0-E245-11E1-8EFF-D0DF9A35C106 | ChipsetSvcDxe
+ Section             | DXE dependency        |   N/A    | 00000028 | C2686222 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00006244 | 5C19E266 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | 0404D3A5 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 00002F16 | 64AAED19 | ------ D359DE86-0A1B-47BC-95D2-1D1F8FFF0AD8 | ChipsetSvcSmm
+ Section             | MM dependency         |   N/A    | 0000004C | 76B771E9 | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00002E84 | 452193E9 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | E4D55050 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0004B58E | 2BE6C7C1 | ------ FE3542FE-C1D3-4EF8-657C-8048606FF670 | SetupUtility
+ Section             | DXE dependency        |   N/A    | 000000B8 | 81CE6D26 | ------- DXE dependency section
+ Section             | Raw                   |   N/A    | 000000AC | FD506ABF | ------- Raw section
+ Section             | PE32 image            |   N/A    | 0004B3E4 | AAFD8DA4 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001E | D0F754F3 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 4C4F5494 | ------- Version section
+ File                | DXE driver            |   N/A    | 00010BFE | 47493376 | ------ FF189B79-F558-4B6A-8A78-6FCD2B4B0E3C | FrontPageDxe
+ Section             | DXE dependency        |   N/A    | 00000070 | F9F8FAFC | ------- DXE dependency section
+ Section             | Raw                   |   N/A    | 00000064 | 17310E80 | ------- Raw section
+ Section             | PE32 image            |   N/A    | 00010AE4 | 2F62823E | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001E | 8B9D79CA | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000007E6 | F9C16C75 | ------ 8C439043-85CA-467A-96F1-CB14F4D0DCDA | LegacyRegionDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00000784 | B9D14820 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000024 | B321ACFE | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000120A | B72B0B8A | ------ EC2BEECA-E84A-445B-869B-F7A73C96F58A | LegacyRegion2Dxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000011A4 | E458B9E4 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000026 | 4E63DA32 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000090E6 | 611F438E | ------ 2383608E-C6D0-4E3E-858D-45DFAC3543D5 | PciHostBridge
+ Section             | DXE dependency        |   N/A    | 0000003A | B768FB62 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00009064 | 9EE2286C | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | D590E973 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Pad                   |   N/A    | 00000018 | 9BDC9D65 | ------ Padding file
+ File                | DXE driver            |   N/A    | 00002926 | F17D2B10 | ------ 440C38B7-ED16-49EA-9669-317EF906635D | I2cMasterDxe
+ Section             | DXE dependency        |   N/A    | 00000028 | 79E02601 | ------- DXE dependency section
+ Section             | Raw                   |   N/A    | 00000014 | D719C651 | ------- Raw section
+ Section             | PE32 image            |   N/A    | 000028A4 | EB79102C | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001E | 4FEAD95B | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 4C4F5494 | ------- Version section
+ File                | DXE driver            |   N/A    | 00001CDE | 4B95F5BF | ------ 0325B5A1-0937-4A4F-B8AF-EC3F80EE6B35 | SataControllerLite
+ Section             | DXE dependency        |   N/A    | 00000028 | 79E02601 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001C64 | C1C39A7B | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002A | E3D3D87A | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000022B2 | E245175D | ------ 84D4AD5B-1702-442E-BDD8-57E1196111E5 | SmmAccessDxe2
+ Section             | DXE dependency        |   N/A    | 00000028 | 5DD142BE | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00002244 | 433EDFC4 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | E8D7DF83 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000582E | 8BE2830D | ------ 12AEDBEA-392D-4E2A-8789-5F6DC6B23661 | OemBadgingSupportDxe
+ Section             | DXE dependency        |   N/A    | 000000A6 | 0070C6A9 | ------- DXE dependency section
+ Section             | Raw                   |   N/A    | 0000004C | 8AD19BB3 | ------- Raw section
+ Section             | PE32 image            |   N/A    | 000056E4 | 699212DB | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002E | 40A2200A | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00000576 | ACDE4384 | ------ F11757E2-1D21-47BB-9E07-04C60DA00ECA | UnexpectedIrqWA
+ Section             | DXE dependency        |   N/A    | 00000028 | 1E31DEFB | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00000504 | CEA0A6D9 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000024 | 00E37989 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 00007006 | 0FBE21C8 | ------ 7B7B65B6-E350-4139-8FE4-665772D32A47 | IhisiSmm
+ Section             | MM dependency         |   N/A    | 00000082 | E317D991 | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00006F44 | 2C318317 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000016 | AC19A67C | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 00003D76 | 286490D0 | ------ E4D932F4-31C9-4075-8FA3-4030F7EB767A | SmmPlatform
+ Section             | MM dependency         |   N/A    | 00000070 | EDDD4031 | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00003CC4 | 3B960E56 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001C | D8D61E3D | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Freeform              |   N/A    | 000066D6 | 4A57059E | ------ 7E374E25-8E01-4FEE-87F2-390C23C606CD
+ Section             | Raw                   |   N/A    | 000000A9 | B8542E3A | ------- Raw section
+ Section             | Raw                   |   N/A    | 0000002C | 75956D62 | ------- Raw section
+ Section             | Raw                   |   N/A    | 00000118 | 4AE86F2F | ------- Raw section
+ Section             | Raw                   |   N/A    | 00000044 | 38CBC54A | ------- Raw section
+ Section             | Raw                   |   N/A    | 0000003C | 70054AF8 | ------- Raw section
+ Section             | Raw                   |   N/A    | 0000013C | 4837EDCB | ------- Raw section
+ Section             | Raw                   |   N/A    | 00000040 | EA37623E | ------- Raw section
+ Section             | Raw                   |   N/A    | 0000017A | 1E631DDC | ------- Raw section
+ Section             | Raw                   |   N/A    | 00000054 | 1A1D5F97 | ------- Raw section
+ Section             | Raw                   |   N/A    | 00006102 | C7A61272 | ------- Raw section
+ File                | Combined SMM/DXE      |   N/A    | 0000576E | BB4E481B | ------ E80DE38B-6D52-48D5-8BA2-52828AEE6221 | OhciDxe
+ Section             | MM dependency         |   N/A    | 00000028 | 5C873ECC | ------- MM dependency section
+ Section             | DXE dependency        |   N/A    | 00000028 | B413FA6D | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000056E4 | AADB6789 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000014 | 69717B17 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 4C4F5494 | ------- Version section
+ File                | DXE driver            |   N/A    | 00003B0A | 1075CC4A | ------ 94EDD12A-419B-447F-9434-9B3B70783903 | DxePlatform
+ Section             | DXE dependency        |   N/A    | 00000082 | D9F176AA | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00003A44 | 99FEE126 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001C | E9003D44 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 4C4F5494 | ------- Version section
+ File                | DXE driver            |   N/A    | 00000A42 | 8FC02F25 | ------ A94B6FBA-BB07-4A98-8749-A860D6EB7724 | LegacyBiosPlatformHookDxe
+ Section             | DXE dependency        |   N/A    | 0000005E | A3F374CC | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00000984 | 8C5F868D | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000038 | C060593D | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Freeform              |   N/A    | 0000D41C | 52BC4795 | ------ 8DFAE5D4-B50E-4C10-96E6-F2C266CACBB6
+ Section             | Raw                   |   N/A    | 0000D404 | 262727AC | ------- Raw section
+ File                | DXE driver            |   N/A    | 00011CB4 | 6739EA65 | ------ A8DAFB9B-3529-4E87-8584-ECDB6A5B78B6
+ Section             | DXE dependency        |   N/A    | 00000016 | 63FA8501 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00011C84 | 54D5ACD1 | ------- PE32 image section
+ File                | Freeform              |   N/A    | 0000004D | C9E2B7E6 | ------ A9943829-A25A-4B94-AC0B-99DD37099F76
+ Section             | Raw                   |   N/A    | 00000035 | 3CCFD07F | ------- Raw section
+ File                | SMM module            |   N/A    | 00002BF6 | D368A21D | ------ BC05DC37-9DA0-4050-9728-F34DDB01E301 | SpiLockSmi
+ Section             | MM dependency         |   N/A    | 00000070 | 646DDEFD | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00002B44 | B9D8E647 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001A | 59780E6B | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000211E | 326E6049 | ------ BC05DC37-9DA0-4050-9728-F34DDB01E200 | BiosRegionLockEntry
+ Section             | DXE dependency        |   N/A    | 00000028 | C2686222 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000020A4 | 6EE98EB8 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002C | 49AF34FB | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000023B6 | EC57A72E | ------ 2D7FCD87-4554-4564-B811-0F9167F782B3 | CrbAcpiPlatform
+ Section             | DXE dependency        |   N/A    | 00000028 | 07713B6D | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00002344 | 0E886009 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000024 | 93094880 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000326E | 353B563A | ------ ABFE2830-855B-4A98-94D6-EEB23D1EBF45 | AmdIdsDebugPrintDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00003204 | D1C157A3 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002C | 58E969FE | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00000592 | 16AFEAC0 | ------ 9FF8B917-D14C-4A43-9314-123DA3960AD6 | AmdMemAm4Dxe
+ Section             | DXE dependency        |   N/A    | 00000028 | E77F7068 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00000524 | 3D2F1F99 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001E | B2687015 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00002F06 | 46B3A1F0 | ------ 0A9F795E-B9FC-4117-BC4E-138695D16562 | AmdSocFp5RvDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00002EA4 | A51A09F2 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000022 | BACC7239 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00000E56 | 5C8DB996 | ------ 8624F36D-6DE0-44C3-8322-74AD419D3A90 | AmdErrorLogDxe
+ Section             | DXE dependency        |   N/A    | 00000028 | 0EDFE281 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00000DE4 | 865DA80D | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000022 | 8F304031 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00001A92 | 2AF8F86C | ------ 023B3AA9-098F-4027-B83F-B6407DA06569 | AmdPspFtpmDxe
+ Section             | DXE dependency        |   N/A    | 00000028 | 84BC8F4F | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001A24 | A429399A | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | 9DEB56E7 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 00007A16 | 4208DB60 | ------ 4759E93E-8F44-448F-88A1-BD97FC47BEA5 | AmdPspP2CmboxV2
+ Section             | MM dependency         |   N/A    | 000000A6 | 6B25F551 | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00007924 | 49B26C9F | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000024 | 54487961 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 000072EE | A68DD69A | ------ 6169AB1C-B05F-4D9C-AFEA-192911E41CE2 | AmdPspSmmV2
+ Section             | MM dependency         |   N/A    | 000000A6 | FCBEE480 | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00007204 | 88249273 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001C | CC75526C | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000078B2 | DCEC3F9E | ------ 8B786703-E8C7-4BEA-8F07-CDF991B90999 | AmdPspDxeV2
+ Section             | DXE dependency        |   N/A    | 0000004C | 7F8AE226 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00007824 | 2E74692D | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001C | A6970706 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Pad                   |   N/A    | 00000040 | FCA037EF | ------ Padding file
+ File                | DXE driver            |   N/A    | 00001D5E | D9FCB7BB | ------ 5466B9AA-EE2F-4FDB-84A3-A330BE1301FF | AmdHstiV2
+ Section             | DXE dependency        |   N/A    | 00000028 | 7603C0D4 | ------- DXE dependency section
+ Section             | Raw                   |   N/A    | 00000014 | D719C651 | ------- Raw section
+ Section             | PE32 image            |   N/A    | 00001CE4 | 7F0DAB67 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000018 | F028BEF0 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000B83A | 5FB3717D | ------ 25075106-F537-4BD4-AFA5-CFF0E6F3B2A6 | AmdFabricRvDxe
+ Section             | DXE dependency        |   N/A    | 0000004C | 86CE0203 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 0000B7A4 | AE1A7F5A | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000022 | 1F8932FF | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 00002DDA | DB88D7D9 | ------ C1B135AA-7ACB-45D0-80B7-862B8D5F0CD5 | AmdFabricRvSmm
+ Section             | MM dependency         |   N/A    | 0000004C | D4185C4C | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00002D44 | BB62CEA0 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000022 | FF58B10A | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000E492 | 000FAC74 | ------ 3C9A095D-C3CB-4302-96E1-7105A7C46A69 | AmdCcxZenRvDxe
+ Section             | DXE dependency        |   N/A    | 00000082 | 4517F6EA | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 0000E3C4 | 72AF6ACC | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000022 | 34E6BEB3 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 0000467E | 55767B27 | ------ B759169B-61E2-4F92-9447-23E3DCD33CEC | AmdCcxZenRvSmm
+ Section             | MM dependency         |   N/A    | 00000070 | 289EA42F | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 000045C4 | ACDFC2D0 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000022 | D4373D46 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000135E | BB43DBF2 | ------ EA7BF2CC-F154-4CC4-A725-6382C701FBFE | AmdMemSmbiosV2RvDxe
+ Section             | DXE dependency        |   N/A    | 00000028 | F2EA553B | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000012E4 | 2BFAC4AE | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002C | 68786F13 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000163A | 49DC611B | ------ 95DE95F8-A215-48C3-814A-40F07B925D24 | AmdMemRestoreDxe
+ Section             | DXE dependency        |   N/A    | 00000028 | BF4D4330 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000015C4 | 89F6B1CD | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000026 | 2CF6181B | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000013DA | B9DB7994 | ------ D4F90895-A60B-4E97-B446-2855246F8930 | AmdNbioBaseRVDxe
+ Section             | DXE dependency        |   N/A    | 00000028 | B0396D37 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001364 | 6BFE20D1 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000026 | 28BBF229 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000AFF2 | 5FABBC1F | ------ 6F960C35-FFED-4778-99A1-4D998CE519B9 | AmdNbioSmuV10Dxe
+ Section             | DXE dependency        |   N/A    | 0000005E | B6133763 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 0000AF44 | E4CF263F | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000026 | B6F0D904 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000C53E | E0D84B04 | ------ D7908EC2-227A-472F-8095-6A159DD723D2 | AmdNbioPcieRVDxe
+ Section             | DXE dependency        |   N/A    | 0000004C | CC3AE443 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 0000C4A4 | 00922AE4 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000026 | 15F3C0B1 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00007FC2 | 5B318724 | ------ 73F53712-2A64-4B86-961D-C25B63DF198C | AmdNbioIOMMURVDxe
+ Section             | DXE dependency        |   N/A    | 00000070 | A4467657 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00007F04 | D19AF2A3 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000028 | D0BFC4E3 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00000F76 | DCDB82B0 | ------ FA70AFCC-3715-4D15-8699-F0DF4CAFC6D3 | AmdNbioGfxRVDxe
+ Section             | DXE dependency        |   N/A    | 00000028 | 29E7E5E7 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00000F04 | 9D023C11 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000024 | 70AEC0DC | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00008AAE | E7EAF7D6 | ------ 28AB63A9-5FB0-4C93-9C44-0DD8A1E9101D | AmdNbioAlibRVDxe
+ Section             | DXE dependency        |   N/A    | 0000003A | 04358B47 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00008A24 | 881ED626 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000026 | 03E05E7A | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000BD0E | 75CDB802 | ------ A334E8C1-F49F-49AA-9F82-9210205FC1FB | FchSandstoneDxe
+ Section             | DXE dependency        |   N/A    | 0000005E | 98093F44 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 0000BC64 | 0DDAD69C | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000024 | C7622CB8 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 0000D4A6 | 6D10A5D9 | ------ 4A69756B-209B-4D57-8810-142DAC6BB7B5 | FchSandstoneSmmInit
+ Section             | MM dependency         |   N/A    | 000000EE | 602B8E50 | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 0000D364 | 9BEE561C | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002C | 6FBE0BF6 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 3859336F | ------- Version section
+ File                | DXE driver            |   N/A    | 00001D92 | 9AC4371F | ------ 69FEEBE1-D86E-49EB-B60F-A87CB0FBC822 | FchSmbusDxe
+ Section             | DXE dependency        |   N/A    | 0000004C | F48B40E8 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001D04 | 02BEBF53 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001C | 0D382C85 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000707E | 224F82ED | ------ D62E660E-6561-45DB-A838-8609BBA5FF37 | Cf9Reset
+ Section             | DXE dependency        |   N/A    | 0000003A | EB5B093D | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00007004 | 1C112515 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000016 | 1889D1F2 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00000AB2 | 7223AB15 | ------ 5B6DBCBC-85F4-4BFC-AF96-188581325C42 | AmdLegacyInterrupt
+ Section             | DXE dependency        |   N/A    | 0000003A | 56BEEA71 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00000A24 | 192873C6 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002A | A4037C4D | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000060AA | A37BF41E | ------ 7C604CBD-5440-46E1-97F7-A4DF8DD09C1C | AmdSmmControl
+ Section             | DXE dependency        |   N/A    | 0000005E | 8580CA47 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00006004 | 801ACE5D | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | CD9DE112 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 00008722 | C15BABF9 | ------ 2FE607A1-B7D3-41D6-BE4A-DA60BD1CAAAC | FchSmmDispatcher
+ Section             | MM dependency         |   N/A    | 00000070 | 682BCCF8 | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00008664 | 92593F3E | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000026 | DF54ECE9 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 00006A1A | 5CBDDA37 | ------ ADA1C665-7A8A-467C-84EA-7172B2B65862 | FchSSSataD3ColdSmm
+ Section             | MM dependency         |   N/A    | 00000082 | 7FB4C61C | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00006944 | 96E32401 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002A | 20D4C774 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 3859336F | ------- Version section
+ File                | DXE driver            |   N/A    | 00007966 | 4F9F9281 | ------ 5B2820BB-9A8A-443D-A84C-73B925C5727A | AmdApcbRvDxe
+ Section             | DXE dependency        |   N/A    | 0000003A | 6E4FD8DB | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000078E4 | D56572FB | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001E | C672A541 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 000096CE | E65FA3AD | ------ 97A03375-250D-4C59-93A8-F76796725E18 | AmdApcbRvSmm
+ Section             | MM dependency         |   N/A    | 00000082 | 178A58DC | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00009604 | 5A613C60 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001E | 26A326B4 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000411A | 05D562D7 | ------ 52A9B223-FAB8-4A24-AEA6-461A59BD3F33 | AmdSmbiosDxe
+ Section             | DXE dependency        |   N/A    | 00000070 | B3EBB0F4 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00004064 | AB38EE7D | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001E | BC8DBDC9 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000032AA | 20184560 | ------ 729B3079-8913-4E12-AFEF-2CA264799469 | AmdAcpiDxe
+ Section             | DXE dependency        |   N/A    | 00000082 | 3045E1EC | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000031E4 | 8CFF744A | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001A | 489CC72E | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 00005822 | 68F2AEC2 | ------ 64E6D006-E62A-481E-8F5A-3F76C9184741 | AmdSmmCommunication
+ Section             | MM dependency         |   N/A    | 0000004C | EB54A56A | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00005784 | 630E3560 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002C | 58DB4F61 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00000682 | 5F9EAE11 | ------ 29D40F30-E8BF-4803-88A6-4247A29A5318 | AmdVersionDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00000624 | C032C332 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | 41994C58 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00003A5A | FF243C99 | ------ 50E22E0A-4103-9999-9BE0-AA8CECBCE694 | AmdRasApeiDxe
+ Section             | DXE dependency        |   N/A    | 00000070 | 90A50C07 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000039A4 | B3F17BF1 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | 0A30D254 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000052CE | 09FDC280 | ------ 9A61F154-4A83-B8C5-80DE-239BFF40D66B | AmdRasDxe
+ Section             | DXE dependency        |   N/A    | 0000004C | E6312F86 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00005244 | AA2A5A41 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000018 | 4F5D14C7 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 00008686 | AEF53BED | ------ 13BEAD28-488D-9112-5B0E-40B67EDD800C | AmdRasSmm
+ Section             | MM dependency         |   N/A    | 00000082 | 68447029 | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 000085C4 | D7D5F926 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000018 | AF8C9732 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 3859336F | ------- Version section
+ File                | DXE driver            |   N/A    | 00001A2E | C7D36EF6 | ------ B0A034CF-41CE-4104-8ED3-4F97E8ADB981 | SioDummyDxe
+ Section             | DXE dependency        |   N/A    | 00000028 | C2686222 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000019C4 | BE005EAA | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001C | FD3CA943 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Combined SMM/DXE      |   N/A    | 00003EFE | DEAABC2E | ------ 97A20DF5-6F57-4C76-9095-0F6439F8A81C | fTPMTisDxe
+ Section             | MM dependency         |   N/A    | 0000003A | F442C015 | ------- MM dependency section
+ Section             | DXE dependency        |   N/A    | 0000003A | D12447A4 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00003E44 | F7AB3885 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001A | 1715B5A9 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 00004981 | 64EB6F7C | ------ 2B872B22-6C11-4DFD-994A-96BC13920A43 | fTPMTcg2Smm
+ Section             | MM dependency         |   N/A    | 000000A6 | 224CF24F | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00004424 | 50344DFD | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001C | 27D66173 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ Section             | Raw                   |   N/A    | 00000471 | 0A67BE51 | ------- Raw section
+ File                | DXE driver            |   N/A    | 000051B6 | E6826EF5 | ------ F7119829-314A-4E7F-8853-44AA79A7CB43 | PspFactoryReset
+ Section             | DXE dependency        |   N/A    | 00000028 | C2686222 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00005144 | 5365711C | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000024 | B6C27AF2 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000009C2 | A0E80870 | ------ 45424D0C-E6AF-4AF2-AD99-FA77168742D1 | SmartTimer
+ Section             | DXE dependency        |   N/A    | 0000003A | C3608BB7 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00000944 | A84A0619 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001A | 7FE6A52C | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00001D6E | E583B1E4 | ------ 48959D4F-4574-470E-AA4C-CF144D1C1678 | InstallVerbtableDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001D04 | FF86654A | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002C | E9BCB3BD | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Combined SMM/DXE      |   N/A    | 00001576 | DDE2176A | ------ 62C38AE7-4BF4-4112-B2C8-88B50F317BC9 | AgesaSmmSaveMemoryConfig
+ Section             | MM dependency         |   N/A    | 0000004C | 16D3E13A | ------- MM dependency section
+ Section             | DXE dependency        |   N/A    | 00000028 | 9054984A | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000014A4 | E480A12F | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000036 | 37921D47 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000909A | 1FD20825 | ------ 3DA97FDE-2261-4CFB-A171-74CD5A9AE279 | SaveSpdToRomDxe
+ Section             | DXE dependency        |   N/A    | 0000004C | 8FF7B91F | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00009004 | D60EBBE2 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000024 | 85B67E45 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000006AA | 53C06929 | ------ 400B4476-3081-11D6-87ED-00062945C3B9 | LegacySpeakerDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00000644 | 47084154 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000026 | 12441DB1 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00003D52 | C6E00A5D | ------ 96BDEA61-C364-4513-B6B3-037E9AD54CE4 | SetSsidSvidDxe
+ Section             | DXE dependency        |   N/A    | 00000082 | B47108A2 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00003C84 | 89333102 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000022 | 1341690D | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00006082 | A71495E2 | ------ C7DAF48F-4787-11E4-9077-047D7B99E097 | VariableRuntimeProtectionDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00006004 | F0D279D3 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000003E | D30F8DE4 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000055A2 | E4DDD4DF | ------ A428AD0A-5034-4E37-8F9D-DB2CE72A59B3 | L05SmbiosOverride
+ Section             | DXE dependency        |   N/A    | 00000070 | 4FB2E8E8 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000054E4 | 17F23E2C | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000028 | 6B808A46 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Freeform              |   N/A    | 000B4048 | 24FB4703 | ------ 12050FC0-F57F-4CF4-ABED-EBDFED4C31E2
+ Section             | Raw                   |   N/A    | 000B4030 | 7D521CF7 | ------- Raw section
+ File                | Freeform              |   N/A    | 00288048 | F5023997 | ------ 1F56B2F9-6E6D-4014-BFD4-37C9E5D398F1
+ Section             | Raw                   |   N/A    | 00288030 | 13C8ED34 | ------- Raw section
+ File                | Freeform              |   N/A    | 000526E8 | 41414685 | ------ B2A91E4E-28E2-4C13-9563-1C9B0558E3D3
+ Section             | Raw                   |   N/A    | 000526D0 | 069692EF | ------- Raw section
+ File                | Freeform              |   N/A    | 000A2048 | B660545E | ------ 26FE9FEA-EA12-485E-8C37-5E7FBD3FDD23
+ Section             | Raw                   |   N/A    | 000A2030 | 9041F93A | ------- Raw section
+ File                | Freeform              |   N/A    | 0000D980 | 39600238 | ------ 12050FC0-F57F-4CF4-ABED-EBDFED4C31E8
+ Section             | Raw                   |   N/A    | 0000D968 | 23943E21 | ------- Raw section
+ File                | Freeform              |   N/A    | 0000E2B2 | 95896A29 | ------ 12050FC0-F57F-4CF4-ABED-EBDFED4C31E9
+ Section             | Raw                   |   N/A    | 0000E29A | 5B1E2CAF | ------- Raw section
+ File                | Freeform              |   N/A    | 0000086C | F98FB225 | ------ 8D29D3C4-DF43-41E3-B174-27AC21B3D1CB
+ Section             | Raw                   |   N/A    | 00000854 | 9B2ACDF4 | ------- Raw section
+ File                | Freeform              |   N/A    | 00000987 | 9CFCF7EE | ------ F66AD038-A423-447C-9BA8-98CE97A3805D
+ Section             | Raw                   |   N/A    | 0000096F | 5090AD81 | ------- Raw section
+ File                | DXE driver            |   N/A    | 000027FE | 230AADCE | ------ 8B48D921-54F7-11E4-9FF3-047D7B99E097 | WirelessDeviceSupportDxe
+ Section             | DXE dependency        |   N/A    | 0000003A | 1F88CEA5 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00002764 | 4007C7F4 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000036 | 45F12909 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00005C22 | 6FAB7011 | ------ C4B8C7FB-D2E2-441C-BAD6-E5D46B1E1AA6 | L05DxeServiceBody
+ Section             | DXE dependency        |   N/A    | 00000070 | 87498970 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00005B64 | BC1F2DAD | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000028 | C57590EF | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Pad                   |   N/A    | 00000040 | FCA037EF | ------ Padding file
+ File                | DXE driver            |   N/A    | 000048CA | C163400F | ------ C4B4A7FB-D2E2-422C-4179-E5D46B1E1AA6 | OneKeyRecovery
+ Section             | DXE dependency        |   N/A    | 00000028 | F46C6C15 | ------- DXE dependency section
+ Section             | Raw                   |   N/A    | 00000014 | D719C651 | ------- Raw section
+ Section             | PE32 image            |   N/A    | 00004844 | 3E2F2240 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000022 | 012F567E | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 7A7C3412 | ------- Version section
+ File                | DXE driver            |   N/A    | 00002ADA | 9003C421 | ------ 1705E39E-C353-11E2-A187-047D7B99E097 | SetupMenuService
+ Section             | DXE dependency        |   N/A    | 00000028 | C2686222 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00002A64 | 8851E1AE | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000026 | ED4B83C9 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000021AA | A104674B | ------ 98C5594F-9759-11E2-9F93-047D7B99E097 | SecureBootService
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00002144 | FB0EC302 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000028 | 90680D5A | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000563A | 5CBB362F | ------ 310B3904-0728-4977-A90C-06B8ECD85A9F | BootOptionService
+ Section             | DXE dependency        |   N/A    | 00000028 | C2686222 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000055C4 | 18926690 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000028 | C361B3B8 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00001D16 | 10D3C30E | ------ 8A97B11E-EE8E-11E2-B664-047D7B99E097 | AcpiOverride
+ Section             | DXE dependency        |   N/A    | 0000004C | 9FB5AC29 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001C84 | 6FD8B2A4 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001E | ADA753BA | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00000812 | B3E24E96 | ------ CE3FA7C0-E9CA-11E2-9BF4-446D571553EB | LenovoStringService
+ Section             | DXE dependency        |   N/A    | 0000003A | C39000F1 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00000784 | FFAB8317 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002C | F9DD1791 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00001676 | B6E04EFD | ------ 1405AD5E-5BED-11E3-866A-047D7B99E097 | Slp20ServiceDxe
+ Section             | DXE dependency        |   N/A    | 00000028 | C2686222 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001604 | DAFF81AE | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000024 | 0D15A9A4 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 000026F2 | A82D47C0 | ------ ED769C37-F526-444A-8D70-249BEFF04948 | L05UpdateSlp20
+ Section             | MM dependency         |   N/A    | 0000005E | 33111BFF | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00002624 | DB015E84 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000022 | 29D9AB12 | ------- UI section
+ Section             | Version               |   N/A    | 00000032 | 3C4FC35E | ------- Version section
+ File                | DXE driver            |   N/A    | 000006D6 | 1FE27491 | ------ A610E170-08AF-11E3-A05F-047D7B99E097 | ConfigurationVariable
+ Section             | DXE dependency        |   N/A    | 0000003A | 1839A0BC | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00000644 | FCF6E431 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000030 | 836BF1C0 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00001B0A | D9465AFD | ------ B34ADD50-05D4-4C99-BC55-F3F2F7F52E1A | LegacyToEfiDxe
+ Section             | DXE dependency        |   N/A    | 0000003A | 2ACABECC | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001A84 | B717F134 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000022 | D249FF37 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 00002DEE | F0B0EAA7 | ------ 2E85FC4F-7050-4F09-9C5D-9A5DD01D3CB5 | LegacyToEfiSmm
+ Section             | MM dependency         |   N/A    | 0000005E | 8BABCBA4 | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00002D44 | 3B430FCC | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000022 | 32987CC2 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000017FE | C8289DDE | ------ 5853694A-467F-4464-BBF9-0C971A74CB36 | L05UefiDriveIdentification
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001784 | F507C3BC | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000003A | 99B34FF9 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 0000149A | DAA47901 | ------ 2C7314B0-A18E-4DAF-8B23-1F21D41572A8 | HddSpinDownSmm
+ Section             | MM dependency         |   N/A    | 0000004C | 0B90C470 | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00001404 | 7B1F9F9E | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000022 | 5E8088A5 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 000008C4 | F0558C55 | ------ 916933AF-3920-4B93-A2A6-EE869D8B7F49 | LfcProjectDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00000864 | 4BDBFD82 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | 576663E2 | ------- UI section
+ Section             | Version               |   N/A    | 00000010 | E1BEDFE9 | ------- Version section
+ File                | DXE driver            |   N/A    | 0000615C | 8172F718 | ------ C0C64D42-E3D9-4D20-865D-A3DB750F91D6 | LenovoVariableDxe
+ Section             | DXE dependency        |   N/A    | 00000028 | C2686222 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000060E4 | DE69DCD3 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000028 | 2F75482E | ------- UI section
+ Section             | Version               |   N/A    | 00000010 | E1BEDFE9 | ------- Version section
+ File                | DXE driver            |   N/A    | 00001AF8 | 67287A02 | ------ DCB0527D-21A1-4407-94C9-F40DB3B5A7C0 | LfcDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001AA4 | DE933720 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000012 | EB248DDF | ------- UI section
+ Section             | Version               |   N/A    | 00000010 | E1BEDFE9 | ------- Version section
+ File                | SMM module            |   N/A    | 00008C44 | B882FF52 | ------ 5795654E-E6C7-4A7F-B835-5E0D93074FA6 | LenovoVariableSmm
+ Section             | MM dependency         |   N/A    | 00000070 | 3F0BEE9E | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00008B84 | 2EB83B40 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000028 | CFA4CBDB | ------- UI section
+ Section             | Version               |   N/A    | 00000010 | E1BEDFE9 | ------- Version section
+ File                | SMM module            |   N/A    | 00000F88 | 939CC1F7 | ------ 12CBFC3A-7ABC-49C6-B65A-E91062355A9A | LfcProjectSmm
+ Section             | MM dependency         |   N/A    | 0000003A | 37B39177 | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00000F04 | B0D93E22 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | B7B7E017 | ------- UI section
+ Section             | Version               |   N/A    | 00000010 | E1BEDFE9 | ------- Version section
+ File                | SMM module            |   N/A    | 0000173E | 669F9035 | ------ 8C8B0335-5545-4E07-A76F-4865365B441A | LfcSmm
+ Section             | MM dependency         |   N/A    | 0000005E | 5C98D7BA | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 000016A4 | C95CBC1F | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000012 | 0BF50E2A | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 00001A54 | 6F71FC5D | ------ 4CA0062A-66FE-4BE7-ACE6-FDE992C1C5EC | ChgBootSmm
+ Section             | MM dependency         |   N/A    | 0000004C | 0B90C470 | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 000019C4 | 0C9F420B | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001A | E8F0DD2C | ------- UI section
+ Section             | Version               |   N/A    | 00000010 | E1BEDFE9 | ------- Version section
+ File                | DXE driver            |   N/A    | 000013C4 | C9B5E6E4 | ------ 30B7C490-D693-40BE-B1C7-6E01B927C041 | AcpiTableOverrideDxe
+ Section             | DXE dependency        |   N/A    | 00000028 | 79E9CA89 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001344 | 1D001D6D | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002E | DE654FC0 | ------- UI section
+ Section             | Version               |   N/A    | 00000010 | E1BEDFE9 | ------- Version section
+ File                | Combined SMM/DXE      |   N/A    | 000040AA | CFBE2EA4 | ------ 08747359-BA88-42F8-9D25-F71D93B6CD26 | EcFlashSmm
+ Section             | MM dependency         |   N/A    | 0000004C | B980E1AF | ------- MM dependency section
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00004004 | 5000E8CA | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001A | D2C10B48 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000620E | 1A0F9F6E | ------ CCFD7D6B-623F-442A-BAB5-EE7FAF07AEE9 | DebugPageDxe
+ Section             | DXE dependency        |   N/A    | 00000082 | 11BE276E | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00006144 | ED43C5A2 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001E | 34FF1A08 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 00001378 | B7E6D0E8 | ------ 8A9541D2-06D7-4832-9599-4BC836058E3C | HangCheckSmm
+ Section             | MM dependency         |   N/A    | 0000004C | CA12D1BB | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 000012E4 | C10564AD | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001E | DDF9E524 | ------- UI section
+ Section             | Version               |   N/A    | 00000010 | E1BEDFE9 | ------- Version section
+ File                | Freeform              |   N/A    | 00000339 | C6313E11 | ------ A42C2691-6098-4DE1-86E3-39F01CCD67DA
+ Section             | Raw                   |   N/A    | 00000321 | 39E3161F | ------- Raw section
+ File                | DXE driver            |   N/A    | 0001845E | C5459C6D | ------ 3E7788CA-2BFC-4FCE-8122-5176CA492D9F | CbsSetupDxeRV
+ Section             | DXE dependency        |   N/A    | 00000094 | 3708F2AD | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00018384 | D87A5DE9 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | 6D8DD4B1 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 00002342 | A9B432F9 | ------ 17AF0060-A98C-4A03-90AD-6ABED75045BD | CbsBaseDxeRV
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000022E4 | 34741018 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001E | 9D28C9F3 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | SMM module            |   N/A    | 000063BA | 5E714382 | ------ 77509744-7507-4B5C-BF6C-3BAB83652F4D | BctBaseSmmRV
+ Section             | MM dependency         |   N/A    | 00000070 | 663E2A58 | ------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00006304 | 8D73399C | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001E | F42B6169 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Freeform              |   N/A    | 00003184 | 66C7CF09 | ------ 52948E6F-137E-4ADC-ABC7-D17DC0AD9EC4
+ Section             | Raw                   |   N/A    | 0000316C | B4A8C006 | ------- Raw section
+ File                | Freeform              |   N/A    | 0000E01C | 5E54693A | ------ 3ACA320F-F3B6-478A-85AF-B0248D2F8633
+ Section             | Raw                   |   N/A    | 0000E004 | 17FB658F | ------- Raw section
+ File                | Pad                   |   N/A    | 00000070 | 773D5C82 | ------ Padding file
+ File                | DXE driver            |   N/A    | 0001CF92 | 7C8113CB | ------ 9ECA2609-8E03-4A42-B6F8-40F78B37A112 | RtkUndiDxe330ARRDriver
+ Section             | DXE dependency        |   N/A    | 00000028 | 41F3A0FB | ------- DXE dependency section
+ Section             | Raw                   |   N/A    | 00000014 | D719C651 | ------- Raw section
+ Section             | PE32 image            |   N/A    | 0001CEFC | E099E505 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 00000032 | E609176E | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Pad                   |   N/A    | 00000068 | A8B3B7F4 | ------ Padding file
+ File                | DXE driver            |   N/A    | 0001D42A | 58E7CEBD | ------ B7B82AD8-3349-4968-A940-7B8C265FF9B4 | RtkUndiDxe
+ Section             | DXE dependency        |   N/A    | 00000028 | 41F3A0FB | ------- DXE dependency section
+ Section             | Raw                   |   N/A    | 00000014 | D719C651 | ------- Raw section
+ Section             | PE32 image            |   N/A    | 0001D3AC | 1037F859 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001A | BCE41657 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | DXE driver            |   N/A    | 0000103E | 3E3455DE | ------ 81E68098-6F95-4CE8-AA8F-A7FFC89E0B9D | AmdGopConfigDrvDxe
+ Section             | DXE dependency        |   N/A    | 00000028 | 41355AFF | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00000FC4 | CC670DC6 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002A | 60E0EF88 | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 4C4F5494 | ------- Version section
+ File                | Freeform              |   N/A    | 000000B8 | 6721B572 | ------ A302F9BE-8504-4505-810A-165E8078E89B
+ Section             | Raw                   |   N/A    | 000000A0 | 1F06ED9C | ------- Raw section
+ File                | Freeform              |   N/A    | 000000D2 | F2185789 | ------ 197CD442-9888-4E3B-89C1-7A3C4E30A035
+ Section             | Raw                   |   N/A    | 000000BA | FDDCC610 | ------- Raw section
+ File                | Freeform              |   N/A    | 0000F01C | DBF8B305 | ------ 9CB460DE-2A28-4F46-B60B-275E7DCA6674
+ Section             | Raw                   |   N/A    | 0000F004 | 2C6EECC2 | ------- Raw section
+ File                | DXE driver            |   N/A    | 00021AEE | D9FE3C68 | ------ 6A8209ED-5D36-4906-A316-5541006F558E | OneKeyBatterySetup
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | ------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00021A84 | 1F58C645 | ------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002A | CEF3888C | ------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | ------- Version section
+ File                | Freeform              |   N/A    | 0000901C | 8761352E | ------ BA71D752-D705-47BB-8300-9A07F172F18B
+ Section             | Raw                   |   N/A    | 00009004 | 877D61F3 | ------- Raw section
+ File                | Freeform              |   N/A    | 00000074 | 5C4287D3 | ------ BFC113FE-AD4B-4F97-9F70-0747369FBEBA
+ Section             | Raw                   |   N/A    | 0000005C | 65E1F798 | ------- Raw section
+ Free space          |                       |   N/A    | 00000670 | 45A35EDF | ------ Volume free space
+ Free space          |                       | 0039A070 | 000B4F90 | 342980CE | -- Volume free space

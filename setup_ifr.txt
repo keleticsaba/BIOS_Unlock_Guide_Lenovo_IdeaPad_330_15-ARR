@@ -1,0 +1,693 @@
+Program version: 1.6.1, Extraction mode: UEFI, SHA256: 24808d0d8edabd2ea7751a3366e3fd2cf4e04482a6805d98d0e5ee343a15979e
+FormSet Guid: 5204F764-DF25-48A2-B337-9EC122B85E0D, Title: "AHCI", Help: "Configures the peripheral devices."
+	Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Class, Class: 0x1
+	Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: SubClass, SubClass: 0x4
+	DefaultStore DefaultId: 0x0, Name: ""
+	DefaultStore DefaultId: 0x1, Name: ""
+	VarStore Guid: A04A27F4-DF00-4D42-B552-39511302113D, VarStoreId: 0x1234, Size: 0x2BC, Name: "SystemConfig"
+	VarStore Guid: F72DEEF6-13EF-4958-B027-0E45CE7FA45E, VarStoreId: 0x1235, Size: 0x4C, Name: "PasswordConfig"
+	VarStore Guid: 07A66697-D400-4903-B3DA-67A61D2B7058, VarStoreId: 0x1237, Size: 0xA, Name: "Tcg2ConfigInfo"
+	VarStoreNameValue Guid: F72DEEF6-13EF-4958-B027-0E45CE7FA45E, VarStoreId: 0x1236
+	Form FormId: 0x1, Title: "AHCI"
+		Subtitle Prompt: "Configures the peripheral devices.", Help: "", Flags: 0x0
+		End 
+		SuppressIf 
+			True 
+			GrayOutIf 
+				True 
+				OneOf Prompt: "EHCI0", Help: "AUTO: Auto detect the EHCI controller 0 (Device12 Function 0).  DISABLED: Disable the EHCI controller 0", QuestionFlags: 0x4, QuestionId: 0x11B9, VarStoreId: 0x1234, VarOffset: 0xE3, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+					OneOfOption Option: "UEFI Mode" Value: 0
+					OneOfOption Option: "USB PORT 5" Value: 1
+					OneOfOption Option: "USB PORT 2" Value: 2, Default
+				End 
+			End 
+		End 
+		SuppressIf 
+			True 
+			Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Label, LabelNumber: 0x760
+		End 
+		SuppressIf 
+			True 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x5, Value: 0x2
+					EqIdVal QuestionId: 0x13, Value: 0x1
+					And 
+				End 
+				OneOf Prompt: "APU GPP #0 Features", Help: "APU GPP #0 Features", QuestionFlags: 0x4, QuestionId: 0x11BA, VarStoreId: 0x1234, VarOffset: 0x9D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "APU GPP #1 Features" Value: 0, Default
+					OneOfOption Option: "APU GPP #1 Features" Value: 1
+				End 
+			End 
+		End 
+		SuppressIf 
+			True 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x5, Value: 0x2
+					EqIdVal QuestionId: 0x13, Value: 0x1
+					And 
+				End 
+				OneOf Prompt: "Serial ATA Port 3 Device configuration", Help: "Serial ATA Port 4 Device configuration", QuestionFlags: 0x0, QuestionId: 0x1, VarStoreId: 0x1234, VarOffset: 0x62, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+					OneOfOption Option: "Serial ATA Port 5 Device configuration" Value: 0, Default
+					OneOfOption Option: "Serial ATA Port 1       " Value: 1
+					OneOfOption Option: "Serial ATA Port 0       " Value: 2
+				End 
+			End 
+		End 
+		SuppressIf 
+			True 
+			GrayOutIf 
+				True 
+				Text Prompt: "Ir Activity Led Enable", Help: "Enable/Disable Ir Activity Led", Text: "Connected Standby Support"
+				Text Prompt: "Enable/Disable Connected Standby Support", Help: "Reduce Hardware Support", Text: "Enable/Disable Reduce Hardware Support"
+				Text Prompt: "Enable discrete TPM", Help: "Enable LPC or SPI TPM", Text: "Enable LPC TPM"
+			End 
+		End 
+		SuppressIf 
+			True 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x5, Value: 0x2
+					EqIdVal QuestionId: 0x13, Value: 0x1
+					And 
+				End 
+				OneOf Prompt: "[Not Installed]", Help: "[Not Installed]", QuestionFlags: 0x4, QuestionId: 0x11C0, VarStoreId: 0x1234, VarOffset: 0x9E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Above 4GB MMIO" Value: 0
+					OneOfOption Option: "Enable/Disable above 4GB MemoryMappedIO BIOS assignment. It's only available with Uefi Boot Mode." Value: 1, Default
+				End 
+			End 
+		End 
+		SuppressIf 
+			True 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x5, Value: 0x2
+					EqIdVal QuestionId: 0x13, Value: 0x1
+					And 
+				End 
+				OneOf Prompt: "APU GPP #0 Features", Help: "APU GPP #0 Features", QuestionFlags: 0x4, QuestionId: 0x11BB, VarStoreId: 0x1234, VarOffset: 0x9D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "APU GPP #1 Features" Value: 0, Default
+					OneOfOption Option: "APU GPP #1 Features" Value: 1
+				End 
+			End 
+		End 
+		SuppressIf 
+			True 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x5, Value: 0x2
+					EqIdVal QuestionId: 0x13, Value: 0x1
+					And 
+				End 
+				Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Label, LabelNumber: 0x761
+				Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Label, LabelNumber: 0x762
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x1, Value: 0x17
+				Not 
+				EqIdVal QuestionId: 0x11BB, Value: 0x1
+				Or 
+			End 
+			SuppressIf 
+				True 
+				CheckBox Prompt: "Enable SPI TPM", Help: "Enable firmware TPM", QuestionFlags: 0x4, QuestionId: 0x1200, VarStoreId: 0x1237, VarOffset: 0x5, Flags: 0x0, Default: Disabled, MfgDefault: Disabled
+					Default DefaultId: 0x0 Value: 1
+				End 
+			End 
+			SuppressIf 
+				True 
+				CheckBox Prompt: "Channel A", Help: "DIMM 0", QuestionFlags: 0x4, QuestionId: 0x1201, VarStoreId: 0x1237, VarOffset: 0x6, Flags: 0x0, Default: Disabled, MfgDefault: Disabled
+					Default DefaultId: 0x0 Value: 0
+				End 
+			End 
+			SuppressIf 
+				True 
+				CheckBox Prompt: "DIMM 1", Help: "Channel B", QuestionFlags: 0x4, QuestionId: 0x1202, VarStoreId: 0x1237, VarOffset: 0x7, Flags: 0x0, Default: Disabled, MfgDefault: Disabled
+					Default DefaultId: 0x0 Value: 0
+				End 
+			End 
+			SuppressIf 
+				True 
+				CheckBox Prompt: "DIMM 0", Help: "DIMM 1", QuestionFlags: 0x4, QuestionId: 0x1203, VarStoreId: 0x1237, VarOffset: 0x8, Flags: 0x0, Default: Disabled, MfgDefault: Disabled
+					Default DefaultId: 0x0 Value: 0
+				End 
+			End 
+			SuppressIf 
+				True 
+				CheckBox Prompt: "[Not Installed]", Help: "[Not Installed]", QuestionFlags: 0x4, QuestionId: 0x1204, VarStoreId: 0x1237, VarOffset: 0x9, Flags: 0x0, Default: Disabled, MfgDefault: Disabled
+					Default DefaultId: 0x0 Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			True 
+			CheckBox Prompt: "Configures the peripheral devices.", Help: "Configures the peripheral devices.", QuestionFlags: 0x0, QuestionId: 0x2, VarStoreId: 0x1234, VarOffset: 0x67, Flags: 0x0, Default: Disabled, MfgDefault: Disabled
+				Default DefaultId: 0x0 Value: 1
+			End 
+		End 
+		SuppressIf 
+			True 
+			OneOf Prompt: "Configures the peripheral devices.", Help: "Configures the peripheral devices.", QuestionFlags: 0x0, QuestionId: 0x3, VarStoreId: 0x1234, VarOffset: 0x6B, Flags: 0x10, Size: 8, Min: 0x3, Max: 0x3, Step: 0x0
+				OneOfOption Option: "Configures the peripheral devices." Value: 3, Default
+			End 
+		End 
+		GrayOutIf 
+			True 
+			Text Prompt: "[Not Detected]", Help: "Configures the peripheral devices.", Text: "FDD"
+			Text Prompt: "IDE->AHCI", Help: "Configures the peripheral devices.", Text: "HDD"
+		End 
+		GrayOutIf 
+			True 
+			SuppressIf 
+				EqIdVal QuestionId: 0x2A, Value: 0x0
+				Text Prompt: "[Not Detected]", Help: "Configures the peripheral devices.", Text: "System Memory"
+			End 
+		End 
+		Subtitle Prompt: "Configures the peripheral devices.", Help: "", Flags: 0x0
+		End 
+		SuppressIf 
+			EqIdValList QuestionId: 0x5, Values: [1, 3, 4]
+				EqIdVal QuestionId: 0x13, Value: 0x0
+				Or 
+			End 
+			Text Prompt: "Configures the peripheral devices.", Help: "Configures the peripheral devices.", Text: "Configures the peripheral devices."
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0x5, Value: 0x2
+				EqIdVal QuestionId: 0x13, Value: 0x1
+				And 
+			End 
+			SuppressIf 
+				EqIdValList QuestionId: 0x5, Values: [3, 4]
+					EqIdVal QuestionId: 0x13, Value: 0x1
+					And 
+				End 
+				Password Prompt: "EC Version", Help: "INVALID", QuestionFlags: 0x4, QuestionId: 0x1037, VarStoreId: 0x1236, VarStoreInfo: 0x100, MinSize: 0x0, MaxSize: 0x10
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x13, Value: 0x1
+				EqIdVal QuestionId: 0x2B, Value: 0x0
+				Or 
+			End 
+			OneOf Prompt: "SATA Port 0 Enable/Disable", Help: "SATA Port 1", QuestionFlags: 0x0, QuestionId: 0x4, VarStoreId: 0x1234, VarOffset: 0x9F, Flags: 0x10, Size: 8, Min: 0x1, Max: 0x2, Step: 0x0
+				OneOfOption Option: "Zip Emulation Type" Value: 2
+				OneOfOption Option: "Enable / Disable Fast Recovery test" Value: 1, Default
+			End 
+		End 
+		SuppressIf 
+			True 
+			OneOf Prompt: "IDE->AMDAHCI", Help: "Set SATA Configure Type", QuestionFlags: 0x0, QuestionId: 0x5, VarStoreId: 0x1234, VarOffset: 0x80, Flags: 0x10, Size: 8, Min: 0x2, Max: 0x4, Step: 0x0
+				OneOfOption Option: "Force Raid Mode" Value: 2
+				OneOfOption Option: "Force Raid Mode" Value: 3, Default
+				OneOfOption Option: "SATA Port 0" Value: 4
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x2B, Value: 0x0
+			Password Prompt: "SATA Port 1 Enable/Disable", Help: "BIOS Version", QuestionFlags: 0x4, QuestionId: 0x1038, VarStoreId: 0x1236, VarStoreInfo: 0x101, MinSize: 0x0, MaxSize: 0x10
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x2C, Value: 0x0
+				EqIdVal QuestionId: 0x2B, Value: 0x0
+				Or 
+				EqIdVal QuestionId: 0x13, Value: 0x1
+				Or 
+			End 
+			Action Prompt: "Channel 4 Slave         ", Help: "OA3 Key ID", QuestionFlags: 0x4, QuestionId: 0x1039, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, QuestionConfig: ""
+				Guid Guid: 38237648-09CC-47C4-8B5F-B09F06890DF7, Optional data: [6, 0, 88, 0]
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x2A, Value: 0x0
+			Subtitle Prompt: "Configures the peripheral devices.", Help: "", Flags: 0x0
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x2A, Value: 0x0
+			GrayOutIf 
+				EqIdVal QuestionId: 0x13, Value: 0x1
+					EqIdVal QuestionId: 0x28, Value: 0x1
+					Or 
+				End 
+				Password Prompt: "[Not Detected]", Help: "UUID Number", QuestionFlags: 0x4, QuestionId: 0xE051, VarStoreId: 0x1236, VarStoreInfo: 0x103, MinSize: 0x0, MaxSize: 0x10
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x29, Value: 0x0
+			GrayOutIf 
+				EqIdVal QuestionId: 0x13, Value: 0x1
+					EqIdVal QuestionId: 0x28, Value: 0x0
+					Or 
+				End 
+				Password Prompt: "None", Help: "Preinstalled OS license", QuestionFlags: 0x4, QuestionId: 0xE052, VarStoreId: 0x1236, VarStoreInfo: 0x103, MinSize: 0x0, MaxSize: 0x10
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x29, Value: 0x0
+			GrayOutIf 
+				EqIdVal QuestionId: 0x28, Value: 0x0
+				Password Prompt: "None", Help: "MTM", QuestionFlags: 0x4, QuestionId: 0xE053, VarStoreId: 0x1236, VarStoreInfo: 0x102, MinSize: 0x0, MaxSize: 0x10
+				End 
+			End 
+		End 
+		Subtitle Prompt: "Configures the peripheral devices.", Help: "", Flags: 0x0
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x27, Value: 0x0
+			GrayOutIf 
+				EqIdValList QuestionId: 0x5, Values: [2, 3]
+					EqIdVal QuestionId: 0x13, Value: 0x1
+					And 
+				End 
+				OneOf Prompt: "OA2", Help: "N", QuestionFlags: 0x0, QuestionId: 0x6, VarStoreId: 0x1234, VarOffset: 0x100, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+					OneOfOption Option: "Zip Emulation Type" Value: 2, Default
+					OneOfOption Option: "Enable / Disable Fast Recovery test" Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x11B9, Value: 0x1
+				Not 
+				EqIdVal QuestionId: 0x26, Value: 0xFF
+				Or 
+				EqIdVal QuestionId: 0x11BB, Value: 0x1
+				Or 
+			End 
+			GrayOutIf 
+				EqIdValList QuestionId: 0x5, Values: [2, 3]
+					EqIdVal QuestionId: 0x13, Value: 0x1
+					And 
+					EqIdVal QuestionId: 0x24, Value: 0x1
+					Or 
+				End 
+				Action Prompt: "Secure Boot", Help: "Disabled", QuestionFlags: 0x4, QuestionId: 0x11B5, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, QuestionConfig: ""
+					Guid Guid: 38237648-09CC-47C4-8B5F-B09F06890DF7, Optional data: [6, 0, 37, 0]
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x11B9, Value: 0x2
+				Not 
+				EqIdVal QuestionId: 0x25, Value: 0xFF
+				Or 
+				EqIdVal QuestionId: 0x11BB, Value: 0x1
+				Or 
+			End 
+			GrayOutIf 
+				EqIdValList QuestionId: 0x5, Values: [2, 3]
+					EqIdVal QuestionId: 0x13, Value: 0x1
+					And 
+					EqIdVal QuestionId: 0x24, Value: 0x1
+					Or 
+				End 
+				Action Prompt: "Secure Boot", Help: "Disabled", QuestionFlags: 0x4, QuestionId: 0x11B8, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, QuestionConfig: ""
+					Guid Guid: 38237648-09CC-47C4-8B5F-B09F06890DF7, Optional data: [6, 0, 37, 0]
+				End 
+			End 
+		End 
+		SuppressIf 
+			True 
+			GrayOutIf 
+				EqIdValList QuestionId: 0x5, Values: [2, 3]
+					EqIdVal QuestionId: 0x13, Value: 0x1
+					And 
+				End 
+				Subtitle Prompt: "Configures the peripheral devices.", Help: "", Flags: 0x0
+				End 
+				Ref Prompt: "Enable or disable beep alarm for external power supply changes.
+
+[Enabled]
+The Power Beep is enabled.
+[Disabled]
+The Power Beep is disabled.", Help: "Configures the peripheral devices.", QuestionFlags: 0x0, QuestionId: 0x7, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0xE102
+			End 
+		End 
+		GrayOutIf 
+			EqIdValList QuestionId: 0x5, Values: [2, 3]
+				EqIdVal QuestionId: 0x13, Value: 0x1
+				And 
+			End 
+			SuppressIf 
+				EqIdValList QuestionId: 0x21, Values: [0, 1]
+				Subtitle Prompt: "Configures the peripheral devices.", Help: "", Flags: 0x0
+				End 
+				OneOf Prompt: "Configuration", Help: "System Time", QuestionFlags: 0x4, QuestionId: 0xE060, VarStoreId: 0x1234, VarOffset: 0x21E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Zip Emulation Type" Value: 1, Default
+					OneOfOption Option: "Enable / Disable Fast Recovery test" Value: 0
+				End 
+				GrayOutIf 
+					True 
+					Text Prompt: "System Date", Help: "Hour: Valid range is from 0 to 23.
+Minute: Valid range is from 0 to 59.
+Second: Valid range is from 0 to 59.
+
+Increase/Reduce: F6/F5", Text: "Month: Valid range is from 1 to 12.
+Day: Valid range is from 1 to 31.
+Year: Valid range is from 2000 to 2099.
+
+Increase/Reduce: F6/F5"
+				End 
+			End 
+		End 
+		GrayOutIf 
+			True 
+			SuppressIf 
+				EqIdValList QuestionId: 0x21, Values: [0, 1]
+					EqIdVal QuestionId: 0x23, Value: 0x1
+					Or 
+				End 
+				Text Prompt: "USB Legacy", Help: "Configures the peripheral devices.", Text: "Select the SATA controller mode.
+
+[AHCI]
+Set SATA controller to AHCI mode.
+[Compatible]
+Set SATA controller to IDE mode."
+			End 
+			SuppressIf 
+				EqIdValList QuestionId: 0x21, Values: [0, 1]
+					EqIdVal QuestionId: 0x23, Value: 0x0
+					Or 
+				End 
+				Text Prompt: "USB Legacy", Help: "Configures the peripheral devices.", Text: "Compatible"
+			End 
+			SuppressIf 
+				EqIdValList QuestionId: 0x21, Values: [0, 1]
+					EqIdVal QuestionId: 0x22, Value: 0x1
+					Or 
+				End 
+				Text Prompt: "Enable or disable USB device in legacy environment (DOS, legacy POST etc).
+
+[Enabled]
+USB function is enabled in legacy environment.
+[Disabled]
+USB function is disabled in legacy environment.", Help: "Configures the peripheral devices.", Text: "Power Beep"
+			End 
+			SuppressIf 
+				EqIdValList QuestionId: 0x21, Values: [0, 1]
+					EqIdVal QuestionId: 0x22, Value: 0x0
+					Or 
+				End 
+				Text Prompt: "Enable or disable USB device in legacy environment (DOS, legacy POST etc).
+
+[Enabled]
+USB function is enabled in legacy environment.
+[Disabled]
+USB function is disabled in legacy environment.", Help: "Configures the peripheral devices.", Text: "AHCI"
+			End 
+		End 
+		GrayOutIf 
+			EqIdValList QuestionId: 0x5, Values: [2, 3]
+				EqIdVal QuestionId: 0x13, Value: 0x1
+				And 
+			End 
+			SuppressIf 
+				EqIdValList QuestionId: 0x21, Values: [0, 1]
+				Action Prompt: "Modem", Help: "Enable or disable Modem device.
+
+[Enabled]
+Modem is enabled.
+[Disabled]
+Modem is disabled.", QuestionFlags: 0x4, QuestionId: 0xE061, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, QuestionConfig: ""
+					Guid Guid: 38237648-09CC-47C4-8B5F-B09F06890DF7, Optional data: [6, 0, 37, 0]
+				End 
+				Action Prompt: "Wireless LAN", Help: "Enable or disable wireless LAN device.
+
+[Enabled]
+All wireless LAN devices are enabled.
+[Disabled]
+All wireless LAN devices are disabled.", QuestionFlags: 0x4, QuestionId: 0xE062, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, QuestionConfig: ""
+					Guid Guid: 38237648-09CC-47C4-8B5F-B09F06890DF7, Optional data: [6, 0, 37, 0]
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x20, Value: 0x1
+				Not 
+				EqIdVal QuestionId: 0x1F, Value: 0x0
+				Or 
+			End 
+			Subtitle Prompt: "Configures the peripheral devices.", Help: "", Flags: 0x0
+			End 
+			Text Prompt: "None", Help: "None", Text: "Configures the peripheral devices."
+		End 
+		Guid Guid: 38237648-09CC-47C4-8B5F-B09F06890DF7, Optional data: [7, 0]
+		End 
+	End 
+	Form FormId: 0xE102, Title: "Enable or disable beep alarm for external power supply changes.
+
+[Enabled]
+The Power Beep is enabled.
+[Disabled]
+The Power Beep is disabled."
+		Subtitle Prompt: "Configures the peripheral devices.", Help: "", Flags: 0x0
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x1E, Value: 0x0
+			GrayOutIf 
+				EqIdValList QuestionId: 0x5, Values: [2, 3]
+					EqIdVal QuestionId: 0x13, Value: 0x1
+					And 
+				End 
+				OneOf Prompt: "AMD SVM Technology", Help: "When enabled, a VM software can utilize the additional hardware capabilities provided by Virtual Technology.
+
+[Enabled]
+Virtual Technology is enabled.
+[Disabled]
+Virtual Technology is disabled.", QuestionFlags: 0x0, QuestionId: 0x8, VarStoreId: 0x1234, VarOffset: 0x238, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Zip Emulation Type" Value: 1, Default
+					OneOfOption Option: "Enable / Disable Fast Recovery test" Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x1D, Value: 0x0
+			GrayOutIf 
+				EqIdValList QuestionId: 0x5, Values: [2, 3]
+					EqIdVal QuestionId: 0x13, Value: 0x1
+					And 
+				End 
+				OneOf Prompt: "Graphic Device", Help: "Select graphic device.
+
+[Discrete]
+Enable the integrated
+and discrete graphic controller. System will choose graphic
+controller according to the user scenario.
+[UMA Only]
+Enable integrated
+graphic controller only.", QuestionFlags: 0x0, QuestionId: 0x9, VarStoreId: 0x1234, VarOffset: 0x23A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Zip Emulation Type" Value: 1, Default
+					OneOfOption Option: "Enable / Disable Fast Recovery test" Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x1C, Value: 0x0
+			GrayOutIf 
+				EqIdValList QuestionId: 0x5, Values: [2, 3]
+					EqIdVal QuestionId: 0x13, Value: 0x1
+					And 
+				End 
+				OneOf Prompt: "Discrete", Help: "UMA Only", QuestionFlags: 0x0, QuestionId: 0xA, VarStoreId: 0x1234, VarOffset: 0x23C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Zip Emulation Type" Value: 1, Default
+					OneOfOption Option: "Enable / Disable Fast Recovery test" Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x1B, Value: 0x0
+			GrayOutIf 
+				EqIdValList QuestionId: 0x5, Values: [2, 3]
+					EqIdVal QuestionId: 0x13, Value: 0x1
+					And 
+				End 
+				OneOf Prompt: "BIOS Back Flash", Help: "Allow BIOS to be back leveled to a previous version.
+
+[Enabled]
+BIOS could be back leveled to a previous version.
+[Disabled]
+BIOS cannot be back leveled to a previous version.", QuestionFlags: 0x0, QuestionId: 0xB, VarStoreId: 0x1234, VarOffset: 0x23E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Zip Emulation Type" Value: 1, Default
+					OneOfOption Option: "Enable / Disable Fast Recovery test" Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x1A, Value: 0x0
+			GrayOutIf 
+				EqIdValList QuestionId: 0x5, Values: [2, 3]
+					EqIdVal QuestionId: 0x13, Value: 0x1
+					And 
+				End 
+				OneOf Prompt: "HotKey Mode", Help: "Enable or disable Hotkey Mode.
+
+[Enabled]
+Use the hotkey function by pressing single Fx key. Use legacy Fx function by pressing Fn+Fx key.
+[Disabled]
+Use the hotkey function by pressing Fn+Fx key. Use legacy Fx function by pressing Fx key directly.", QuestionFlags: 0x0, QuestionId: 0xC, VarStoreId: 0x1234, VarOffset: 0x240, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Zip Emulation Type" Value: 1, Default
+					OneOfOption Option: "Enable / Disable Fast Recovery test" Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x19, Value: 0x0
+			GrayOutIf 
+				EqIdValList QuestionId: 0x5, Values: [2, 3]
+					EqIdVal QuestionId: 0x13, Value: 0x1
+					And 
+				End 
+				OneOf Prompt: "Always On USB", Help: "Enable or disable USB charge for external device.
+
+[Enabled]
+USB Charge is enabled.
+[Disabled]
+USB Charge is disabled.", QuestionFlags: 0x0, QuestionId: 0xD, VarStoreId: 0x1234, VarOffset: 0x242, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Zip Emulation Type" Value: 1, Default
+					OneOfOption Option: "Enable / Disable Fast Recovery test" Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x18, Value: 0x0
+			GrayOutIf 
+				EqIdValList QuestionId: 0x5, Values: [2, 3]
+					EqIdVal QuestionId: 0x13, Value: 0x1
+					And 
+				End 
+				OneOf Prompt: "- Charge in Battery Mode", Help: "Enable/Disable charging external device when system is in hiberante or power-off state and in battery mode.
+
+[Disabled]
+Disables charging when system is in hibernate or power-off state and in battery mode.
+[Enabled]
+Enables charging when system is in hibernate or power-off state and in battery mode.", QuestionFlags: 0x0, QuestionId: 0xE, VarStoreId: 0x1234, VarOffset: 0x244, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Zip Emulation Type" Value: 1, Default
+					OneOfOption Option: "Enable / Disable Fast Recovery test" Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x17, Value: 0x0
+			GrayOutIf 
+				EqIdValList QuestionId: 0x5, Values: [2, 3]
+					EqIdVal QuestionId: 0x13, Value: 0x1
+					And 
+				End 
+				OneOf Prompt: "OneKeyBattery", Help: "When shutdown, attaching AC or Knocking keyboard will trigger showing battery charging logo.
+
+[Enabled]
+ Battery Charging Logo is enabled.
+[Disabled]
+ Battery Charging Logo is disabled.", QuestionFlags: 0x0, QuestionId: 0xF, VarStoreId: 0x1234, VarOffset: 0x246, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Zip Emulation Type" Value: 1, Default
+					OneOfOption Option: "Enable / Disable Fast Recovery test" Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x16, Value: 0x0
+			GrayOutIf 
+				EqIdValList QuestionId: 0x5, Values: [2, 3]
+					EqIdVal QuestionId: 0x13, Value: 0x1
+					And 
+				End 
+				OneOf Prompt: "System Performance Mode", Help: "Select different thermal control method.
+
+[Performance]
+Best performance.
+[Quiet]
+Best balance performance and acoustic noise.", QuestionFlags: 0x0, QuestionId: 0x10, VarStoreId: 0x1234, VarOffset: 0x248, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Zip Emulation Type" Value: 1, Default
+					OneOfOption Option: "Enable / Disable Fast Recovery test" Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x15, Value: 0x0
+			GrayOutIf 
+				EqIdValList QuestionId: 0x5, Values: [2, 3]
+					EqIdVal QuestionId: 0x13, Value: 0x1
+					And 
+				End 
+				OneOf Prompt: "Performance", Help: "Quiet", QuestionFlags: 0x0, QuestionId: 0x11, VarStoreId: 0x1234, VarOffset: 0x24A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Zip Emulation Type" Value: 1, Default
+					OneOfOption Option: "Enable / Disable Fast Recovery test" Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x14, Value: 0x0
+			GrayOutIf 
+				EqIdValList QuestionId: 0x5, Values: [2, 3]
+					EqIdVal QuestionId: 0x13, Value: 0x1
+					And 
+				End 
+				OneOf Prompt: "OS Optimized Defaults", Help: "Set the BIOS default setting for pure UEFI mode or legacy support mode.
+
+[Enabled]
+When load default values, will load pure UEFI mode default values. Win8 and later OS support pure UEFI mode
+[Disabled]
+When load default values, will load legacy support mode default values.", QuestionFlags: 0x0, QuestionId: 0x12, VarStoreId: 0x1234, VarOffset: 0x24C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Zip Emulation Type" Value: 1, Default
+					OneOfOption Option: "Enable / Disable Fast Recovery test" Value: 0
+				End 
+			End 
+		End 
+		DisableIf 
+			True 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x13, VarStoreId: 0x1234, VarOffset: 0x81, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x14, VarStoreId: 0x1234, VarOffset: 0x24B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x15, VarStoreId: 0x1234, VarOffset: 0x249, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x16, VarStoreId: 0x1234, VarOffset: 0x247, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x17, VarStoreId: 0x1234, VarOffset: 0x245, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x18, VarStoreId: 0x1234, VarOffset: 0x243, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x19, VarStoreId: 0x1234, VarOffset: 0x241, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x1A, VarStoreId: 0x1234, VarOffset: 0x23F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x1B, VarStoreId: 0x1234, VarOffset: 0x23D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x1C, VarStoreId: 0x1234, VarOffset: 0x23B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x1D, VarStoreId: 0x1234, VarOffset: 0x239, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x1E, VarStoreId: 0x1234, VarOffset: 0x237, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x1F, VarStoreId: 0x1234, VarOffset: 0x232, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x20, VarStoreId: 0x1234, VarOffset: 0x219, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x21, VarStoreId: 0x1234, VarOffset: 0x79, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x22, VarStoreId: 0x1234, VarOffset: 0x222, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x23, VarStoreId: 0x1234, VarOffset: 0x21F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x24, VarStoreId: 0x1234, VarOffset: 0x6C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x25, VarStoreId: 0x1234, VarOffset: 0x66, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x26, VarStoreId: 0x1234, VarOffset: 0x61, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x27, VarStoreId: 0x1234, VarOffset: 0x233, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x28, VarStoreId: 0x1234, VarOffset: 0x212, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x29, VarStoreId: 0x1235, VarOffset: 0x7, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x2A, VarStoreId: 0x1235, VarOffset: 0x0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x2B, VarStoreId: 0x1234, VarOffset: 0xA8, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x2C, VarStoreId: 0x1234, VarOffset: 0xA9, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+		End 
+	End 
+End 

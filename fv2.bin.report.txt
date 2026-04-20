@@ -1,0 +1,13 @@
+        Type         |        Subtype        |   Base   |   Size   |  CRC32   |   Name 
+ Image               | UEFI                  | 00000000 | 00050000 | 5BB10BC8 |  UEFI image
+ Volume              | NVRAM                 | 00000000 | 00050000 | 5BB10BC8 | - FFF12B8D-7696-4C8B-A985-2747075B4F50
+ Padding             | Non-empty             | 00000048 | 00024FB8 | 48D483E2 | -- Padding
+ FTW store           |                       | 00025000 | 00001000 | DF70898C | -- FTW store
+ Padding             | Empty (FFh)           | 00026000 | 00026000 | 5CADFE14 | -- Padding
+ FDC store           |                       | 0004C000 | 00004000 | 875273B3 | -- Insyde FDC store
+ VSS store           |                       | 0004C050 | 00003FB0 | E75FC2A5 | --- VSS store
+ VSS entry           | Auth                  | 0004C060 | 00000396 | 310A866F | ---- 8BE4DF61-93CA-11D2-AA0D-00E098032B8C | PK
+ VSS entry           | Auth                  | 0004C3F6 | 0000065C | 7FA2E962 | ---- 8BE4DF61-93CA-11D2-AA0D-00E098032B8C | KEK
+ VSS entry           | Auth                  | 0004CA52 | 00000FDA | FC15CBCD | ---- D719B2CB-3D3A-4596-A3BC-DAD00E67656F | db
+ VSS entry           | Auth                  | 0004DA2C | 00000ED0 | FBE1DD8A | ---- D719B2CB-3D3A-4596-A3BC-DAD00E67656F | dbx
+ Free space          |                       | 0004E8FC | 00001704 | E45282DD | ---- Free space

@@ -1,0 +1,422 @@
+Program version: 1.6.1, Extraction mode: UEFI, SHA256: bfe7ddb9d61d2a68c767a5f4c72be496c8f281a98f4863d771b1143e01101a69
+FormSet Guid: B863B959-0EC6-4033-99C1-8FD89F040222, Title: "AMD PBS", Help: "AMD PBS Setup Page"
+	Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Class, Class: 0x1
+	Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: SubClass, SubClass: 0x0
+	DefaultStore DefaultId: 0x0, Name: ""
+	DefaultStore DefaultId: 0x1, Name: ""
+	VarStore Guid: A339D746-F678-49B3-9FC7-54CE0F9DF226, VarStoreId: 0x1, Size: 0x80, Name: "AMD_PBS_SETUP"
+	Form FormId: 0xB, Title: "AMD PBS Option"
+		Ref Prompt: "AMD Firmware Version", Help: "Show all of AMD Firmware Version", QuestionFlags: 0x0, QuestionId: 0x1, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0xC
+		OneOf Prompt: "D3Cold Support", Help: "Enable/Disable PCIe x8 Slot D3Cold", QuestionFlags: 0x14, QuestionId: 0x2, VarStoreId: 0x1, VarOffset: 0x3E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled " Value: 1
+		End 
+		OneOf Prompt: "NVIDIA DGPU Power Enable", Help: "For NVIDIA mobile DGPU card only. Output DGPU_EN# A19 pin and DGPU_SEL# B17 pin to high at every power on state.", QuestionFlags: 0x14, QuestionId: 0x3, VarStoreId: 0x1, VarOffset: 0x42, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled " Value: 1
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x39, Value: 0x0
+				EqIdVal QuestionId: 0x2, Value: 0x0
+				And 
+			End 
+			OneOf Prompt: "Discrete GPU Hotplug Mode", Help: "Select Discrete GPU Hotplug Mode - HotplugEnhanced or HotplugBasic", QuestionFlags: 0x14, QuestionId: 0x4, VarStoreId: 0x1, VarOffset: 0x2E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Basic Mode" Value: 0
+				OneOfOption Option: "Enhanced Mode" Value: 1, Default
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x39, Value: 0x0
+			OneOf Prompt: "Non-Eval Discrete GPU Support", Help: "Enable to support Non-Eval Discrete GPU that doesn't have specific EVAL_PWRGD(A5), EVAL_PRESENT#(B30)", QuestionFlags: 0x14, QuestionId: 0x5, VarStoreId: 0x1, VarOffset: 0x41, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0, Default
+				OneOfOption Option: "Enabled " Value: 1
+			End 
+			OneOf Prompt: "Discrete GPU HPD Circuitry", Help: "Enable/Disable Discrete GPU Display HPD Circuitry", QuestionFlags: 0x14, QuestionId: 0x6, VarStoreId: 0x1, VarOffset: 0x2F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "OR Circuitry" Value: 0, Default
+				OneOfOption Option: "Pulse Circuitry" Value: 1
+			End 
+			OneOf Prompt: "Discrete GPU's Audio", Help: "Disable Discrete GPU's Audio or keep its ROM strap setting", QuestionFlags: 0x14, QuestionId: 0x7, VarStoreId: 0x1, VarOffset: 0x5, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0, Default
+				OneOfOption Option: "Keep ROM Strap Setting" Value: 1
+			End 
+			OneOf Prompt: "Discrete GPU BOMACO Support", Help: "Enable/Disable Discrete GPU BOMACO Support", QuestionFlags: 0x14, QuestionId: 0x7E4, VarStoreId: 0x1, VarOffset: 0x30, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0, Default
+				OneOfOption Option: "Enabled " Value: 1
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7E4, Value: 0x0
+			Numeric Prompt: "MACO-PWR Timing   (us)", Help: "MACO-PWR Timing: MACO_EN assert to PWR_EN deassert", QuestionFlags: 0x0, QuestionId: 0x8, VarStoreId: 0x1, VarOffset: 0x31, Flags: 0x10, Size: 8, Min: 0xA, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 10
+			End 
+			Numeric Prompt: "PWROFF-RST Timing (ms)", Help: "PWROFF-RST Timing: PWR_EN deassert to PERSTb assert", QuestionFlags: 0x0, QuestionId: 0x9, VarStoreId: 0x1, VarOffset: 0x32, Flags: 0x10, Size: 8, Min: 0x1, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 20
+			End 
+			Numeric Prompt: "PWRON-RST Timing  (ms)", Help: "PWRON-RST Timing: PWR_EN assert to PERSTb deassert", QuestionFlags: 0x0, QuestionId: 0xA, VarStoreId: 0x1, VarOffset: 0x33, Flags: 0x10, Size: 8, Min: 0x1, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 20
+			End 
+			Numeric Prompt: "RST-MACO Timing   (ms)", Help: "RST-MACO Timing: PERSTb deassert to MACO_EN deassert", QuestionFlags: 0x0, QuestionId: 0xB, VarStoreId: 0x1, VarOffset: 0x34, Flags: 0x10, Size: 8, Min: 0x1, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 1
+			End 
+		End 
+		OneOf Prompt: "Primary Video Adaptor", Help: "Select Internal/External Graphics", QuestionFlags: 0x14, QuestionId: 0xC, VarStoreId: 0x1, VarOffset: 0x6, Flags: 0x10, Size: 8, Min: 0x1, Max: 0x2, Step: 0x0
+			OneOfOption Option: "Int Graphics (IGD)" Value: 1, Default
+			OneOfOption Option: "Ext Graphics (PEG)" Value: 2
+		End 
+		OneOf Prompt: "Above 4GB MMIO Limit", Help: "Select Above 4GB MMIO Limit to 35~48bits limit.", QuestionFlags: 0x14, QuestionId: 0xD, VarStoreId: 0x1, VarOffset: 0x3D, Flags: 0x10, Size: 8, Min: 0x23, Max: 0x30, Step: 0x0
+			OneOfOption Option: "35bit (32GB)" Value: 35
+			OneOfOption Option: "36bit (64GB)" Value: 36
+			OneOfOption Option: "37bit (128GB)" Value: 37
+			OneOfOption Option: "38bit (256GB)" Value: 38
+			OneOfOption Option: "39bit (512GB)" Value: 39
+			OneOfOption Option: "40bit (1TB)" Value: 40, Default
+			OneOfOption Option: "41bit (2TB)" Value: 41
+			OneOfOption Option: "42bit (4TB)" Value: 42
+			OneOfOption Option: "43bit (8TB)" Value: 43
+			OneOfOption Option: "44bit (16TB)" Value: 44
+			OneOfOption Option: "45bit (32TB)" Value: 45
+			OneOfOption Option: "46bit (64TB)" Value: 46
+			OneOfOption Option: "47bit (128TB)" Value: 47
+			OneOfOption Option: "48bit (256TB)" Value: 48
+		End 
+		OneOf Prompt: "StallForUnlock", Help: "StallForUnlock Enable/Disable", QuestionFlags: 0x14, QuestionId: 0xE, VarStoreId: 0x1, VarOffset: 0x39, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled " Value: 1
+		End 
+		OneOf Prompt: "HDT BreakPoint for Boot", Help: "HDT BreakPoint for Boot Enable/Disable", QuestionFlags: 0x14, QuestionId: 0xF, VarStoreId: 0x1, VarOffset: 0x3A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled " Value: 1
+		End 
+		OneOf Prompt: "SW BreakPoint for S3", Help: "SW BreakPoint for S3 Enable/Disable", QuestionFlags: 0x14, QuestionId: 0x10, VarStoreId: 0x1, VarOffset: 0x3B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled " Value: 1
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x38, Value: 0x0
+				Not 
+			End 
+			OneOf Prompt: "Touch Panel Support", Help: "Enable/Disable exposing of _HID(PNP0C50) in ACPI ASL code to OS", QuestionFlags: 0x14, QuestionId: 0x11, VarStoreId: 0x1, VarOffset: 0x7, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x8, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0, Default
+				OneOfOption Option: "Under I2C 0 Bus" Value: 1
+				OneOfOption Option: "Under I2C 1 Bus" Value: 2
+				OneOfOption Option: "Under I2C 2 Bus" Value: 3
+				OneOfOption Option: "Under I2C 3 Bus" Value: 4
+				OneOfOption Option: "ELAN TSP Under I2C 0 Bus" Value: 5
+				OneOfOption Option: "ELAN TSP Under I2C 1 Bus" Value: 6
+				OneOfOption Option: "ELAN TSP Under I2C 2 Bus" Value: 7
+				OneOfOption Option: "ELAN TSP Under I2C 3 Bus" Value: 8
+			End 
+			OneOf Prompt: "Touch Pad Support", Help: "Enable/Disable exposing of _HID(PNP0C50) in ACPI ASL code to OS", QuestionFlags: 0x14, QuestionId: 0x12, VarStoreId: 0x1, VarOffset: 0x8, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0, Default
+				OneOfOption Option: "Under I2C 0 Bus" Value: 1
+				OneOfOption Option: "Under I2C 1 Bus" Value: 2
+				OneOfOption Option: "Under I2C 2 Bus" Value: 3
+				OneOfOption Option: "Under I2C 3 Bus" Value: 4
+			End 
+			OneOf Prompt: "Nfc Support", Help: "Enable/Disable exposing of _HID(BCM2F25) in ACPI ASL code to OS", QuestionFlags: 0x14, QuestionId: 0x13, VarStoreId: 0x1, VarOffset: 0x9, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0, Default
+				OneOfOption Option: "Under I2C 0 Bus" Value: 1
+				OneOfOption Option: "Under I2C 1 Bus" Value: 2
+				OneOfOption Option: "Under I2C 2 Bus" Value: 3
+				OneOfOption Option: "Under I2C 3 Bus" Value: 4
+			End 
+			OneOf Prompt: "ALS Support", Help: "Enable/Disable exposing of _HID(CPLM3218) in ACPI ASL code to OS", QuestionFlags: 0x14, QuestionId: 0x14, VarStoreId: 0x1, VarOffset: 0xA, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0, Default
+				OneOfOption Option: "Under I2C 0 Bus" Value: 1
+				OneOfOption Option: "Under I2C 1 Bus" Value: 2
+				OneOfOption Option: "Under I2C 2 Bus" Value: 3
+				OneOfOption Option: "Under I2C 3 Bus" Value: 4
+			End 
+		End 
+		OneOf Prompt: "HDMI over USB-C0", Help: "Force HDMI signals route over USB Type C port", QuestionFlags: 0x14, QuestionId: 0x15, VarStoreId: 0x1, VarOffset: 0xB, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Native USB Type-C" Value: 0, Default
+			OneOfOption Option: "HDMI over USB Type-C" Value: 1
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x37, Value: 0x1
+			OneOf Prompt: "HDMI over USB-C1", Help: "Force HDMI signals route over USB Type C port", QuestionFlags: 0x14, QuestionId: 0x16, VarStoreId: 0x1, VarOffset: 0xC, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Native USB Type-C" Value: 0, Default
+				OneOfOption Option: "HDMI over USB Type-C" Value: 1
+			End 
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0x7E9, Value: 0x2
+			OneOf Prompt: "HDD Power Enable", Help: "Enable or disable the power of HDD", QuestionFlags: 0x14, QuestionId: 0x17, VarStoreId: 0x1, VarOffset: 0xD, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled " Value: 1, Default
+				OneOfOption Option: "Manual by jumper" Value: 2
+			End 
+			OneOf Prompt: "ODD Power Enable", Help: "Enable or disable the power of ODD", QuestionFlags: 0x14, QuestionId: 0x7EE, VarStoreId: 0x1, VarOffset: 0xE, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled " Value: 1, Default
+			End 
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0x7EE, Value: 0x0
+			OneOf Prompt: "Zero-Power ODD", Help: "Enable/Disable Zero-Power ODD Feature", QuestionFlags: 0x14, QuestionId: 0x18, VarStoreId: 0x1, VarOffset: 0xF, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0, Default
+				OneOfOption Option: "Enabled " Value: 1
+			End 
+		End 
+		OneOf Prompt: "SSD Power Enable", Help: "Enable or disable the power of SSD", QuestionFlags: 0x14, QuestionId: 0x7E9, VarStoreId: 0x1, VarOffset: 0x10, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "SSD x2" Value: 1, Default
+			SuppressIf 
+				EqIdVal QuestionId: 0x38, Value: 0x1
+					EqIdVal QuestionId: 0x37, Value: 0x1
+					Or 
+				End 
+				OneOfOption Option: "SSD x4" Value: 2
+			End 
+		End 
+		OneOf Prompt: "Serial Debug Message Under OS", Help: "Enable Serial Debug Message Under OS", QuestionFlags: 0x14, QuestionId: 0x19, VarStoreId: 0x1, VarOffset: 0x11, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled " Value: 1
+		End 
+		OneOf Prompt: "DT Hotplug Enable", Help: "Enable or Disable DT Hotplug, it uses EC DOCK_IN# pin as plug-in event.", QuestionFlags: 0x14, QuestionId: 0x7DC, VarStoreId: 0x1, VarOffset: 0x12, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled " Value: 1
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7DC, Value: 0x0
+			OneOf Prompt: "DT Hotplug Mode", Help: "Select DT Hotplug Mode - DxioHotplugEnhanced or DxioHotplugBasic", QuestionFlags: 0x14, QuestionId: 0x1A, VarStoreId: 0x1, VarOffset: 0x13, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Basic Mode" Value: 0
+				OneOfOption Option: "Enhanced Mode" Value: 1, Default
+			End 
+		End 
+		OneOf Prompt: "DT Slot Power Enable", Help: "Enable or disable the power of DT SLOT", QuestionFlags: 0x14, QuestionId: 0x7DD, VarStoreId: 0x1, VarOffset: 0x14, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			SuppressIf 
+				EqIdVal QuestionId: 0x37, Value: 0x1
+				OneOfOption Option: "Enabled (x4)" Value: 1
+			End 
+			OneOfOption Option: "Enabled (x2) (Lane 0 + 1)" Value: 2
+			OneOfOption Option: "Enabled (x1) (Lane 0)" Value: 3
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0x7DD, Value: 0x0
+				Not 
+			End 
+			OneOf Prompt: "WLAN/WIFI Power Enable", Help: "Enable or disable the power of WLAN/WIFI", QuestionFlags: 0x14, QuestionId: 0x1B, VarStoreId: 0x1, VarOffset: 0x15, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled " Value: 1, Default
+				OneOfOption Option: "Manual" Value: 2
+			End 
+		End 
+		GrayOutIf 
+			EqIdValList QuestionId: 0x7DD, Values: [1, 2, 3]
+			OneOf Prompt: "LAN Power Enable", Help: "Enable or disable LAN Power", QuestionFlags: 0x14, QuestionId: 0x1C, VarStoreId: 0x1, VarOffset: 0x16, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled " Value: 1, Default
+				OneOfOption Option: "Manual" Value: 2
+			End 
+			OneOf Prompt: "LAN Low Power Mode", Help: "Enable or disable LAN Low Power Mode", QuestionFlags: 0x14, QuestionId: 0x1D, VarStoreId: 0x1, VarOffset: 0x3F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0, Default
+				OneOfOption Option: "Enabled " Value: 1
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x38, Value: 0x1
+				EqIdVal QuestionId: 0x37, Value: 0x1
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x7DD, Value: 0x1
+				OneOf Prompt: "WWAN Power Enable", Help: "Enable or disable the power of WWAN", QuestionFlags: 0x14, QuestionId: 0x1E, VarStoreId: 0x1, VarOffset: 0x17, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+					OneOfOption Option: "Disabled" Value: 0
+					OneOfOption Option: "Enabled " Value: 1, Default
+					OneOfOption Option: "Manual" Value: 2
+				End 
+			End 
+		End 
+		OneOf Prompt: "Eval Auto Detection", Help: "Disable or enable EVAL card auto detection", QuestionFlags: 0x14, QuestionId: 0x1F, VarStoreId: 0x1, VarOffset: 0x18, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled " Value: 1
+		End 
+		OneOf Prompt: "Camera 0 Enable", Help: "Enable or disable the power of REAR CAMERA", QuestionFlags: 0x14, QuestionId: 0x20, VarStoreId: 0x1, VarOffset: 0x19, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled " Value: 1, Default
+		End 
+		OneOf Prompt: "Camera 1 Enable", Help: "Enable or disable the power of FRONT CAMERA", QuestionFlags: 0x14, QuestionId: 0x21, VarStoreId: 0x1, VarOffset: 0x1A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled " Value: 1, Default
+		End 
+		OneOf Prompt: "UCSI Support", Help: "Enable/Disable UCSI (USB Type-C Connector System Software Interface)", QuestionFlags: 0x14, QuestionId: 0x22, VarStoreId: 0x1, VarOffset: 0x1B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled " Value: 1, Default
+		End 
+		OneOf Prompt: "Sensor Fusion User Mode Driver", Help: "Enable/Disable Sensor Fusion User Mode Driver", QuestionFlags: 0x14, QuestionId: 0x23, VarStoreId: 0x1, VarOffset: 0x40, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled " Value: 1
+		End 
+		OneOf Prompt: "MITT/WITT Selection", Help: "MITT/WITT Selection", QuestionFlags: 0x14, QuestionId: 0x24, VarStoreId: 0x1, VarOffset: 0x1C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+			OneOfOption Option: "MITT Only" Value: 0
+			OneOfOption Option: "WITT Only" Value: 1
+			OneOfOption Option: "Both disable" Value: 2, Default
+		End 
+		OneOf Prompt: "Unused GPP Clocks Off", Help: "Turn Unused GPP Clocks Off", QuestionFlags: 0x14, QuestionId: 0x25, VarStoreId: 0x1, VarOffset: 0x1D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled " Value: 1, Default
+		End 
+		OneOf Prompt: "Clock PM: CLK_REQ0", Help: "Enable or disable CLK_REQ0# for M.2 WLAN Slot J3711", QuestionFlags: 0x14, QuestionId: 0x26, VarStoreId: 0x1, VarOffset: 0x1E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled " Value: 1, Default
+		End 
+		OneOf Prompt: "Clock PM: CLK_REQ1", Help: "Enable or disable CLK_REQ1# for Onboard LAN U1301", QuestionFlags: 0x14, QuestionId: 0x27, VarStoreId: 0x1, VarOffset: 0x1F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled " Value: 1, Default
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x37, Value: 0x1
+			OneOf Prompt: "Clock PM: CLK_REQ2", Help: "Enable or disable CLK_REQ2# for M.2 WWAN Slot J3712", QuestionFlags: 0x14, QuestionId: 0x28, VarStoreId: 0x1, VarOffset: 0x20, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled " Value: 1, Default
+			End 
+			OneOf Prompt: "Clock PM: CLK_REQ3", Help: "Enable or disable CLK_REQ3# for M.2 WIFI Slot J3709", QuestionFlags: 0x14, QuestionId: 0x29, VarStoreId: 0x1, VarOffset: 0x21, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled " Value: 1, Default
+			End 
+		End 
+		OneOf Prompt: "Clock PM: CLK_REQ4", Help: "Enable or disable CLK_REQ4# for DT x4 Slot J3606", QuestionFlags: 0x14, QuestionId: 0x2A, VarStoreId: 0x1, VarOffset: 0x22, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled " Value: 1
+		End 
+		OneOf Prompt: "Clock PM: CLK_REQ5", Help: "Enable or disable CLK_REQ5# for M.2 SSD Slot J3704", QuestionFlags: 0x14, QuestionId: 0x2B, VarStoreId: 0x1, VarOffset: 0x23, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled " Value: 1, Default
+		End 
+		OneOf Prompt: "Clock PM: CLK_REQ6", Help: "Enable or disable CLK_REQ6# for MXM x8 Slot J3604", QuestionFlags: 0x14, QuestionId: 0x2C, VarStoreId: 0x1, VarOffset: 0x24, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled " Value: 1
+		End 
+		OneOf Prompt: "KBC Support", Help: "Enable/Disable KBC Support under OS", QuestionFlags: 0x14, QuestionId: 0x2D, VarStoreId: 0x1, VarOffset: 0x25, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled " Value: 1
+		End 
+		OneOf Prompt: "AcDcSwitch", Help: "Enable/disable AcDcSwitch.", QuestionFlags: 0x14, QuestionId: 0x2E, VarStoreId: 0x1, VarOffset: 0x26, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled " Value: 1
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x2E, Value: 0x0
+			Numeric Prompt: "AmdDcTimer", Help: "AmdDcTimer Setting.", QuestionFlags: 0x0, QuestionId: 0x2F, VarStoreId: 0x1, VarOffset: 0x27, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "AmdAcTimer", Help: "AmdAcTimer Setting.", QuestionFlags: 0x0, QuestionId: 0x30, VarStoreId: 0x1, VarOffset: 0x28, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 0
+			End 
+		End 
+		SuppressIf 
+			True 
+			OneOf Prompt: "SATA/ SATA express selection", Help: "SATA/ SATA express selection  Setting.", QuestionFlags: 0x14, QuestionId: 0x31, VarStoreId: 0x1, VarOffset: 0x29, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "SATA" Value: 0, Default
+				OneOfOption Option: "SATA express" Value: 1
+			End 
+		End 
+		OneOf Prompt: "VDDP voltage", Help: "VDDP voltage  Setting.", QuestionFlags: 0x14, QuestionId: 0x32, VarStoreId: 0x1, VarOffset: 0x2A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x14, Step: 0x0
+			OneOfOption Option: "VDDP voltage (0.9V)" Value: 0, Default
+			OneOfOption Option: "VDDP voltage (+10mv)" Value: 1
+			OneOfOption Option: "VDDP voltage (+20mv)" Value: 2
+			OneOfOption Option: "VDDP voltage (+30mv)" Value: 3
+			OneOfOption Option: "VDDP voltage (+40mv)" Value: 4
+			OneOfOption Option: "VDDP voltage (+50mv)" Value: 5
+			OneOfOption Option: "VDDP voltage (+60mv)" Value: 6
+			OneOfOption Option: "VDDP voltage (+70mv)" Value: 7
+			OneOfOption Option: "VDDP voltage (+80mv)" Value: 8
+			OneOfOption Option: "VDDP voltage (+90mv)" Value: 9
+			OneOfOption Option: "VDDP voltage (+100mv)" Value: 10
+			OneOfOption Option: "VDDP voltage (-10mv)" Value: 11
+			OneOfOption Option: "VDDP voltage (-20mv)" Value: 12
+			OneOfOption Option: "VDDP voltage (-30mv)" Value: 13
+			OneOfOption Option: "VDDP voltage (-40mv)" Value: 14
+			OneOfOption Option: "VDDP voltage (-50mv)" Value: 15
+			OneOfOption Option: "VDDP voltage (-60mv)" Value: 16
+			OneOfOption Option: "VDDP voltage (-70mv)" Value: 17
+			OneOfOption Option: "VDDP voltage (-80mv)" Value: 18
+			OneOfOption Option: "VDDP voltage (-90mv)" Value: 19
+			OneOfOption Option: "VDDP voltage (-100mv)" Value: 20
+		End 
+		OneOf Prompt: "VDD18 voltage", Help: "VDD18 voltage  Setting.", QuestionFlags: 0x14, QuestionId: 0x33, VarStoreId: 0x1, VarOffset: 0x2B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x14, Step: 0x0
+			OneOfOption Option: "VDD18 voltage (1.8V)" Value: 0, Default
+			OneOfOption Option: "VDD18 voltage (+40mv)" Value: 1
+			OneOfOption Option: "VDD18 voltage (+50mv)" Value: 2
+			OneOfOption Option: "VDD18 voltage (+60mv)" Value: 3
+			OneOfOption Option: "VDD18 voltage (+70mv)" Value: 4
+			OneOfOption Option: "VDD18 voltage (+80mv)" Value: 5
+			OneOfOption Option: "VDD18 voltage (+90mv)" Value: 6
+			OneOfOption Option: "VDD18 voltage (+100mv)" Value: 7
+			OneOfOption Option: "VDD18 voltage (+110mv)" Value: 8
+			OneOfOption Option: "VDD18 voltage (+120mv)" Value: 9
+			OneOfOption Option: "VDD18 voltage (+130mv)" Value: 10
+			OneOfOption Option: "VDD18 voltage (-40mv)" Value: 11
+			OneOfOption Option: "VDD18 voltage (-50mv)" Value: 12
+			OneOfOption Option: "VDD18 voltage (-60mv)" Value: 13
+			OneOfOption Option: "VDD18 voltage (-70mv)" Value: 14
+			OneOfOption Option: "VDD18 voltage (-80mv)" Value: 15
+			OneOfOption Option: "VDD18 voltage (-90mv)" Value: 16
+			OneOfOption Option: "VDD18 voltage (-100mv)" Value: 17
+			OneOfOption Option: "VDD18 voltage (-110mv)" Value: 18
+			OneOfOption Option: "VDD18 voltage (-120mv)" Value: 19
+			OneOfOption Option: "VDD18 voltage (-130mv)" Value: 20
+		End 
+		OneOf Prompt: "AMD KVM Mouse Protocol", Help: "Swtich KVM Mouse Protocol between Absolut/Simple", QuestionFlags: 0x14, QuestionId: 0x34, VarStoreId: 0x1, VarOffset: 0x35, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+			OneOfOption Option: "Absolute" Value: 0
+			OneOfOption Option: "Simple" Value: 1
+			OneOfOption Option: "Auto" Value: 3, Default
+		End 
+		OneOf Prompt: "AMD DPTC interface", Help: "Dynamic Power and Thermal Control Interface Enable/Disable", QuestionFlags: 0x14, QuestionId: 0x35, VarStoreId: 0x1, VarOffset: 0x2C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled " Value: 1
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0x7E4, Value: 0x1
+			OneOf Prompt: "BLINK LED", Help: "Enable/Disable BLINK LED to identify S3/S4 state", QuestionFlags: 0x14, QuestionId: 0x36, VarStoreId: 0x1, VarOffset: 0x36, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled " Value: 1, Default
+				OneOfOption Option: "GPIO 11 Output Low" Value: 2
+				OneOfOption Option: "GPIO 11 Output High" Value: 3
+			End 
+		End 
+	End 
+	Form FormId: 0xC, Title: "AMD Firmware Version"
+		Subtitle Prompt: "AMD Firmware Version", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		Text Prompt: "AGESA Version", Help: " ", Text: "0"
+		Text Prompt: "PSP BootLoader Version", Help: " ", Text: "0"
+		Text Prompt: "PSP SecureOS Version", Help: " ", Text: "0"
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		Text Prompt: "ABL Version", Help: " ", Text: "0"
+		Text Prompt: "APCB Version", Help: " ", Text: "0"
+		Text Prompt: "APOB Version", Help: " ", Text: "0"
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		Text Prompt: "Ucode Patch Version", Help: " ", Text: "0"
+		Text Prompt: "SMU FW Version", Help: " ", Text: "0"
+		Text Prompt: "DXIO FW Version", Help: " ", Text: "0"
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		Text Prompt: "MP2 FW Version", Help: " ", Text: "0"
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		Text Prompt: "XHCI FW Version", Help: " ", Text: "0"
+		Text Prompt: "VBIOS FW Version", Help: " ", Text: "0"
+		Text Prompt: "GOP Driver Version", Help: " ", Text: "0"
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		Text Prompt: "EC FW Version", Help: " ", Text: "0"
+		Text Prompt: "USB PD Section 1 FW Version", Help: " ", Text: "0"
+		Text Prompt: "USB PD Section 2 FW Version", Help: " ", Text: "0"
+		DisableIf 
+			True 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x37, VarStoreId: 0x1, VarOffset: 0x2, Flags: 0x11, Size: 16, Min: 0x0, Max: 0xFFFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x38, VarStoreId: 0x1, VarOffset: 0x0, Flags: 0x11, Size: 16, Min: 0x0, Max: 0xFFFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x39, VarStoreId: 0x1, VarOffset: 0x4, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+		End 
+	End 
+End 

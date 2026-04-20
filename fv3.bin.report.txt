@@ -1,0 +1,12 @@
+        Type         |        Subtype        |   Base   |   Size   |  CRC32   |   Name 
+ Image               | UEFI                  | 00000000 | 00050000 | 96A4A8F8 |  UEFI image
+ Volume              | NVRAM                 | 00000000 | 00050000 | 96A4A8F8 | - FFF12B8D-7696-4C8B-A985-2747075B4F50
+ Padding             | Non-empty             | 00000048 | 00007FB0 | F8D0E0DC | -- Padding
+ VSS store           |                       | 00007FF8 | 00000854 | DC2741DE | -- VSS store
+ VSS entry           | Auth                  | 00008008 | 00000304 | 5581E1D5 | --- A04A27F4-DF00-4D42-B552-39511302113D | Setup
+ VSS entry           | Auth                  | 0000830C | 00000174 | 4F6A3E9C | --- 3A997502-647A-4C82-998E-52EF9486A247 | AmdSetup
+ VSS entry           | Auth                  | 00008480 | 000000D8 | BF57674F | --- A339D746-F678-49B3-9FC7-54CE0F9DF226 | AMD_PBS_SETUP
+ VSS entry           | Auth                  | 00008558 | 000001E0 | 0968809F | --- 1F2D63E1-FEBD-4DC7-9CC5-BA2B1CEF9C5B | FeData
+ VSS entry           | Auth                  | 00008738 | 000000B0 | FCD041BB | --- AA1305B9-01F3-4AFB-920E-C9B979A852FD | SecureBootData
+ VSS entry           | Auth                  | 000087E8 | 00000064 | 2DCF34AF | --- 07A66697-D400-4903-B3DA-67A61D2B7058 | Tcg2ConfigInfo
+ Padding             | Non-empty             | 0000884C | 000477B4 | F7DBF0FB | -- Padding

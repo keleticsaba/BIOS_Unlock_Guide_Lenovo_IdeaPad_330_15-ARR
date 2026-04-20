@@ -1,0 +1,2039 @@
+Program version: 1.6.1, Extraction mode: UEFI, SHA256: 6887f9245832cab36ea0eb9a960d3a9adaa19363bf11e53f15aceabdab575bbc
+FormSet Guid: B04535E3-3004-4946-9EB7-149428983053, Title: "AMD CBS", Help: "AMD CBS Setup Page"
+	DefaultStore DefaultId: 0x0, Name: ""
+	DefaultStore DefaultId: 0x1, Name: ""
+	VarStore Guid: 3A997502-647A-4C82-998E-52EF9486A247, VarStoreId: 0x5000, Size: 0x126, Name: "AmdSetup"
+	Form FormId: 0x7000, Title: "AMD CBS"
+		Subtitle Prompt: "AMD CBS", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Ref Prompt: "Zen Common Options", Help: "Zen Common Options", QuestionFlags: 0x0, QuestionId: 0x1, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x7001
+		Ref Prompt: "DF Common Options", Help: "DF Common Options", QuestionFlags: 0x0, QuestionId: 0x2, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x7002
+		Ref Prompt: "UMC Common Options", Help: "UMC Common Options", QuestionFlags: 0x0, QuestionId: 0x3, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x7003
+		Ref Prompt: "NBIO Common Options", Help: "NBIO Common Options", QuestionFlags: 0x0, QuestionId: 0x4, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x7004
+		Ref Prompt: "FCH Common Options", Help: "FCH Common Options", QuestionFlags: 0x0, QuestionId: 0x5, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x7005
+		SuppressIf 
+			EqIdVal QuestionId: 0x6, Value: 0xFF
+				Not 
+			End 
+			Numeric Prompt: "Combo CBS", Help: "No help string", QuestionFlags: 0x10, QuestionId: 0x6, VarStoreId: 0x5000, VarOffset: 0x0, Flags: 0x20, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 254
+			End 
+		End 
+	End 
+	Form FormId: 0x7001, Title: "Zen Common Options"
+		Subtitle Prompt: "Zen Common Options", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "RedirectForReturnDis", Help: "From a workaround for GCC/C000005 issue for XV Core on CZ A0, setting MSRC001_1029 Decode Configuration (DE_CFG) bit 14 [DecfgNoRdrctForReturns] to 1", QuestionFlags: 0x10, QuestionId: 0x7, VarStoreId: 0x5000, VarOffset: 0x1, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			OneOfOption Option: "Auto" Value: 255, Default
+			OneOfOption Option: "1" Value: 1
+			OneOfOption Option: "0" Value: 0
+		End 
+		OneOf Prompt: "L2 TLB Associativity", Help: "0 - L2 TLB ways [11:8] are fully associative.  1 - =L2 TLB ways [11:8] are 4K-only.", QuestionFlags: 0x10, QuestionId: 0x8, VarStoreId: 0x5000, VarOffset: 0x2, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+			OneOfOption Option: "0" Value: 0
+			OneOfOption Option: "1" Value: 1
+			OneOfOption Option: "Auto" Value: 3, Default
+		End 
+		OneOf Prompt: "Platform First Error Handling", Help: "Enable/disable PFEH, cloak individual banks, and mask deferred error interrupts from each bank.", QuestionFlags: 0x10, QuestionId: 0x9, VarStoreId: 0x5000, VarOffset: 0x3, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+			OneOfOption Option: "Enable" Value: 0
+			OneOfOption Option: "Disable" Value: 1
+			OneOfOption Option: "Auto" Value: 3, Default
+		End 
+		OneOf Prompt: "Core Performance Boost", Help: "Disable CPB", QuestionFlags: 0x10, QuestionId: 0xA, VarStoreId: 0x5000, VarOffset: 0x4, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Auto" Value: 1, Default
+		End 
+		OneOf Prompt: "Global C-state Control", Help: "Controls IO based C-state generation and DF C-states.", QuestionFlags: 0x10, QuestionId: 0xB, VarStoreId: 0x5000, VarOffset: 0x5, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 3, Default
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x6, Value: 0xF
+				Not 
+			End 
+			OneOf Prompt: "OC Mode", Help: "No help string", QuestionFlags: 0x14, QuestionId: 0x7007, VarStoreId: 0x5000, VarOffset: 0x6, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x5, Step: 0x0
+				OneOfOption Option: "Normal Operation" Value: 0, Default
+				OneOfOption Option: "OC1" Value: 1
+				OneOfOption Option: "Customized" Value: 5
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x6, Value: 0xF
+				Not 
+			End 
+			Ref Prompt: "Custom Pstates / Throttling", Help: "Custom Pstates / Throttling", QuestionFlags: 0x0, QuestionId: 0xC, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x7008
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x6, Value: 0xF
+				Not 
+			End 
+			Ref Prompt: "Core/Thread Enablement", Help: "Core/Thread Enablement", QuestionFlags: 0x0, QuestionId: 0xD, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x7009
+		End 
+		OneOf Prompt: "Streaming Stores Control", Help: "Enables or disables the streaming stores functionality", QuestionFlags: 0x10, QuestionId: 0xE, VarStoreId: 0x5000, VarOffset: 0x7, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 3, Default
+		End 
+		OneOf Prompt: "Enable IBS", Help: "When IBS is enabled, SpecLockMap and Stack Engine are disabled.", QuestionFlags: 0x10, QuestionId: 0xF, VarStoreId: 0x5000, VarOffset: 0x8, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 3, Default
+		End 
+	End 
+	Form FormId: 0x7008, Title: "Custom Pstates / Throttling"
+		Subtitle Prompt: "Custom Pstates / Throttling", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Text Prompt: "WARNING - DAMAGE CAUSED BY USE OF YOUR AMD PROCESSOR OUTSIDE OF SPECIFICATION OR IN EXCESS OF FACTORY SETTINGS ARE NOT COVERED UNDER YOUR AMD PRODUCT WARRANTY AND MAY NOT BE COVERED BY YOUR SYSTEM MANUFACTURER'S WARRANTY.", Help: "Legal Disclaimer", Text: ""
+		Text Prompt: "Operating your AMD processor outside of specification or in excess of factory settings, including but not limited to overclocking, may damage or shorten the life of your processor or other system components, create system instabilities (e.g., data loss and corrupted images) and in extreme cases may result in total system failure. AMD does not provide support or service for issues or damages related to use of an AMD processor outside of processor specifications or in excess of factory settings.", Help: "Legal Disclaimer", Text: ""
+		Ref Prompt: "Decline", Help: "Decline", QuestionFlags: 0x0, QuestionId: 0x10, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x7001
+		Ref Prompt: "Accept", Help: "Accept", QuestionFlags: 0x0, QuestionId: 0x11, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x700B
+	End 
+	Form FormId: 0x700A, Title: "Decline"
+		Subtitle Prompt: "Decline", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+	End 
+	Form FormId: 0x700B, Title: "Accept"
+		Subtitle Prompt: "Accept", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0x7007, Value: 0x5
+				Not 
+			End 
+			OneOf Prompt: "Custom Pstate0", Help: "Disable - disable this Pstate
+Custom - customize this Pstate, applicable only if PcdOcDisable=FALSE
+
+WARNING - DAMAGE CAUSED BY USE OF YOUR AMD PROCESSOR OUTSIDE OF SPECIFICATION OR IN EXCESS OF FACTORY SETTINGS ARE NOT COVERED UNDER YOUR AMD PRODUCT WARRANTY AND MAY NOT BE COVERED BY YOUR SYSTEM MANUFACTURER'S WARRANTY.
+Operating your AMD processor outside of specification or in excess of factory settings, including but not limited to overclocking, may damage or shorten the life of your processor or other system components, create system instabilities (e.g., data loss and corrupted images) and in extreme cases may result in total system failure. AMD does not provide support or service for issues or damages related to use of an AMD processor outside of processor specifications or in excess of factory settings.
+", QuestionFlags: 0x14, QuestionId: 0x700C, VarStoreId: 0x5000, VarOffset: 0xB, Flags: 0x10, Size: 8, Min: 0x1, Max: 0x2, Step: 0x0
+				OneOfOption Option: "Custom" Value: 1
+				OneOfOption Option: "Auto" Value: 2, Default
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x700C, Value: 0x1
+				Not 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x700C, Value: 0x2
+					Not 
+				End 
+				Numeric Prompt: "  Frequency (MHz)", Help: "Current core frequency in MHz", QuestionFlags: 0x10, QuestionId: 0x12, VarStoreId: 0x5000, VarOffset: 0xC, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x0
+					Default DefaultId: 0x0 Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x700C, Value: 0x1
+				Not 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x700C, Value: 0x2
+					Not 
+				End 
+				Numeric Prompt: "  Voltage (uV)", Help: "Voltage in uV (1V = 1000 * 1000 uV)", QuestionFlags: 0x10, QuestionId: 0x13, VarStoreId: 0x5000, VarOffset: 0x10, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x0
+					Default DefaultId: 0x0 Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x700C, Value: 0x1
+				Not 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x7007, Value: 0x5
+					Not 
+				End 
+				Numeric Prompt: "  Pstate0 FID", Help: "Specifies the core frequency multiplier. COF = 200MHz * FID / DID", QuestionFlags: 0x14, QuestionId: 0x700D, VarStoreId: 0x5000, VarOffset: 0x14, Flags: 0x20, Size: 8, Min: 0x10, Max: 0xFF, Step: 0x0
+					Default DefaultId: 0x0 Value: 16
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x700C, Value: 0x1
+				Not 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x7007, Value: 0x5
+					Not 
+				End 
+				Numeric Prompt: "  Pstate0 DID", Help: "Specifies the core frequency divisor (DID[0] should zero if DID[5:0]>1Ah).", QuestionFlags: 0x14, QuestionId: 0x700E, VarStoreId: 0x5000, VarOffset: 0x15, Flags: 0x20, Size: 8, Min: 0x8, Max: 0x30, Step: 0x0
+					Default DefaultId: 0x0 Value: 8
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x700C, Value: 0x1
+				Not 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x7007, Value: 0x5
+					Not 
+				End 
+				Numeric Prompt: "  Pstate0 VID", Help: "Specifies the core voltage.", QuestionFlags: 0x14, QuestionId: 0x700F, VarStoreId: 0x5000, VarOffset: 0x16, Flags: 0x20, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+					Default DefaultId: 0x0 Value: 255
+				End 
+			End 
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0x7007, Value: 0x5
+				Not 
+			End 
+			OneOf Prompt: "Custom Pstate1", Help: "Disabled - disable this Pstate
+Custom - customize this Pstate, applicable only if PcdOcDisable=FALSE
+
+WARNING - DAMAGE CAUSED BY USE OF YOUR AMD PROCESSOR OUTSIDE OF SPECIFICATION OR IN EXCESS OF FACTORY SETTINGS ARE NOT COVERED UNDER YOUR AMD PRODUCT WARRANTY AND MAY NOT BE COVERED BY YOUR SYSTEM MANUFACTURER'S WARRANTY.
+Operating your AMD processor outside of specification or in excess of factory settings, including but not limited to overclocking, may damage or shorten the life of your processor or other system components, create system instabilities (e.g., data loss and corrupted images) and in extreme cases may result in total system failure. AMD does not provide support or service for issues or damages related to use of an AMD processor outside of processor specifications or in excess of factory settings.
+", QuestionFlags: 0x14, QuestionId: 0x7010, VarStoreId: 0x5000, VarOffset: 0x17, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Custom" Value: 1
+				OneOfOption Option: "Auto" Value: 2, Default
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7010, Value: 0x1
+				Not 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x7010, Value: 0x2
+					Not 
+				End 
+				Numeric Prompt: "  Frequency (MHz)", Help: "Current core frequency in MHz", QuestionFlags: 0x10, QuestionId: 0x14, VarStoreId: 0x5000, VarOffset: 0x18, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x0
+					Default DefaultId: 0x0 Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7010, Value: 0x1
+				Not 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x7010, Value: 0x2
+					Not 
+				End 
+				Numeric Prompt: "  Voltage (uV)", Help: "Voltage in uV (1V = 1000 * 1000 uV)", QuestionFlags: 0x10, QuestionId: 0x15, VarStoreId: 0x5000, VarOffset: 0x1C, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x0
+					Default DefaultId: 0x0 Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7010, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "  Pstate1 FID", Help: "Specifies the core frequency multiplier. COF = 200MHz * FID / DID", QuestionFlags: 0x14, QuestionId: 0x7011, VarStoreId: 0x5000, VarOffset: 0x20, Flags: 0x20, Size: 8, Min: 0x10, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 16
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7010, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "  Pstate1 DID", Help: "Specifies the core frequency divisor (DID[0] should zero if DID[5:0]>1Ah).", QuestionFlags: 0x14, QuestionId: 0x7012, VarStoreId: 0x5000, VarOffset: 0x21, Flags: 0x20, Size: 8, Min: 0x8, Max: 0x30, Step: 0x0
+				Default DefaultId: 0x0 Value: 8
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7010, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "  Pstate1 VID", Help: "Specifies the core voltage.", QuestionFlags: 0x14, QuestionId: 0x7013, VarStoreId: 0x5000, VarOffset: 0x22, Flags: 0x20, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 255
+			End 
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0x7007, Value: 0x5
+				Not 
+				EqIdVal QuestionId: 0x7010, Value: 0x1
+				Not 
+				EqIdVal QuestionId: 0x7010, Value: 0x2
+				Not 
+				And 
+				Or 
+			End 
+			OneOf Prompt: "Custom Pstate2", Help: "Disabled - disable this Pstate
+Custom - customize this Pstate, applicable only if PcdOcDisable=FALSE
+
+WARNING - DAMAGE CAUSED BY USE OF YOUR AMD PROCESSOR OUTSIDE OF SPECIFICATION OR IN EXCESS OF FACTORY SETTINGS ARE NOT COVERED UNDER YOUR AMD PRODUCT WARRANTY AND MAY NOT BE COVERED BY YOUR SYSTEM MANUFACTURER'S WARRANTY.
+Operating your AMD processor outside of specification or in excess of factory settings, including but not limited to overclocking, may damage or shorten the life of your processor or other system components, create system instabilities (e.g., data loss and corrupted images) and in extreme cases may result in total system failure. AMD does not provide support or service for issues or damages related to use of an AMD processor outside of processor specifications or in excess of factory settings.
+", QuestionFlags: 0x14, QuestionId: 0x7014, VarStoreId: 0x5000, VarOffset: 0x23, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Custom" Value: 1
+				OneOfOption Option: "Auto" Value: 2, Default
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7014, Value: 0x1
+				Not 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x7014, Value: 0x2
+					Not 
+				End 
+				Numeric Prompt: "  Frequency (MHz)", Help: "Current core frequency in MHz", QuestionFlags: 0x10, QuestionId: 0x16, VarStoreId: 0x5000, VarOffset: 0x24, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x0
+					Default DefaultId: 0x0 Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7014, Value: 0x1
+				Not 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x7014, Value: 0x2
+					Not 
+				End 
+				Numeric Prompt: "  Voltage (uV)", Help: "Voltage in uV (1V = 1000 * 1000 uV)", QuestionFlags: 0x10, QuestionId: 0x17, VarStoreId: 0x5000, VarOffset: 0x28, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x0
+					Default DefaultId: 0x0 Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7014, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "  Pstate2 FID", Help: "Specifies the core frequency multiplier. COF = 200MHz * FID / DID", QuestionFlags: 0x14, QuestionId: 0x7015, VarStoreId: 0x5000, VarOffset: 0x2C, Flags: 0x20, Size: 8, Min: 0x10, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 16
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7014, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "  Pstate2 DID", Help: "Specifies the core frequency divisor (DID[0] should zero if DID[5:0]>1Ah).", QuestionFlags: 0x14, QuestionId: 0x7016, VarStoreId: 0x5000, VarOffset: 0x2D, Flags: 0x20, Size: 8, Min: 0x8, Max: 0x30, Step: 0x0
+				Default DefaultId: 0x0 Value: 8
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7014, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "  Pstate2 VID", Help: "Specifies the core voltage.", QuestionFlags: 0x14, QuestionId: 0x7017, VarStoreId: 0x5000, VarOffset: 0x2E, Flags: 0x20, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 255
+			End 
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0x7007, Value: 0x5
+				Not 
+				EqIdVal QuestionId: 0x7014, Value: 0x1
+				Not 
+				EqIdVal QuestionId: 0x7014, Value: 0x2
+				Not 
+				And 
+				Or 
+			End 
+			OneOf Prompt: "Custom Pstate3", Help: "Disabled - disable this Pstate
+Custom - customize this Pstate, applicable only if PcdOcDisable=FALSE
+
+WARNING - DAMAGE CAUSED BY USE OF YOUR AMD PROCESSOR OUTSIDE OF SPECIFICATION OR IN EXCESS OF FACTORY SETTINGS ARE NOT COVERED UNDER YOUR AMD PRODUCT WARRANTY AND MAY NOT BE COVERED BY YOUR SYSTEM MANUFACTURER'S WARRANTY.
+Operating your AMD processor outside of specification or in excess of factory settings, including but not limited to overclocking, may damage or shorten the life of your processor or other system components, create system instabilities (e.g., data loss and corrupted images) and in extreme cases may result in total system failure. AMD does not provide support or service for issues or damages related to use of an AMD processor outside of processor specifications or in excess of factory settings.
+", QuestionFlags: 0x14, QuestionId: 0x7018, VarStoreId: 0x5000, VarOffset: 0x2F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Custom" Value: 1
+				OneOfOption Option: "Auto" Value: 2, Default
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7018, Value: 0x1
+				Not 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x7018, Value: 0x2
+					Not 
+				End 
+				Numeric Prompt: "  Frequency (MHz)", Help: "Current core frequency in MHz", QuestionFlags: 0x10, QuestionId: 0x18, VarStoreId: 0x5000, VarOffset: 0x30, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x0
+					Default DefaultId: 0x0 Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7018, Value: 0x1
+				Not 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x7018, Value: 0x2
+					Not 
+				End 
+				Numeric Prompt: "  Voltage (uV)", Help: "Voltage in uV (1V = 1000 * 1000 uV)", QuestionFlags: 0x10, QuestionId: 0x19, VarStoreId: 0x5000, VarOffset: 0x34, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x0
+					Default DefaultId: 0x0 Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7018, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "  Pstate3 FID", Help: "Specifies the core frequency multiplier. COF = 200MHz * FID / DID", QuestionFlags: 0x14, QuestionId: 0x7019, VarStoreId: 0x5000, VarOffset: 0x38, Flags: 0x20, Size: 8, Min: 0x10, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 16
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7018, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "  Pstate3 DID", Help: "Specifies the core frequency divisor (DID[0] should zero if DID[5:0]>1Ah).", QuestionFlags: 0x14, QuestionId: 0x701A, VarStoreId: 0x5000, VarOffset: 0x39, Flags: 0x20, Size: 8, Min: 0x8, Max: 0x30, Step: 0x0
+				Default DefaultId: 0x0 Value: 8
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7018, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "  Pstate3 VID", Help: "Specifies the core voltage.", QuestionFlags: 0x14, QuestionId: 0x701B, VarStoreId: 0x5000, VarOffset: 0x3A, Flags: 0x20, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 255
+			End 
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0x7007, Value: 0x5
+				Not 
+				EqIdVal QuestionId: 0x7018, Value: 0x1
+				Not 
+				EqIdVal QuestionId: 0x7018, Value: 0x2
+				Not 
+				And 
+				Or 
+			End 
+			OneOf Prompt: "Custom Pstate4", Help: "Disabled - disable this Pstate
+Custom - customize this Pstate, applicable only if PcdOcDisable=FALSE
+
+WARNING - DAMAGE CAUSED BY USE OF YOUR AMD PROCESSOR OUTSIDE OF SPECIFICATION OR IN EXCESS OF FACTORY SETTINGS ARE NOT COVERED UNDER YOUR AMD PRODUCT WARRANTY AND MAY NOT BE COVERED BY YOUR SYSTEM MANUFACTURER'S WARRANTY.
+Operating your AMD processor outside of specification or in excess of factory settings, including but not limited to overclocking, may damage or shorten the life of your processor or other system components, create system instabilities (e.g., data loss and corrupted images) and in extreme cases may result in total system failure. AMD does not provide support or service for issues or damages related to use of an AMD processor outside of processor specifications or in excess of factory settings.
+", QuestionFlags: 0x14, QuestionId: 0x701C, VarStoreId: 0x5000, VarOffset: 0x3B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Custom" Value: 1
+				OneOfOption Option: "Auto" Value: 2, Default
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x701C, Value: 0x1
+				Not 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x701C, Value: 0x2
+					Not 
+				End 
+				Numeric Prompt: "  Frequency (MHz)", Help: "Current core frequency in MHz", QuestionFlags: 0x10, QuestionId: 0x1A, VarStoreId: 0x5000, VarOffset: 0x3C, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x0
+					Default DefaultId: 0x0 Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x701C, Value: 0x1
+				Not 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x701C, Value: 0x2
+					Not 
+				End 
+				Numeric Prompt: "  Voltage (uV)", Help: "Voltage in uV (1V = 1000 * 1000 uV)", QuestionFlags: 0x10, QuestionId: 0x1B, VarStoreId: 0x5000, VarOffset: 0x40, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x0
+					Default DefaultId: 0x0 Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x701C, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "  Pstate4 FID", Help: "Specifies the core frequency multiplier. COF = 200MHz * FID / DID", QuestionFlags: 0x14, QuestionId: 0x701D, VarStoreId: 0x5000, VarOffset: 0x44, Flags: 0x20, Size: 8, Min: 0x10, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 16
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x701C, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "  Pstate4 DID", Help: "Specifies the core frequency divisor (DID[0] should zero if DID[5:0]>1Ah).", QuestionFlags: 0x14, QuestionId: 0x701E, VarStoreId: 0x5000, VarOffset: 0x45, Flags: 0x20, Size: 8, Min: 0x8, Max: 0x30, Step: 0x0
+				Default DefaultId: 0x0 Value: 8
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x701C, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "  Pstate4 VID", Help: "Specifies the core voltage.", QuestionFlags: 0x14, QuestionId: 0x701F, VarStoreId: 0x5000, VarOffset: 0x46, Flags: 0x20, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 255
+			End 
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0x7007, Value: 0x5
+				Not 
+				EqIdVal QuestionId: 0x701C, Value: 0x1
+				Not 
+				EqIdVal QuestionId: 0x701C, Value: 0x2
+				Not 
+				And 
+				Or 
+			End 
+			OneOf Prompt: "Custom Pstate5", Help: "Disabled - disable this Pstate
+Custom - customize this Pstate, applicable only if PcdOcDisable=FALSE
+
+WARNING - DAMAGE CAUSED BY USE OF YOUR AMD PROCESSOR OUTSIDE OF SPECIFICATION OR IN EXCESS OF FACTORY SETTINGS ARE NOT COVERED UNDER YOUR AMD PRODUCT WARRANTY AND MAY NOT BE COVERED BY YOUR SYSTEM MANUFACTURER'S WARRANTY.
+Operating your AMD processor outside of specification or in excess of factory settings, including but not limited to overclocking, may damage or shorten the life of your processor or other system components, create system instabilities (e.g., data loss and corrupted images) and in extreme cases may result in total system failure. AMD does not provide support or service for issues or damages related to use of an AMD processor outside of processor specifications or in excess of factory settings.
+", QuestionFlags: 0x14, QuestionId: 0x7020, VarStoreId: 0x5000, VarOffset: 0x47, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Custom" Value: 1
+				OneOfOption Option: "Auto" Value: 2, Default
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7020, Value: 0x1
+				Not 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x7020, Value: 0x2
+					Not 
+				End 
+				Numeric Prompt: "  Frequency (MHz)", Help: "Current core frequency in MHz", QuestionFlags: 0x10, QuestionId: 0x1C, VarStoreId: 0x5000, VarOffset: 0x48, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x0
+					Default DefaultId: 0x0 Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7020, Value: 0x1
+				Not 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x7020, Value: 0x2
+					Not 
+				End 
+				Numeric Prompt: "  Voltage (uV)", Help: "Voltage in uV (1V = 1000 * 1000 uV)", QuestionFlags: 0x10, QuestionId: 0x1D, VarStoreId: 0x5000, VarOffset: 0x4C, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x0
+					Default DefaultId: 0x0 Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7020, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "  Pstate5 FID", Help: "Specifies the core frequency multiplier. COF = 200MHz * FID / DID", QuestionFlags: 0x14, QuestionId: 0x7021, VarStoreId: 0x5000, VarOffset: 0x50, Flags: 0x20, Size: 8, Min: 0x10, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 16
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7020, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "  Pstate5 DID", Help: "Specifies the core frequency divisor (DID[0] should zero if DID[5:0]>1Ah).", QuestionFlags: 0x14, QuestionId: 0x7022, VarStoreId: 0x5000, VarOffset: 0x51, Flags: 0x20, Size: 8, Min: 0x8, Max: 0x30, Step: 0x0
+				Default DefaultId: 0x0 Value: 8
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7020, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "  Pstate5 VID", Help: "Specifies the core voltage.", QuestionFlags: 0x14, QuestionId: 0x7023, VarStoreId: 0x5000, VarOffset: 0x52, Flags: 0x20, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 255
+			End 
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0x7007, Value: 0x5
+				Not 
+				EqIdVal QuestionId: 0x7020, Value: 0x1
+				Not 
+				EqIdVal QuestionId: 0x7020, Value: 0x2
+				Not 
+				And 
+				Or 
+			End 
+			OneOf Prompt: "Custom Pstate6", Help: "Disabled - disable this Pstate
+Custom - customize this Pstate, applicable only if PcdOcDisable=FALSE
+
+WARNING - DAMAGE CAUSED BY USE OF YOUR AMD PROCESSOR OUTSIDE OF SPECIFICATION OR IN EXCESS OF FACTORY SETTINGS ARE NOT COVERED UNDER YOUR AMD PRODUCT WARRANTY AND MAY NOT BE COVERED BY YOUR SYSTEM MANUFACTURER'S WARRANTY.
+Operating your AMD processor outside of specification or in excess of factory settings, including but not limited to overclocking, may damage or shorten the life of your processor or other system components, create system instabilities (e.g., data loss and corrupted images) and in extreme cases may result in total system failure. AMD does not provide support or service for issues or damages related to use of an AMD processor outside of processor specifications or in excess of factory settings.
+", QuestionFlags: 0x14, QuestionId: 0x7024, VarStoreId: 0x5000, VarOffset: 0x53, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Custom" Value: 1
+				OneOfOption Option: "Auto" Value: 2, Default
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7024, Value: 0x1
+				Not 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x7024, Value: 0x2
+					Not 
+				End 
+				Numeric Prompt: "  Frequency (MHz)", Help: "Current core frequency in MHz", QuestionFlags: 0x10, QuestionId: 0x1E, VarStoreId: 0x5000, VarOffset: 0x54, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x0
+					Default DefaultId: 0x0 Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7024, Value: 0x1
+				Not 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x7024, Value: 0x2
+					Not 
+				End 
+				Numeric Prompt: "  Voltage (uV)", Help: "Voltage in uV (1V = 1000 * 1000 uV)", QuestionFlags: 0x10, QuestionId: 0x1F, VarStoreId: 0x5000, VarOffset: 0x58, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x0
+					Default DefaultId: 0x0 Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7024, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "  Pstate6 FID", Help: "Specifies the core frequency multiplier. COF = 200MHz * FID / DID", QuestionFlags: 0x14, QuestionId: 0x7025, VarStoreId: 0x5000, VarOffset: 0x5C, Flags: 0x20, Size: 8, Min: 0x10, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 16
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7024, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "  Pstate6 DID", Help: "Specifies the core frequency divisor (DID[0] should zero if DID[5:0]>1Ah).", QuestionFlags: 0x14, QuestionId: 0x7026, VarStoreId: 0x5000, VarOffset: 0x5D, Flags: 0x20, Size: 8, Min: 0x8, Max: 0x30, Step: 0x0
+				Default DefaultId: 0x0 Value: 8
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7024, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "  Pstate6 VID", Help: "Specifies the core voltage.", QuestionFlags: 0x14, QuestionId: 0x7027, VarStoreId: 0x5000, VarOffset: 0x5E, Flags: 0x20, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 255
+			End 
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0x7007, Value: 0x5
+				Not 
+				EqIdVal QuestionId: 0x7024, Value: 0x1
+				Not 
+				EqIdVal QuestionId: 0x7024, Value: 0x2
+				Not 
+				And 
+				Or 
+			End 
+			OneOf Prompt: "Custom Pstate7", Help: "Disabled - disable this Pstate
+Custom - customize this Pstate, applicable only if PcdOcDisable=FALSE
+
+WARNING - DAMAGE CAUSED BY USE OF YOUR AMD PROCESSOR OUTSIDE OF SPECIFICATION OR IN EXCESS OF FACTORY SETTINGS ARE NOT COVERED UNDER YOUR AMD PRODUCT WARRANTY AND MAY NOT BE COVERED BY YOUR SYSTEM MANUFACTURER'S WARRANTY.
+Operating your AMD processor outside of specification or in excess of factory settings, including but not limited to overclocking, may damage or shorten the life of your processor or other system components, create system instabilities (e.g., data loss and corrupted images) and in extreme cases may result in total system failure. AMD does not provide support or service for issues or damages related to use of an AMD processor outside of processor specifications or in excess of factory settings.
+", QuestionFlags: 0x14, QuestionId: 0x7028, VarStoreId: 0x5000, VarOffset: 0x5F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Custom" Value: 1
+				OneOfOption Option: "Auto" Value: 2, Default
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7028, Value: 0x1
+				Not 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x7028, Value: 0x2
+					Not 
+				End 
+				Numeric Prompt: "  Frequency (MHz)", Help: "Current core frequency in MHz", QuestionFlags: 0x10, QuestionId: 0x20, VarStoreId: 0x5000, VarOffset: 0x60, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x0
+					Default DefaultId: 0x0 Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7028, Value: 0x1
+				Not 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x7028, Value: 0x2
+					Not 
+				End 
+				Numeric Prompt: "  Voltage (uV)", Help: "Voltage in uV (1V = 1000 * 1000 uV)", QuestionFlags: 0x10, QuestionId: 0x21, VarStoreId: 0x5000, VarOffset: 0x64, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x0
+					Default DefaultId: 0x0 Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7028, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "  Pstate7 FID", Help: "Specifies the core frequency multiplier. COF = 200MHz * FID / DID", QuestionFlags: 0x14, QuestionId: 0x7029, VarStoreId: 0x5000, VarOffset: 0x68, Flags: 0x20, Size: 8, Min: 0x10, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 16
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7028, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "  Pstate7 DID", Help: "Specifies the core frequency divisor (DID[0] should zero if DID[5:0]>1Ah).", QuestionFlags: 0x14, QuestionId: 0x702A, VarStoreId: 0x5000, VarOffset: 0x69, Flags: 0x20, Size: 8, Min: 0x8, Max: 0x30, Step: 0x0
+				Default DefaultId: 0x0 Value: 8
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7028, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "  Pstate7 VID", Help: "Specifies the core voltage.", QuestionFlags: 0x14, QuestionId: 0x702B, VarStoreId: 0x5000, VarOffset: 0x6A, Flags: 0x20, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 255
+			End 
+		End 
+		OneOf Prompt: "Relaxed EDC throttling", Help: "Disabled - Part-specific EDC throttling protection enabled
+Enabled - Reduce the amount of time the processor will throttle
+Auto - AMD's recommendation (Disabled)
+", QuestionFlags: 0x14, QuestionId: 0x702C, VarStoreId: 0x5000, VarOffset: 0x6B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 3, Default
+		End 
+	End 
+	Form FormId: 0x7009, Title: "Core/Thread Enablement"
+		Subtitle Prompt: "Core/Thread Enablement", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Text Prompt: "WARNING - S3 is NOT SUPPORTED on systems where cores/threads have been removed/disabled.", Help: "Legal Disclaimer", Text: ""
+		Ref Prompt: "Disagree", Help: "Disagree", QuestionFlags: 0x0, QuestionId: 0x22, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x7001
+		Ref Prompt: "Agree", Help: "Agree", QuestionFlags: 0x0, QuestionId: 0x23, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x702E
+	End 
+	Form FormId: 0x702D, Title: "Disagree"
+		Subtitle Prompt: "Disagree", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+	End 
+	Form FormId: 0x702E, Title: "Agree"
+		Subtitle Prompt: "Agree", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "Downcore control", Help: "Sets the number of cores to be used. Once this option has been used to remove any cores, a POWER CYCLE is required in order for future selections to take effect.", QuestionFlags: 0x10, QuestionId: 0x24, VarStoreId: 0x5000, VarOffset: 0x6D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+			OneOfOption Option: "ONE" Value: 1
+			OneOfOption Option: "TWO" Value: 3
+			OneOfOption Option: "THREE" Value: 4
+			OneOfOption Option: "Auto" Value: 0, Default
+		End 
+		OneOf Prompt: "SMTEN", Help: "Can be used to disable symmetric multithreading. To re-enable SMT, a POWER CYCLE is needed after selecting the 'Auto' option. WARNING - S3 is NOT SUPPORTED on systems where SMT is disabled.", QuestionFlags: 0x10, QuestionId: 0x25, VarStoreId: 0x5000, VarOffset: 0x6E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disable" Value: 0
+			OneOfOption Option: "Auto" Value: 1, Default
+		End 
+	End 
+	Form FormId: 0x7002, Title: "DF Common Options"
+		Subtitle Prompt: "DF Common Options", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "DRAM scrub time", Help: "Provide a value that is the number of hours to scrub memory.", QuestionFlags: 0x10, QuestionId: 0x26, VarStoreId: 0x5000, VarOffset: 0x6F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x7, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "1 hour" Value: 1
+			OneOfOption Option: "4 hours" Value: 2
+			OneOfOption Option: "8 hours" Value: 3
+			OneOfOption Option: "16 hours" Value: 4
+			OneOfOption Option: "24 hours" Value: 5
+			OneOfOption Option: "48 hours" Value: 6
+			OneOfOption Option: "Auto" Value: 7, Default
+		End 
+		OneOf Prompt: "Redirect scrubber control", Help: "Control DF::RedirScrubCtrl[EnRedirScrub]", QuestionFlags: 0x10, QuestionId: 0x27, VarStoreId: 0x5000, VarOffset: 0x70, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 3, Default
+		End 
+		OneOf Prompt: "Disable DF sync flood propagation", Help: "Control DF::PIEConfig[DisSyncFloodProp]", QuestionFlags: 0x10, QuestionId: 0x28, VarStoreId: 0x5000, VarOffset: 0x71, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+			OneOfOption Option: "Sync flood disabled" Value: 0
+			OneOfOption Option: "Sync flood enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 3, Default
+		End 
+		OneOf Prompt: "GMI encryption control", Help: "Control GMI link encryption", QuestionFlags: 0x10, QuestionId: 0x29, VarStoreId: 0x5000, VarOffset: 0x72, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 3, Default
+		End 
+		OneOf Prompt: "xGMI encryption control", Help: "Control xGMI link encryption", QuestionFlags: 0x10, QuestionId: 0x2A, VarStoreId: 0x5000, VarOffset: 0x73, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 3, Default
+		End 
+		OneOf Prompt: "CC6 memory region encryption", Help: "Control whether or not the CC6 save/restore memory is encrypted", QuestionFlags: 0x10, QuestionId: 0x2B, VarStoreId: 0x5000, VarOffset: 0x74, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 3, Default
+		End 
+		OneOf Prompt: "Location of private memory regions", Help: "Controls whether or not the private memory regions (PSP, SMU and CC6) are at the top of DRAM or distributed. Note that distributed requires memory on all dies. Note that it will always be at the top of DRAM if some dies don't have memory regardless of this option's setting.", QuestionFlags: 0x10, QuestionId: 0x2C, VarStoreId: 0x5000, VarOffset: 0x75, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+			OneOfOption Option: "Distributed" Value: 0
+			OneOfOption Option: "Consolidated" Value: 1
+			OneOfOption Option: "Auto" Value: 3, Default
+		End 
+		OneOf Prompt: "System probe filter", Help: "Controls whether or not the probe filter is enabled. Has no effect on parts where the probe filter is fuse disabled.", QuestionFlags: 0x10, QuestionId: 0x2D, VarStoreId: 0x5000, VarOffset: 0x76, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 3, Default
+		End 
+		OneOf Prompt: "Memory interleaving", Help: "Controls fabric level memory interleaving (AUTO, none, channel, die, socket). Note that channel, die, and socket has requirements on memory populations and it will be ignored if the memory doesn't support the selected option.", QuestionFlags: 0x10, QuestionId: 0x2E, VarStoreId: 0x5000, VarOffset: 0x77, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x7, Step: 0x0
+			OneOfOption Option: "None" Value: 0
+			OneOfOption Option: "Channel" Value: 1
+			OneOfOption Option: "Die" Value: 2
+			OneOfOption Option: "Socket" Value: 3
+			OneOfOption Option: "Auto" Value: 7, Default
+		End 
+		OneOf Prompt: "Memory interleaving size", Help: "Controls the memory interleaving size. The valid values are AUTO, 256 bytes, 512 bytes, 1 Kbytes or 2Kbytes. This determines the starting address of the interleave (bit 8, 9, 10 or 11).", QuestionFlags: 0x10, QuestionId: 0x2F, VarStoreId: 0x5000, VarOffset: 0x78, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x7, Step: 0x0
+			OneOfOption Option: "256 Bytes" Value: 0
+			OneOfOption Option: "512 Bytes" Value: 1
+			OneOfOption Option: "1 KB" Value: 2
+			OneOfOption Option: "2 KB" Value: 3
+			OneOfOption Option: "Auto" Value: 7, Default
+		End 
+		OneOf Prompt: "Channel interleaving hash", Help: "Controls whether or not the address bits are hashed during channel interleave mode. This field should not be used unless the interleaving is set to channel and the interleaving size is 256 or 512 bytes.", QuestionFlags: 0x10, QuestionId: 0x30, VarStoreId: 0x5000, VarOffset: 0x79, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 3, Default
+		End 
+		OneOf Prompt: "DF C-state control", Help: "Enable / disable DF C-states (DF::CstateControl[DfCstateDisable])", QuestionFlags: 0x10, QuestionId: 0x31, VarStoreId: 0x5000, VarOffset: 0x7A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 3, Default
+		End 
+		OneOf Prompt: "xGMI DLWM control", Help: "Controls xGMI dynamic link width management feature.", QuestionFlags: 0x10, QuestionId: 0x32, VarStoreId: 0x5000, VarOffset: 0x7B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 3, Default
+		End 
+		OneOf Prompt: "Freeze DF module queues on error", Help: "Controls DF::DfGlobalCtrl[DisImmSyncFloodOnFatalError]
+Disabling this option sets DF:DfGlobalCtrl[DisImmSyncFloodOnFatalError]", QuestionFlags: 0x10, QuestionId: 0x33, VarStoreId: 0x5000, VarOffset: 0x7C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 3, Default
+		End 
+	End 
+	Form FormId: 0x7003, Title: "UMC Common Options"
+		Subtitle Prompt: "UMC Common Options", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Ref Prompt: "DDR4 Common Options", Help: "DDR4 Common Options", QuestionFlags: 0x0, QuestionId: 0x34, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x702F
+		Ref Prompt: "DRAM Memory Mapping", Help: "DRAM Memory Mapping", QuestionFlags: 0x0, QuestionId: 0x35, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x7030
+		Ref Prompt: "NVDIMM", Help: "NVDIMM", QuestionFlags: 0x0, QuestionId: 0x36, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x7031
+		Ref Prompt: "Memory MBIST", Help: "Memory MBIST", QuestionFlags: 0x0, QuestionId: 0x37, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x7032
+	End 
+	Form FormId: 0x702F, Title: "DDR4 Common Options"
+		Subtitle Prompt: "DDR4 Common Options", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Ref Prompt: "DRAM Timing Configuration", Help: "DRAM Timing Configuration", QuestionFlags: 0x0, QuestionId: 0x38, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x7033
+		Ref Prompt: "Common RAS", Help: "Common RAS", QuestionFlags: 0x0, QuestionId: 0x39, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x7034
+		Ref Prompt: "Security", Help: "Security", QuestionFlags: 0x0, QuestionId: 0x3A, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x7035
+	End 
+	Form FormId: 0x7033, Title: "DRAM Timing Configuration"
+		Subtitle Prompt: "DRAM Timing Configuration", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Text Prompt: "WARNING - DAMAGE CAUSED BY USE OF YOUR AMD PROCESSOR OUTSIDE OF SPECIFICATION OR IN EXCESS OF FACTORY SETTINGS ARE NOT COVERED UNDER YOUR AMD PRODUCT WARRANTY AND MAY NOT BE COVERED BY YOUR SYSTEM MANUFACTURER'S WARRANTY.", Help: "No help string", Text: ""
+		Text Prompt: "Operating your AMD processor outside of specification or in excess of factory settings, including but not limited to overclocking, may damage or shorten the life of your processor or other system components, create system instabilities (e.g., data loss and corrupted images) and in extreme cases may result in total system failure. AMD does not provide support or service for issues or damages related to use of an AMD processor outside of processor specifications or in excess of factory settings.", Help: "No help string", Text: ""
+		Ref Prompt: "I Decline", Help: "I Decline", QuestionFlags: 0x0, QuestionId: 0x3B, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x702F
+		Ref Prompt: "I Accept", Help: "I Accept", QuestionFlags: 0x0, QuestionId: 0x3C, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x7037
+	End 
+	Form FormId: 0x7036, Title: "I Decline"
+		Subtitle Prompt: "I Decline", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+	End 
+	Form FormId: 0x7037, Title: "I Accept"
+		Subtitle Prompt: "I Accept", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "Overclock", Help: "Memory Overclock Settings", QuestionFlags: 0x10, QuestionId: 0x3D, VarStoreId: 0x5000, VarOffset: 0x7F, Flags: 0x10, Size: 8, Min: 0x1, Max: 0xFF, Step: 0x0
+			OneOfOption Option: "Auto" Value: 255, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "Memory Clock Speed", Help: "Set the memory clock frequency.", QuestionFlags: 0x10, QuestionId: 0x3E, VarStoreId: 0x5000, VarOffset: 0x80, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+				OneOfOption Option: "667MHz" Value: 20
+				OneOfOption Option: "800MHz" Value: 24
+				OneOfOption Option: "933MHz" Value: 28
+				OneOfOption Option: "1067MHz" Value: 32
+				OneOfOption Option: "1200MHz" Value: 36
+				OneOfOption Option: "Auto" Value: 255, Default
+				OneOfOption Option: "1333MHz" Value: 40
+				OneOfOption Option: "1467MHz" Value: 44
+				OneOfOption Option: "1600MHz" Value: 48
+				OneOfOption Option: "333MHz" Value: 4
+				OneOfOption Option: "400MHz" Value: 6
+				OneOfOption Option: "533MHz" Value: 10
+				OneOfOption Option: "1050MHz" Value: 25
+				OneOfOption Option: "1066MHz" Value: 26
+				OneOfOption Option: "1400MHz" Value: 42
+				OneOfOption Option: "1533MHz" Value: 46
+				OneOfOption Option: "1667MHz" Value: 50
+				OneOfOption Option: "1733MHz" Value: 52
+				OneOfOption Option: "1800MHz" Value: 54
+				OneOfOption Option: "1867MHz" Value: 56
+				OneOfOption Option: "1933MHz" Value: 58
+				OneOfOption Option: "2000MHz" Value: 60
+				OneOfOption Option: "2033MHz" Value: 61
+				OneOfOption Option: "2067MHz" Value: 0
+				OneOfOption Option: "2100MHz" Value: 63
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "Tcl", Help: "Sets the tCL time.", QuestionFlags: 0x10, QuestionId: 0x3F, VarStoreId: 0x5000, VarOffset: 0x81, Flags: 0x10, Size: 8, Min: 0x8, Max: 0xFF, Step: 0x0
+				OneOfOption Option: "8 Clk" Value: 8
+				OneOfOption Option: "9 Clk" Value: 9
+				OneOfOption Option: "0Ah Clk" Value: 10
+				OneOfOption Option: "0Bh Clk" Value: 11
+				OneOfOption Option: "0Ch Clk" Value: 12
+				OneOfOption Option: "0Dh Clk" Value: 13
+				OneOfOption Option: "0Eh Clk" Value: 14
+				OneOfOption Option: "0Fh Clk" Value: 15
+				OneOfOption Option: "10h Clk" Value: 16
+				OneOfOption Option: "11h Clk" Value: 17
+				OneOfOption Option: "12h Clk" Value: 18
+				OneOfOption Option: "13h Clk" Value: 19
+				OneOfOption Option: "Auto" Value: 255, Default
+				OneOfOption Option: "14h Clk" Value: 20
+				OneOfOption Option: "15h Clk" Value: 21
+				OneOfOption Option: "16h Clk" Value: 22
+				OneOfOption Option: "17h Clk" Value: 23
+				OneOfOption Option: "18h Clk" Value: 24
+				OneOfOption Option: "19h Clk" Value: 25
+				OneOfOption Option: "1Ah Clk" Value: 26
+				OneOfOption Option: "1Bh Clk" Value: 27
+				OneOfOption Option: "1Ch Clk" Value: 28
+				OneOfOption Option: "1Dh Clk" Value: 29
+				OneOfOption Option: "1Eh Clk" Value: 30
+				OneOfOption Option: "1Fh Clk" Value: 31
+				OneOfOption Option: "20h Clk" Value: 32
+				OneOfOption Option: "21h Clk" Value: 33
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "Trcdrd", Help: "This sets the RAS# Active to CAS# read/write delay.", QuestionFlags: 0x10, QuestionId: 0x40, VarStoreId: 0x5000, VarOffset: 0x82, Flags: 0x10, Size: 8, Min: 0x8, Max: 0xFF, Step: 0x0
+				OneOfOption Option: "8 Clk" Value: 8
+				OneOfOption Option: "9 Clk" Value: 9
+				OneOfOption Option: "0Ah Clk" Value: 10
+				OneOfOption Option: "0Bh Clk" Value: 11
+				OneOfOption Option: "0Ch Clk" Value: 12
+				OneOfOption Option: "0Dh Clk" Value: 13
+				OneOfOption Option: "0Eh Clk" Value: 14
+				OneOfOption Option: "0Fh Clk" Value: 15
+				OneOfOption Option: "10h Clk" Value: 16
+				OneOfOption Option: "14h Clk" Value: 20
+				OneOfOption Option: "15h Clk" Value: 21
+				OneOfOption Option: "16h Clk" Value: 22
+				OneOfOption Option: "17h Clk" Value: 23
+				OneOfOption Option: "18h Clk" Value: 24
+				OneOfOption Option: "19h Clk" Value: 25
+				OneOfOption Option: "1Ah Clk" Value: 26
+				OneOfOption Option: "11h Clk" Value: 17
+				OneOfOption Option: "12h Clk" Value: 18
+				OneOfOption Option: "13h Clk" Value: 19
+				OneOfOption Option: "Auto" Value: 255, Default
+				OneOfOption Option: "1Bh Clk" Value: 27
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "Trcdwr", Help: "This sets the RAS# Active to CAS# read/write delay.", QuestionFlags: 0x10, QuestionId: 0x41, VarStoreId: 0x5000, VarOffset: 0x83, Flags: 0x10, Size: 8, Min: 0x8, Max: 0xFF, Step: 0x0
+				OneOfOption Option: "Auto" Value: 255, Default
+				OneOfOption Option: "8 Clk" Value: 8
+				OneOfOption Option: "9 Clk" Value: 9
+				OneOfOption Option: "0xA Clk" Value: 10
+				OneOfOption Option: "0xB Clk" Value: 11
+				OneOfOption Option: "0xC Clk" Value: 12
+				OneOfOption Option: "0xD Clk" Value: 13
+				OneOfOption Option: "0xE Clk" Value: 14
+				OneOfOption Option: "0xF Clk" Value: 15
+				OneOfOption Option: "10h Clk" Value: 16
+				OneOfOption Option: "11h Clk" Value: 17
+				OneOfOption Option: "12h Clk" Value: 18
+				OneOfOption Option: "13h Clk" Value: 19
+				OneOfOption Option: "14h Clk" Value: 20
+				OneOfOption Option: "15h Clk" Value: 21
+				OneOfOption Option: "16h Clk" Value: 22
+				OneOfOption Option: "17h Clk" Value: 23
+				OneOfOption Option: "18h Clk" Value: 24
+				OneOfOption Option: "19h Clk" Value: 25
+				OneOfOption Option: "1Ah Clk" Value: 26
+				OneOfOption Option: "1Bh Clk" Value: 27
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "Trp", Help: "Specify the row precharge time.", QuestionFlags: 0x10, QuestionId: 0x42, VarStoreId: 0x5000, VarOffset: 0x84, Flags: 0x10, Size: 8, Min: 0x8, Max: 0xFF, Step: 0x0
+				OneOfOption Option: "8 Clk" Value: 8
+				OneOfOption Option: "9 Clk" Value: 9
+				OneOfOption Option: "0Ah Clk" Value: 10
+				OneOfOption Option: "0Bh Clk" Value: 11
+				OneOfOption Option: "0Ch Clk" Value: 12
+				OneOfOption Option: "0Dh Clk" Value: 13
+				OneOfOption Option: "0Eh Clk" Value: 14
+				OneOfOption Option: "0Fh Clk" Value: 15
+				OneOfOption Option: "10h Clk" Value: 16
+				OneOfOption Option: "11h Clk" Value: 17
+				OneOfOption Option: "12h Clk" Value: 18
+				OneOfOption Option: "13h Clk" Value: 19
+				OneOfOption Option: "Auto" Value: 255, Default
+				OneOfOption Option: "14h Clk" Value: 20
+				OneOfOption Option: "15h Clk" Value: 21
+				OneOfOption Option: "16h Clk" Value: 22
+				OneOfOption Option: "17h Clk" Value: 23
+				OneOfOption Option: "18h Clk" Value: 24
+				OneOfOption Option: "19h Clk" Value: 25
+				OneOfOption Option: "1Ah Clk" Value: 26
+				OneOfOption Option: "1Bh Clk" Value: 27
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "Tras", Help: "Specify the min RAS# active time.", QuestionFlags: 0x10, QuestionId: 0x43, VarStoreId: 0x5000, VarOffset: 0x85, Flags: 0x10, Size: 8, Min: 0x15, Max: 0xFF, Step: 0x0
+				OneOfOption Option: "15h Clk" Value: 21
+				OneOfOption Option: "16h Clk" Value: 22
+				OneOfOption Option: "17h Clk" Value: 23
+				OneOfOption Option: "18h Clk" Value: 24
+				OneOfOption Option: "19h Clk" Value: 25
+				OneOfOption Option: "1Ah Clk" Value: 26
+				OneOfOption Option: "1Bh Clk" Value: 27
+				OneOfOption Option: "1Ch Clk" Value: 28
+				OneOfOption Option: "1Dh Clk" Value: 29
+				OneOfOption Option: "1Eh Clk" Value: 30
+				OneOfOption Option: "1Fh Clk" Value: 31
+				OneOfOption Option: "20h Clk" Value: 32
+				OneOfOption Option: "21h Clk" Value: 33
+				OneOfOption Option: "22h Clk" Value: 34
+				OneOfOption Option: "23h Clk" Value: 35
+				OneOfOption Option: "24h Clk" Value: 36
+				OneOfOption Option: "25h Clk" Value: 37
+				OneOfOption Option: "26h Clk" Value: 38
+				OneOfOption Option: "27h Clk" Value: 39
+				OneOfOption Option: "28h Clk" Value: 40
+				OneOfOption Option: "29h Clk" Value: 41
+				OneOfOption Option: "2Ah Clk" Value: 42
+				OneOfOption Option: "Auto" Value: 255, Default
+				OneOfOption Option: "2Bh Clk" Value: 43
+				OneOfOption Option: "2Ch Clk" Value: 44
+				OneOfOption Option: "2Dh Clk" Value: 45
+				OneOfOption Option: "2Eh Clk" Value: 46
+				OneOfOption Option: "2Fh Clk" Value: 47
+				OneOfOption Option: "30h Clk" Value: 48
+				OneOfOption Option: "31h Clk" Value: 49
+				OneOfOption Option: "32h Clk" Value: 50
+				OneOfOption Option: "33h Clk" Value: 51
+				OneOfOption Option: "34h Clk" Value: 52
+				OneOfOption Option: "35h Clk" Value: 53
+				OneOfOption Option: "36h Clk" Value: 54
+				OneOfOption Option: "37h Clk" Value: 55
+				OneOfOption Option: "38h Clk" Value: 56
+				OneOfOption Option: "39h Clk" Value: 57
+				OneOfOption Option: "3Ah Clk" Value: 58
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "Trc Ctrl", Help: "Specify Trc", QuestionFlags: 0x10, QuestionId: 0x44, VarStoreId: 0x5000, VarOffset: 0x86, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Auto" Value: 0, Default
+				OneOfOption Option: "Manual" Value: 1
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+				EqIdVal QuestionId: 0x44, Value: 0x1
+				Not 
+				Or 
+			End 
+			Numeric Prompt: "Trc", Help: "Active to Active/Refresh Delay Time. Valid values 87h-1Dh.", QuestionFlags: 0x10, QuestionId: 0x45, VarStoreId: 0x5000, VarOffset: 0x87, Flags: 0x20, Size: 8, Min: 0x1D, Max: 0x87, Step: 0x0
+				Default DefaultId: 0x0 Value: 57
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "Trrds", Help: "Activate to Activate Delay Time, different bank group (tRRD_S)", QuestionFlags: 0x10, QuestionId: 0x46, VarStoreId: 0x5000, VarOffset: 0x88, Flags: 0x10, Size: 8, Min: 0x4, Max: 0xFF, Step: 0x0
+				OneOfOption Option: "Auto" Value: 255, Default
+				OneOfOption Option: "4 Clk" Value: 4
+				OneOfOption Option: "5 Clk" Value: 5
+				OneOfOption Option: "6 Clk" Value: 6
+				OneOfOption Option: "7 Clk" Value: 7
+				OneOfOption Option: "8 Clk" Value: 8
+				OneOfOption Option: "9 Clk" Value: 9
+				OneOfOption Option: "0Ah Clk" Value: 10
+				OneOfOption Option: "0Bh Clk" Value: 11
+				OneOfOption Option: "0Ch Clk" Value: 12
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "TrrdL", Help: "Activate to Activate Delay Time, same bank group (tRRD_L)", QuestionFlags: 0x10, QuestionId: 0x47, VarStoreId: 0x5000, VarOffset: 0x89, Flags: 0x10, Size: 8, Min: 0x4, Max: 0xFF, Step: 0x0
+				OneOfOption Option: "Auto" Value: 255, Default
+				OneOfOption Option: "4 Clk" Value: 4
+				OneOfOption Option: "5 Clk" Value: 5
+				OneOfOption Option: "6 Clk" Value: 6
+				OneOfOption Option: "7 Clk" Value: 7
+				OneOfOption Option: "8 Clk" Value: 8
+				OneOfOption Option: "9 Clk" Value: 9
+				OneOfOption Option: "0Ah Clk" Value: 10
+				OneOfOption Option: "0Bh Clk" Value: 11
+				OneOfOption Option: "0Ch Clk" Value: 12
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "Tfaw Ctrl", Help: "Specify Tfaw", QuestionFlags: 0x10, QuestionId: 0x48, VarStoreId: 0x5000, VarOffset: 0x8A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Auto" Value: 0, Default
+				OneOfOption Option: "Manual" Value: 1
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+				EqIdVal QuestionId: 0x48, Value: 0x1
+				Not 
+				Or 
+			End 
+			Numeric Prompt: "Tfaw", Help: "Four Activate Window Time. Valid values 36h-6h.", QuestionFlags: 0x10, QuestionId: 0x49, VarStoreId: 0x5000, VarOffset: 0x8B, Flags: 0x20, Size: 8, Min: 0x6, Max: 0x36, Step: 0x0
+				Default DefaultId: 0x0 Value: 26
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "TwtrS", Help: "Minimum Write to Read Time, different bank group", QuestionFlags: 0x10, QuestionId: 0x4A, VarStoreId: 0x5000, VarOffset: 0x8C, Flags: 0x10, Size: 8, Min: 0x2, Max: 0xFF, Step: 0x0
+				OneOfOption Option: "Auto" Value: 255, Default
+				OneOfOption Option: "2 Clk" Value: 2
+				OneOfOption Option: "3 Clk" Value: 3
+				OneOfOption Option: "4 Clk" Value: 4
+				OneOfOption Option: "5 Clk" Value: 5
+				OneOfOption Option: "6 Clk" Value: 6
+				OneOfOption Option: "7 Clk" Value: 7
+				OneOfOption Option: "8 Clk" Value: 8
+				OneOfOption Option: "9 Clk" Value: 9
+				OneOfOption Option: "0Ah Clk" Value: 10
+				OneOfOption Option: "0Bh Clk" Value: 11
+				OneOfOption Option: "0Ch Clk" Value: 12
+				OneOfOption Option: "0Dh Clk" Value: 13
+				OneOfOption Option: "0Eh Clk" Value: 14
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "TwtrL", Help: "Minimum Write to Read Time, same bank group", QuestionFlags: 0x10, QuestionId: 0x4B, VarStoreId: 0x5000, VarOffset: 0x8D, Flags: 0x10, Size: 8, Min: 0x2, Max: 0xFF, Step: 0x0
+				OneOfOption Option: "Auto" Value: 255, Default
+				OneOfOption Option: "2 Clk" Value: 2
+				OneOfOption Option: "3 Clk" Value: 3
+				OneOfOption Option: "4 Clk" Value: 4
+				OneOfOption Option: "5 Clk" Value: 5
+				OneOfOption Option: "6 Clk" Value: 6
+				OneOfOption Option: "7 Clk" Value: 7
+				OneOfOption Option: "8 Clk" Value: 8
+				OneOfOption Option: "9 Clk" Value: 9
+				OneOfOption Option: "0Ah Clk" Value: 10
+				OneOfOption Option: "0Bh Clk" Value: 11
+				OneOfOption Option: "0Ch Clk" Value: 12
+				OneOfOption Option: "0Dh Clk" Value: 13
+				OneOfOption Option: "0Eh Clk" Value: 14
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "Twr Ctrl", Help: "Specify Twr", QuestionFlags: 0x10, QuestionId: 0x4C, VarStoreId: 0x5000, VarOffset: 0x8E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Auto" Value: 0, Default
+				OneOfOption Option: "Manual" Value: 1
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+				EqIdVal QuestionId: 0x4C, Value: 0x1
+				Not 
+				Or 
+			End 
+			Numeric Prompt: "Twr", Help: "Minimum Write Recovery Time. Valid value 51h-Ah", QuestionFlags: 0x10, QuestionId: 0x4D, VarStoreId: 0x5000, VarOffset: 0x8F, Flags: 0x20, Size: 8, Min: 0xA, Max: 0x51, Step: 0x0
+				Default DefaultId: 0x0 Value: 18
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "Trcpage Ctrl", Help: "Specify Trcpage", QuestionFlags: 0x10, QuestionId: 0x4E, VarStoreId: 0x5000, VarOffset: 0x90, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Auto" Value: 0, Default
+				OneOfOption Option: "Manual" Value: 1
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+				EqIdVal QuestionId: 0x4E, Value: 0x1
+				Not 
+				Or 
+			End 
+			Numeric Prompt: "Trcpage", Help: "SDRAM Optional Features (tMAW, MAC). Valid value 3FFh - 0h", QuestionFlags: 0x10, QuestionId: 0x4F, VarStoreId: 0x5000, VarOffset: 0x91, Flags: 0x21, Size: 16, Min: 0x0, Max: 0x3FF, Step: 0x0
+				Default DefaultId: 0x0 Value: 0
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "TrdrdScL Ctrl", Help: "Specify TrdrdScL", QuestionFlags: 0x10, QuestionId: 0x50, VarStoreId: 0x5000, VarOffset: 0x93, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Auto" Value: 0, Default
+				OneOfOption Option: "Manual" Value: 1
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+				EqIdVal QuestionId: 0x50, Value: 0x1
+				Not 
+				Or 
+			End 
+			Numeric Prompt: "TrdrdScL", Help: "CAS to CAS Delay Time, same bank group. Valid values Fh-1h", QuestionFlags: 0x10, QuestionId: 0x51, VarStoreId: 0x5000, VarOffset: 0x94, Flags: 0x20, Size: 8, Min: 0x1, Max: 0xF, Step: 0x0
+				Default DefaultId: 0x0 Value: 3
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "TwrwrScL Ctrl", Help: "Specify TwrwrScL", QuestionFlags: 0x10, QuestionId: 0x52, VarStoreId: 0x5000, VarOffset: 0x95, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Auto" Value: 0, Default
+				OneOfOption Option: "Manual" Value: 1
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+				EqIdVal QuestionId: 0x52, Value: 0x1
+				Not 
+				Or 
+			End 
+			Numeric Prompt: "TwrwrScL", Help: "CAS to CAS Delay Time, same bank group. Valid values 3Fh-1h", QuestionFlags: 0x10, QuestionId: 0x53, VarStoreId: 0x5000, VarOffset: 0x96, Flags: 0x20, Size: 8, Min: 0x1, Max: 0x3F, Step: 0x0
+				Default DefaultId: 0x0 Value: 3
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "Trfc Ctrl", Help: "Specify Trfc", QuestionFlags: 0x10, QuestionId: 0x54, VarStoreId: 0x5000, VarOffset: 0x97, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Auto" Value: 0, Default
+				OneOfOption Option: "Manual" Value: 1
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+				EqIdVal QuestionId: 0x54, Value: 0x1
+				Not 
+				Or 
+			End 
+			Numeric Prompt: "Trfc", Help: "Refresh Recovery Delay Time (tRFC1). Valid values 3DEh-3Ch", QuestionFlags: 0x10, QuestionId: 0x55, VarStoreId: 0x5000, VarOffset: 0x98, Flags: 0x21, Size: 16, Min: 0x3C, Max: 0x3DE, Step: 0x0
+				Default DefaultId: 0x0 Value: 312
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "Trfc2 Ctrl", Help: "Specify Trfc2", QuestionFlags: 0x10, QuestionId: 0x56, VarStoreId: 0x5000, VarOffset: 0x9A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Auto" Value: 0, Default
+				OneOfOption Option: "Manual" Value: 1
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+				EqIdVal QuestionId: 0x56, Value: 0x1
+				Not 
+				Or 
+			End 
+			Numeric Prompt: "Trfc2", Help: "Refresh Recovery Delay Time (tRFC2).  Valid values 3DEh-3Ch", QuestionFlags: 0x10, QuestionId: 0x57, VarStoreId: 0x5000, VarOffset: 0x9B, Flags: 0x21, Size: 16, Min: 0x3C, Max: 0x3DE, Step: 0x0
+				Default DefaultId: 0x0 Value: 192
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "Trfc4 Ctrl", Help: "Specify Trfc4", QuestionFlags: 0x10, QuestionId: 0x58, VarStoreId: 0x5000, VarOffset: 0x9D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Auto" Value: 0, Default
+				OneOfOption Option: "Manual" Value: 1
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+				EqIdVal QuestionId: 0x58, Value: 0x1
+				Not 
+				Or 
+			End 
+			Numeric Prompt: "Trfc4", Help: "Refresh Recovery Delay Time (tRFC4). Valid values 3DEh-3Ch", QuestionFlags: 0x10, QuestionId: 0x59, VarStoreId: 0x5000, VarOffset: 0x9E, Flags: 0x21, Size: 16, Min: 0x3C, Max: 0x3DE, Step: 0x0
+				Default DefaultId: 0x0 Value: 132
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "Fail_CNT", Help: "The number of training failure/retries required before boot from recovery mode", QuestionFlags: 0x10, QuestionId: 0x5A, VarStoreId: 0x5000, VarOffset: 0xA0, Flags: 0x20, Size: 8, Min: 0x0, Max: 0xA, Step: 0x0
+				Default DefaultId: 0x0 Value: 5
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "ProcODT", Help: "Specifies the Processor ODT", QuestionFlags: 0x10, QuestionId: 0x5B, VarStoreId: 0x5000, VarOffset: 0xA1, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+				OneOfOption Option: "Auto" Value: 255, Default
+				OneOfOption Option: "High Impedance" Value: 0
+				OneOfOption Option: "480 ohm" Value: 1
+				OneOfOption Option: "240 ohm" Value: 2
+				OneOfOption Option: "160 ohm" Value: 3
+				OneOfOption Option: "120 ohm" Value: 8
+				OneOfOption Option: "96 ohm" Value: 9
+				OneOfOption Option: "80 ohm" Value: 10
+				OneOfOption Option: "68.6 ohm" Value: 11
+				OneOfOption Option: "60 ohm" Value: 24
+				OneOfOption Option: "53.3 ohm" Value: 25
+				OneOfOption Option: "48 ohm" Value: 26
+				OneOfOption Option: "43.6 ohm" Value: 27
+				OneOfOption Option: "40 ohm" Value: 56
+				OneOfOption Option: "36.9 ohm" Value: 57
+				OneOfOption Option: "34.3 ohm" Value: 58
+				OneOfOption Option: "32 ohm" Value: 59
+				OneOfOption Option: "30 ohm" Value: 62
+				OneOfOption Option: "28.2 ohm" Value: 63
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "Tcwl", Help: "No help string", QuestionFlags: 0x10, QuestionId: 0x5C, VarStoreId: 0x5000, VarOffset: 0xA2, Flags: 0x10, Size: 8, Min: 0x9, Max: 0xFF, Step: 0x0
+				OneOfOption Option: "Auto" Value: 255, Default
+				OneOfOption Option: "9 Clk" Value: 9
+				OneOfOption Option: "0Ah Clk" Value: 10
+				OneOfOption Option: "0Bh Clk" Value: 11
+				OneOfOption Option: "0Ch Clk" Value: 12
+				OneOfOption Option: "0Eh Clk" Value: 14
+				OneOfOption Option: "10h Clk" Value: 16
+				OneOfOption Option: "12h Clk" Value: 18
+				OneOfOption Option: "14h Clk" Value: 20
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3D, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "Trtp", Help: "Specifies the read CAS# to precharge time.", QuestionFlags: 0x10, QuestionId: 0x5D, VarStoreId: 0x5000, VarOffset: 0xA3, Flags: 0x10, Size: 8, Min: 0x5, Max: 0xFF, Step: 0x0
+				OneOfOption Option: "8 Clk" Value: 8
+				OneOfOption Option: "9 Clk" Value: 9
+				OneOfOption Option: "0Ah Clk" Value: 10
+				OneOfOption Option: "0Bh Clk" Value: 11
+				OneOfOption Option: "Auto" Value: 255, Default
+				OneOfOption Option: "0Ch Clk" Value: 12
+				OneOfOption Option: "0Dh Clk" Value: 13
+				OneOfOption Option: "5 Clk" Value: 5
+				OneOfOption Option: "6 Clk" Value: 6
+				OneOfOption Option: "7 Clk" Value: 7
+				OneOfOption Option: "0Eh Clk" Value: 14
+			End 
+		End 
+	End 
+	Form FormId: 0x7034, Title: "Common RAS"
+		Subtitle Prompt: "Common RAS", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "Data Poisoning", Help: " Enable/disable data poisoning: UMC_CH::EccCtrl[UcFatalEn] UMC_CH::EccCtrl[WrEccEn] Should be enabled/disabled together.", QuestionFlags: 0x10, QuestionId: 0x5E, VarStoreId: 0x5000, VarOffset: 0xA4, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 255, Default
+		End 
+		Ref Prompt: "ECC Configuration", Help: "ECC Configuration", QuestionFlags: 0x0, QuestionId: 0x5F, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x7038
+	End 
+	Form FormId: 0x7038, Title: "ECC Configuration"
+		Subtitle Prompt: "ECC Configuration", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "DRAM ECC Symbol Size", Help: "DRAM ECC Symbol Size (x4/x8) - UMC_CH::EccCtrl[EccSymbolSize]", QuestionFlags: 0x10, QuestionId: 0x60, VarStoreId: 0x5000, VarOffset: 0xA5, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			OneOfOption Option: "x4" Value: 0
+			OneOfOption Option: "x8" Value: 1
+			OneOfOption Option: "Auto" Value: 255, Default
+		End 
+		OneOf Prompt: "DRAM ECC Enable", Help: "Use this option to enable / disable DRAM ECC. Auto will set ECC to enable.", QuestionFlags: 0x10, QuestionId: 0x61, VarStoreId: 0x5000, VarOffset: 0xA6, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 255, Default
+		End 
+	End 
+	Form FormId: 0x7035, Title: "Security"
+		Subtitle Prompt: "Security", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "TSME", Help: "Transparent SME: AddrTweakEn = 1; ForceEncrEn =1; DataEncrEn = 0", QuestionFlags: 0x14, QuestionId: 0x7039, VarStoreId: 0x5000, VarOffset: 0xA7, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 255, Default
+		End 
+	End 
+	Form FormId: 0x7030, Title: "DRAM Memory Mapping"
+		Subtitle Prompt: "DRAM Memory Mapping", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "Chipselect Interleaving", Help: "Interleave memory blocks across the DRAM chip selects for node 0.", QuestionFlags: 0x10, QuestionId: 0x62, VarStoreId: 0x5000, VarOffset: 0xA8, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Auto" Value: 255, Default
+		End 
+		OneOf Prompt: "BankGroupSwap", Help: "No help string", QuestionFlags: 0x10, QuestionId: 0x63, VarStoreId: 0x5000, VarOffset: 0xA9, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Auto" Value: 255, Default
+		End 
+		OneOf Prompt: "Address Hash Bank", Help: "Enable or disable bank address hashing", QuestionFlags: 0x10, QuestionId: 0x64, VarStoreId: 0x5000, VarOffset: 0xAA, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 255, Default
+		End 
+		OneOf Prompt: "Address Hash CS", Help: "Enable or disable CS address hashing", QuestionFlags: 0x10, QuestionId: 0x65, VarStoreId: 0x5000, VarOffset: 0xAB, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			OneOfOption Option: "Auto" Value: 255, Default
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Disabled" Value: 0
+		End 
+	End 
+	Form FormId: 0x7031, Title: "NVDIMM"
+		Subtitle Prompt: "NVDIMM", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+	End 
+	Form FormId: 0x7032, Title: "Memory MBIST"
+		Subtitle Prompt: "Memory MBIST", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "MBIST Enable", Help: "Enable or disable Memory MBIST", QuestionFlags: 0x10, QuestionId: 0x66, VarStoreId: 0x5000, VarOffset: 0xAC, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			OneOfOption Option: "Auto" Value: 255, Default
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x66, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "MBIST Test Mode", Help: "Select MBIST Test Mode -Interface Mode (Tests Single and Multiple CS transactions and Basic Connectivity) or Data Eye Mode (Measures Voltage vs. Timing)", QuestionFlags: 0x10, QuestionId: 0x67, VarStoreId: 0x5000, VarOffset: 0xAD, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+				OneOfOption Option: "Auto" Value: 255, Default
+				OneOfOption Option: "Interface Mode" Value: 0
+				OneOfOption Option: "Data Eye Mode" Value: 1
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x66, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "MBIST Aggressors", Help: "Enable or disable MBIST Aggressor test", QuestionFlags: 0x10, QuestionId: 0x68, VarStoreId: 0x5000, VarOffset: 0xAE, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+				OneOfOption Option: "Auto" Value: 255, Default
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x66, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "MBIST Per Bit Slave Die Reporting", Help: "Reports 2D Data Eye Results in ABL Log for each DQ, Chipselect, and Channel", QuestionFlags: 0x10, QuestionId: 0x69, VarStoreId: 0x5000, VarOffset: 0xAF, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+				OneOfOption Option: "Auto" Value: 255, Default
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1
+			End 
+		End 
+	End 
+	Form FormId: 0x7004, Title: "NBIO Common Options"
+		Subtitle Prompt: "NBIO Common Options", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Ref Prompt: "GFX Configuration", Help: "GFX Configuration", QuestionFlags: 0x0, QuestionId: 0x6A, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x703A
+		Ref Prompt: "NB Configuration", Help: "NB Configuration", QuestionFlags: 0x0, QuestionId: 0x6B, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x703B
+		Ref Prompt: "PCIe Configuration", Help: "PCIe Configuration", QuestionFlags: 0x0, QuestionId: 0x6C, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x703C
+		Text Prompt: "", Help: "", Text: ""
+		OneOf Prompt: "System Configuration", Help: "Warning: Select System Configuration may cause the system to hang, as some System Configuration may not be supported by your OPN.
+", QuestionFlags: 0x14, QuestionId: 0x703D, VarStoreId: 0x5000, VarOffset: 0xB0, Flags: 0x10, Size: 8, Min: 0x1, Max: 0xF, Step: 0x0
+			OneOfOption Option: "12W POR Configuration" Value: 1
+			OneOfOption Option: "15W POR Configuration" Value: 2
+			OneOfOption Option: "25W POR Configuration" Value: 3
+			OneOfOption Option: "35W POR Configuration" Value: 4
+			OneOfOption Option: "45W POR Configuration" Value: 5
+			OneOfOption Option: "54W POR Configuration" Value: 6
+			OneOfOption Option: "Auto" Value: 15, Default
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x6, Value: 0x1
+				Not 
+				EqIdVal QuestionId: 0x6, Value: 0x2
+				Not 
+				And 
+				EqIdVal QuestionId: 0x6, Value: 0x3
+				Not 
+				And 
+			End 
+			Ref Prompt: "Fan Control", Help: "Fan Control", QuestionFlags: 0x0, QuestionId: 0x6D, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x703E
+		End 
+		OneOf Prompt: "Audio IOs", Help: "Audio IOs control", QuestionFlags: 0x10, QuestionId: 0x6E, VarStoreId: 0x5000, VarOffset: 0xB1, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "Auto" Value: 15, Default
+			OneOfOption Option: "MAX HDA / MIN SoundWire" Value: 0
+			OneOfOption Option: "MAX mHDA / MIN SoundWire" Value: 1
+			OneOfOption Option: "MAX SoundWire / MIN HDA" Value: 2
+			OneOfOption Option: "MAX SoundWire / MIN mHDA" Value: 3
+			OneOfOption Option: "I2S/TDM" Value: 4
+			OneOfOption Option: "Soundwire" Value: 8
+			OneOfOption Option: "DISABLE AUDIO IOs" Value: 7
+		End 
+		OneOf Prompt: "System Temperature Tracking", Help: "System Temperature Tracking [0 = disabled; 1 = enabled]", QuestionFlags: 0x10, QuestionId: 0x6F, VarStoreId: 0x5000, VarOffset: 0xB2, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "Auto" Value: 15, Default
+			OneOfOption Option: "Disable" Value: 0
+			OneOfOption Option: "Enable" Value: 1
+		End 
+	End 
+	Form FormId: 0x703A, Title: "GFX Configuration"
+		Subtitle Prompt: "GFX Configuration", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "Integrated Graphics Controller", Help: "Enable Integrated Graphics controller", QuestionFlags: 0x10, QuestionId: 0x70, VarStoreId: 0x5000, VarOffset: 0xB6, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Forces" Value: 2
+			OneOfOption Option: "Auto" Value: 15, Default
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x70, Value: 0x2
+				Not 
+			End 
+			OneOf Prompt: "UMA Mode", Help: "UMA Mode", QuestionFlags: 0x10, QuestionId: 0x71, VarStoreId: 0x5000, VarOffset: 0xB7, Flags: 0x10, Size: 8, Min: 0x1, Max: 0xF, Step: 0x0
+				OneOfOption Option: "Auto" Value: 15, Default
+				OneOfOption Option: "UMA_SPECIFIED" Value: 1
+				OneOfOption Option: "UMA_AUTO" Value: 2
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x70, Value: 0x2
+				Not 
+			End 
+			OneOf Prompt: "UMA Version", Help: "UMA Legacy Version
+UMA Non Legacy Version
+Hybrid Secure", QuestionFlags: 0x10, QuestionId: 0x72, VarStoreId: 0x5000, VarOffset: 0xB8, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+				OneOfOption Option: "Legacy" Value: 0
+				OneOfOption Option: "Non-Legacy" Value: 1
+				OneOfOption Option: "Hybrid Secure" Value: 2
+				OneOfOption Option: "Auto" Value: 15, Default
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x70, Value: 0x2
+				Not 
+				EqIdVal QuestionId: 0x71, Value: 0x2
+				Not 
+				Or 
+			End 
+			OneOf Prompt: "Display Resulotuon", Help: "Display Resolution", QuestionFlags: 0x10, QuestionId: 0x73, VarStoreId: 0x5000, VarOffset: 0xB9, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+				OneOfOption Option: "1920x1080 and below" Value: 0
+				OneOfOption Option: "2560x1600" Value: 1
+				OneOfOption Option: "3840x2160" Value: 2
+				OneOfOption Option: "Auto" Value: 255, Default
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x70, Value: 0x2
+				Not 
+				EqIdVal QuestionId: 0x71, Value: 0x1
+				Not 
+				Or 
+			End 
+			OneOf Prompt: "UMA Frame buffer Size", Help: "Set UMA FB size", QuestionFlags: 0x10, QuestionId: 0x74, VarStoreId: 0x5000, VarOffset: 0xBA, Flags: 0x12, Size: 32, Min: 0x40, Max: 0xFFFFFFFF, Step: 0x0
+				OneOfOption Option: "Auto" Value: 4294967295, Default
+				OneOfOption Option: "64M" Value: 64
+				OneOfOption Option: "128M" Value: 128
+				OneOfOption Option: "256M" Value: 256
+				OneOfOption Option: "384M" Value: 384
+				OneOfOption Option: "512M" Value: 512
+				OneOfOption Option: "80M" Value: 80
+				OneOfOption Option: "96M" Value: 96
+				OneOfOption Option: "768M" Value: 768
+				OneOfOption Option: "1G" Value: 1024
+				OneOfOption Option: "2G" Value: 2048
+				OneOfOption Option: "3G" Value: 3072
+				OneOfOption Option: "4G" Value: 4096
+				OneOfOption Option: "8G" Value: 8192
+				OneOfOption Option: "16G" Value: 16384
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x70, Value: 0xF
+				Not 
+				EqIdVal QuestionId: 0x70, Value: 0x2
+				Not 
+				And 
+			End 
+			OneOf Prompt: "NB Azalia", Help: "Enable Integrate HD Audio controller", QuestionFlags: 0x10, QuestionId: 0x75, VarStoreId: 0x5000, VarOffset: 0xBE, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1
+				OneOfOption Option: "Auto" Value: 15, Default
+			End 
+		End 
+	End 
+	Form FormId: 0x703B, Title: "NB Configuration"
+		Subtitle Prompt: "NB Configuration", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "IOMMU", Help: "Enable/Disable IOMMU", QuestionFlags: 0x10, QuestionId: 0x76, VarStoreId: 0x5000, VarOffset: 0xBF, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 15, Default
+		End 
+	End 
+	Form FormId: 0x703C, Title: "PCIe Configuration"
+		Subtitle Prompt: "PCIe Configuration", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "PSPP Policy", Help: "No help string", QuestionFlags: 0x10, QuestionId: 0x77, VarStoreId: 0x5000, VarOffset: 0xC0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Performance" Value: 1
+			OneOfOption Option: "Balanced-High" Value: 2
+			OneOfOption Option: "Balanced-Low" Value: 3
+			OneOfOption Option: "Power Saving" Value: 4
+			OneOfOption Option: "Auto" Value: 15
+		End 
+	End 
+	Form FormId: 0x703E, Title: "Fan Control"
+		Subtitle Prompt: "Fan Control", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "Fan Control", Help: "Auto = Use the default fan controller settings
+Manual = User can set customized fan controller settings", QuestionFlags: 0x10, QuestionId: 0x78, VarStoreId: 0x5000, VarOffset: 0xC1, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Manual" Value: 1
+			OneOfOption Option: "Auto" Value: 0, Default
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x78, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "Force PWM Control", Help: "Unforce = Do not force the fan PWM
+Force = Force the fan PWM to the use specified value", QuestionFlags: 0x10, QuestionId: 0x79, VarStoreId: 0x5000, VarOffset: 0xC2, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Force" Value: 1
+				OneOfOption Option: "Unforce" Value: 0, Default
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x79, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "Force PWM", Help: "Specify the PWM to force the fan to [0-100]", QuestionFlags: 0x10, QuestionId: 0x7A, VarStoreId: 0x5000, VarOffset: 0xC3, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x64, Step: 0x0
+				Default DefaultId: 0x0 Value: 0
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x78, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "Fan Table Control", Help: "Auto = Use the default fan table
+Manual = User can set customized fan table", QuestionFlags: 0x10, QuestionId: 0x7B, VarStoreId: 0x5000, VarOffset: 0xC4, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Manual" Value: 1
+				OneOfOption Option: "Auto" Value: 0, Default
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7B, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "Low Temperature", Help: "Low Temperature ['C]", QuestionFlags: 0x10, QuestionId: 0x7C, VarStoreId: 0x5000, VarOffset: 0xC5, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 0
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7B, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "Medium Temperature", Help: "Medium Temperature ['C]", QuestionFlags: 0x10, QuestionId: 0x7D, VarStoreId: 0x5000, VarOffset: 0xC6, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 0
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7B, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "High Temperature", Help: "High Temperature ['C]", QuestionFlags: 0x10, QuestionId: 0x7E, VarStoreId: 0x5000, VarOffset: 0xC7, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 0
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7B, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "Critical Temperature", Help: "Critical Temperature ['C]", QuestionFlags: 0x10, QuestionId: 0x7F, VarStoreId: 0x5000, VarOffset: 0xC8, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 0
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7B, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "Low Pwm", Help: "Low Pwm [0-100]", QuestionFlags: 0x10, QuestionId: 0x80, VarStoreId: 0x5000, VarOffset: 0xC9, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x64, Step: 0x0
+				Default DefaultId: 0x0 Value: 0
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7B, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "Medium Pwm", Help: "Medium Pwm [0-100]", QuestionFlags: 0x10, QuestionId: 0x81, VarStoreId: 0x5000, VarOffset: 0xCA, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x64, Step: 0x0
+				Default DefaultId: 0x0 Value: 0
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7B, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "High Pwm", Help: "High Pwm [0-100]", QuestionFlags: 0x10, QuestionId: 0x82, VarStoreId: 0x5000, VarOffset: 0xCB, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x64, Step: 0x0
+				Default DefaultId: 0x0 Value: 0
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7B, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "Temperature Hysteresis", Help: "Temperature Hysteresis ['C]", QuestionFlags: 0x10, QuestionId: 0x83, VarStoreId: 0x5000, VarOffset: 0xCC, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 0
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7B, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "Pwm Frequency", Help: "0 = 25kHz
+1 = 100Hz", QuestionFlags: 0x10, QuestionId: 0x84, VarStoreId: 0x5000, VarOffset: 0xCD, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "100Hz" Value: 1
+				OneOfOption Option: "25kHz" Value: 0, Default
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7B, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "Fan Polarity", Help: "0 = negative
+1 = positive", QuestionFlags: 0x10, QuestionId: 0x85, VarStoreId: 0x5000, VarOffset: 0xCE, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Negative" Value: 0, Default
+				OneOfOption Option: "Positive" Value: 1
+			End 
+		End 
+	End 
+	Form FormId: 0x7005, Title: "FCH Common Options"
+		Subtitle Prompt: "FCH Common Options", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Ref Prompt: "SATA Configuration Options", Help: "SATA Configuration Options", QuestionFlags: 0x0, QuestionId: 0x86, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x703F
+		Ref Prompt: "USB Configuration Options", Help: "USB Configuration Options", QuestionFlags: 0x0, QuestionId: 0x87, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x7040
+		Ref Prompt: "SD (Secure Digital) Options", Help: "SD (Secure Digital) Options", QuestionFlags: 0x0, QuestionId: 0x88, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x7041
+		Ref Prompt: "Ac Power Loss Options", Help: "Ac Power Loss Options", QuestionFlags: 0x0, QuestionId: 0x89, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x7042
+		Ref Prompt: "I2C Configuration Options", Help: "I2C Configuration Options", QuestionFlags: 0x0, QuestionId: 0x8A, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x7043
+		Ref Prompt: "Uart Configuration Options", Help: "Uart Configuration Options", QuestionFlags: 0x0, QuestionId: 0x8B, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x7044
+		Ref Prompt: "ESPI Configuration Options", Help: "ESPI Configuration Options", QuestionFlags: 0x0, QuestionId: 0x8C, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x7045
+		Ref Prompt: "eMMC Options", Help: "eMMC Options", QuestionFlags: 0x0, QuestionId: 0x8D, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x7046
+		Ref Prompt: "LPC Options", Help: "LPC Options", QuestionFlags: 0x0, QuestionId: 0x8E, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x7047
+		Ref Prompt: "System Control", Help: "System Control", QuestionFlags: 0x0, QuestionId: 0x8F, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x7048
+	End 
+	Form FormId: 0x703F, Title: "SATA Configuration Options"
+		Subtitle Prompt: "SATA Configuration Options", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "SATA Controller", Help: "Disable or enable OnChip SATA controller", QuestionFlags: 0x14, QuestionId: 0x7049, VarStoreId: 0x5000, VarOffset: 0xCF, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 15, Default
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7049, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "SATA Mode", Help: "Select OnChip SATA Type", QuestionFlags: 0x14, QuestionId: 0x704A, VarStoreId: 0x5000, VarOffset: 0xD0, Flags: 0x10, Size: 8, Min: 0x1, Max: 0xF, Step: 0x0
+				OneOfOption Option: "AHCI" Value: 2
+				OneOfOption Option: "AHCI as ID 0x7904" Value: 5
+				OneOfOption Option: "Auto" Value: 15, Default
+				OneOfOption Option: "RAID" Value: 1
+			End 
+		End 
+		OneOf Prompt: "Sata RAS Support", Help: "Disable or enable Sata RAS Support", QuestionFlags: 0x10, QuestionId: 0x90, VarStoreId: 0x5000, VarOffset: 0xD1, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 15, Default
+		End 
+		OneOf Prompt: "Sata Disabled AHCI Prefetch Function", Help: "Disable or enable Sata Disabled AHCI Prefetch Function", QuestionFlags: 0x10, QuestionId: 0x91, VarStoreId: 0x5000, VarOffset: 0xD2, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 15, Default
+		End 
+		OneOf Prompt: "Aggresive SATA Device Sleep Port 0", Help: "No help string", QuestionFlags: 0x10, QuestionId: 0x92, VarStoreId: 0x5000, VarOffset: 0xD3, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "Disable" Value: 0
+			OneOfOption Option: "Enable" Value: 1
+			OneOfOption Option: "Auto" Value: 15, Default
+		End 
+		OneOf Prompt: "Aggresive SATA Device Sleep Port 1", Help: "No help string", QuestionFlags: 0x10, QuestionId: 0x93, VarStoreId: 0x5000, VarOffset: 0xD4, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "Disable" Value: 0
+			OneOfOption Option: "Enable" Value: 1
+			OneOfOption Option: "Auto" Value: 15, Default
+		End 
+	End 
+	Form FormId: 0x7040, Title: "USB Configuration Options"
+		Subtitle Prompt: "USB Configuration Options", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "XHCI0 controller enable", Help: "Enable or disable USB3 controller.", QuestionFlags: 0x10, QuestionId: 0x94, VarStoreId: 0x5000, VarOffset: 0xD5, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Auto" Value: 15, Default
+		End 
+		OneOf Prompt: "XHCI1 controller enable", Help: "Enable or disable USB3 controller.", QuestionFlags: 0x10, QuestionId: 0x95, VarStoreId: 0x5000, VarOffset: 0xD6, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Auto" Value: 15, Default
+		End 
+	End 
+	Form FormId: 0x7041, Title: "SD (Secure Digital) Options"
+		Subtitle Prompt: "SD (Secure Digital) Options", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "SD Configuration Mode", Help: "Select SD Mode", QuestionFlags: 0x10, QuestionId: 0x96, VarStoreId: 0x5000, VarOffset: 0xD7, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Ver2.0" Value: 1
+			OneOfOption Option: "SdDump" Value: 6, Default
+			OneOfOption Option: "Auto (Version 2.0 + Low Speed)" Value: 15
+		End 
+	End 
+	Form FormId: 0x7042, Title: "Ac Power Loss Options"
+		Subtitle Prompt: "Ac Power Loss Options", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "Ac Loss Control", Help: "Select Ac Loss Control Method", QuestionFlags: 0x10, QuestionId: 0x97, VarStoreId: 0x5000, VarOffset: 0xD8, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+			OneOfOption Option: "Always Off" Value: 0, Default
+			OneOfOption Option: "Always On" Value: 1
+			OneOfOption Option: "Reserved" Value: 2
+			OneOfOption Option: "Previous" Value: 3
+		End 
+	End 
+	Form FormId: 0x7043, Title: "I2C Configuration Options"
+		Subtitle Prompt: "I2C Configuration Options", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "I2C 0 Enable", Help: "No help string", QuestionFlags: 0x10, QuestionId: 0x98, VarStoreId: 0x5000, VarOffset: 0xD9, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 15, Default
+		End 
+		OneOf Prompt: "I2C 1 Enable", Help: "No help string", QuestionFlags: 0x10, QuestionId: 0x99, VarStoreId: 0x5000, VarOffset: 0xDA, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 15, Default
+		End 
+		OneOf Prompt: "I2C 2 Enable", Help: "No help string", QuestionFlags: 0x10, QuestionId: 0x9A, VarStoreId: 0x5000, VarOffset: 0xDB, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 15, Default
+		End 
+		OneOf Prompt: "I2C 3 Enable", Help: "No help string", QuestionFlags: 0x10, QuestionId: 0x9B, VarStoreId: 0x5000, VarOffset: 0xDC, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 15, Default
+		End 
+		OneOf Prompt: "I2C 4 Enable", Help: "No help string", QuestionFlags: 0x10, QuestionId: 0x9C, VarStoreId: 0x5000, VarOffset: 0xDD, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 15, Default
+		End 
+		OneOf Prompt: "I2C 5 Enable", Help: "No help string", QuestionFlags: 0x10, QuestionId: 0x9D, VarStoreId: 0x5000, VarOffset: 0xDE, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 15, Default
+		End 
+	End 
+	Form FormId: 0x7044, Title: "Uart Configuration Options"
+		Subtitle Prompt: "Uart Configuration Options", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "Uart 0 Enable", Help: "Uart 0 has no HW FC if Uart 2 is enabled", QuestionFlags: 0x10, QuestionId: 0x9E, VarStoreId: 0x5000, VarOffset: 0xDF, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 15, Default
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x9E, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "Uart 0 Legacy Options", Help: "No help string", QuestionFlags: 0x10, QuestionId: 0x9F, VarStoreId: 0x5000, VarOffset: 0xE0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0, Default
+				OneOfOption Option: "COM1 0x3F8" Value: 4
+				OneOfOption Option: "COM2 0x2F8" Value: 2
+				OneOfOption Option: "COM3 0x3E8" Value: 3
+				OneOfOption Option: "COM4 0x2E8" Value: 1
+			End 
+		End 
+		OneOf Prompt: "Uart 1 Enable", Help: "Uart 1 has no HW FC if Uart 3 is enabled", QuestionFlags: 0x10, QuestionId: 0xA0, VarStoreId: 0x5000, VarOffset: 0xE1, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 15, Default
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0xA0, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "Uart 1 Legacy Options", Help: "No help string", QuestionFlags: 0x10, QuestionId: 0xA1, VarStoreId: 0x5000, VarOffset: 0xE2, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0, Default
+				OneOfOption Option: "COM1 0x3F8" Value: 4
+				OneOfOption Option: "COM2 0x2F8" Value: 2
+				OneOfOption Option: "COM3 0x3E8" Value: 3
+				OneOfOption Option: "COM4 0x2E8" Value: 1
+			End 
+		End 
+		OneOf Prompt: "Uart 2 Enable (no HW FC)", Help: "No help string", QuestionFlags: 0x10, QuestionId: 0xA2, VarStoreId: 0x5000, VarOffset: 0xE3, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 15, Default
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0xA2, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "Uart 2 Legacy Options", Help: "No help string", QuestionFlags: 0x10, QuestionId: 0xA3, VarStoreId: 0x5000, VarOffset: 0xE4, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0, Default
+				OneOfOption Option: "COM1 0x3F8" Value: 4
+				OneOfOption Option: "COM2 0x2F8" Value: 2
+				OneOfOption Option: "COM3 0x3E8" Value: 3
+				OneOfOption Option: "COM4 0x2E8" Value: 1
+			End 
+		End 
+		OneOf Prompt: "Uart 3 Enable (no HW FC)", Help: "No help string", QuestionFlags: 0x10, QuestionId: 0xA4, VarStoreId: 0x5000, VarOffset: 0xE5, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 15, Default
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0xA4, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "Uart 3 Legacy Options", Help: "No help string", QuestionFlags: 0x10, QuestionId: 0xA5, VarStoreId: 0x5000, VarOffset: 0xE6, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0, Default
+				OneOfOption Option: "COM1 0x3F8" Value: 4
+				OneOfOption Option: "COM2 0x2F8" Value: 2
+				OneOfOption Option: "COM3 0x3E8" Value: 3
+				OneOfOption Option: "COM4 0x2E8" Value: 1
+			End 
+		End 
+	End 
+	Form FormId: 0x7045, Title: "ESPI Configuration Options"
+		Subtitle Prompt: "ESPI Configuration Options", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "ESPI Enable", Help: "No help string", QuestionFlags: 0x10, QuestionId: 0xA6, VarStoreId: 0x5000, VarOffset: 0xE7, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 15, Default
+		End 
+	End 
+	Form FormId: 0x7046, Title: "eMMC Options"
+		Subtitle Prompt: "eMMC Options", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "eMMC/SD Configure", Help: "No help string", QuestionFlags: 0x10, QuestionId: 0xA7, VarStoreId: 0x5000, VarOffset: 0xE8, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "SD Normal Speed" Value: 1
+			OneOfOption Option: "SD High Speed" Value: 2
+			OneOfOption Option: "SD UHSI-SDR50" Value: 3
+			OneOfOption Option: "SD UHSI-DDR50" Value: 4
+			OneOfOption Option: "SD UHSI-SDR104" Value: 5
+			OneOfOption Option: "eMMC Emmc Backward Compatibility" Value: 6
+			OneOfOption Option: "eMMC High Speed SDR" Value: 7
+			OneOfOption Option: "eMMC High Speed DDR" Value: 8
+			OneOfOption Option: "eMMC HS200" Value: 9
+			OneOfOption Option: "eMMC HS400" Value: 10
+			OneOfOption Option: "eMMC HS300" Value: 11
+			OneOfOption Option: "Auto" Value: 15
+		End 
+		OneOf Prompt: "Driver Type", Help: "Bios will select MS driver for SD selections.", QuestionFlags: 0x10, QuestionId: 0xA8, VarStoreId: 0x5000, VarOffset: 0xE9, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "AMD eMMC Driver" Value: 0
+			OneOfOption Option: "MS Driver" Value: 1
+			OneOfOption Option: "MS eMMC Driver" Value: 2
+			OneOfOption Option: "Auto" Value: 15, Default
+		End 
+		OneOf Prompt: "D3 Cold Support", Help: "No help string", QuestionFlags: 0x10, QuestionId: 0xA9, VarStoreId: 0x5000, VarOffset: 0xEA, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 15, Default
+		End 
+		OneOf Prompt: "eMMC Boot ", Help: "No help string", QuestionFlags: 0x10, QuestionId: 0xAA, VarStoreId: 0x5000, VarOffset: 0xEB, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 15, Default
+		End 
+	End 
+	Form FormId: 0x7047, Title: "LPC Options"
+		Subtitle Prompt: "LPC Options", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "LPC Clock Run control", Help: "No help string", QuestionFlags: 0x10, QuestionId: 0xAB, VarStoreId: 0x5000, VarOffset: 0xEC, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 15, Default
+		End 
+	End 
+	Form FormId: 0x7048, Title: "System Control"
+		Subtitle Prompt: "System Control", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "Toggle All PwrGood On Cf9", Help: "No help string", QuestionFlags: 0x10, QuestionId: 0xAC, VarStoreId: 0x5000, VarOffset: 0xED, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 2, Default
+		End 
+	End 
+End 
